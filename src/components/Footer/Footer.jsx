@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../styles/footer.css";
-import logo from "../../assets/Images/logo.png"; // use your local logo if available
+import logo from "../../assets/Images/logo.png";
 
 const FOOTER_QUICK_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/about-us", label: "About Us" },
-  { href: "/what-we-do", label: "What We Do" },
-  { href: "/scholar-stories", label: "Scholar Stories" },
-  { href: "/media", label: "Media" },
+  { path: "/", label: "Home" },
+  { path: "/get-involved", label: "About Us" }, // needs correct page
+  { path: "/what-we-do", label: "What We Do" },
+  { path: "/scholar-stories", label: "Scholar Stories" },
+  { path: "/donate", label: "Media" }, // needs correct page
 ];
 
 const SOCIAL_LINKS = [
@@ -24,9 +25,9 @@ const Footer = () => {
 
         {/* Column 1 - Logo + Disclaimer */}
         <div className="footer-col footer-about">
-          <a href="/">
+          <Link to="/">
             <img src={logo} alt="Kashmir Education Initiative Logo" />
-          </a>
+          </Link>
           <p>
             KEI does not accept funds raised at political events.
             All donations must come through official channels.
@@ -37,9 +38,9 @@ const Footer = () => {
         <div className="footer-col">
           <h4>Quick Links</h4>
           <ul>
-            {FOOTER_QUICK_LINKS.map(({ href, label }) => (
-              <li key={href}>
-                <a href={href}>{label}</a>
+            {FOOTER_QUICK_LINKS.map(({ path, label }) => (
+              <li key={path}>
+                <Link to={path}>{label}</Link>
               </li>
             ))}
           </ul>

@@ -1,0 +1,121 @@
+.section-ss-grid {
+    padding: 120px 0;
+    background: #f8f9fb;
+  }
+  
+  .section-ss-grid .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  
+  .ss-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  
+  .ss-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+  }
+  
+  .ss-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .ss-card p {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .ss-card h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .ss-card span {
+    font-size: 13px;
+    color: #48BEDA;
+  }
+  
+  .ss-buttons {
+    margin-top: 70px;
+    text-align: center;
+  }
+  
+  .btn-primary {
+    background: #48BEDA;
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  .btn-outline {
+    background: transparent;
+    color: #48BEDA;
+    padding: 12px 28px;
+    border: 2px solid #48BEDA;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  /* ================= BUTTONS ================= */
+
+.ss-buttons {
+    margin-top: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Base Button Style */
+  .btn-primary,
+  .btn-outline {
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.35s ease,
+                color 0.35s ease,
+                box-shadow 0.35s ease;
+  }
+  
+  /* Primary Button */
+  .btn-primary {
+    background-color: #48BEDA;
+    color: #ffffff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #3aa9c4;
+    box-shadow: 0 8px 24px rgba(72, 190, 218, 0.35);
+  }
+  
+  /* Outline Button */
+  .btn-outline {
+    background: transparent;
+    color: #48BEDA;
+    border: 2px solid #48BEDA;
+  }
+  
+  .btn-outline:hover {
+    background-color: #48BEDA;
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(72, 190, 218, 0.25);
+  }
+  
+  

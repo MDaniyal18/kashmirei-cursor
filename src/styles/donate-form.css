@@ -1,0 +1,23 @@
+/* ===============================
+   DONATE FORM EMBED
+================================= */
+
+.section-donate-form {
+    padding: 100px 0;
+    background: #ffffff;
+  }
+  
+  .embed-container {
+    position: relative;
+    width: 100%;
+    height: 1950px;   /* Same as your embed */
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  
+  .embed-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  

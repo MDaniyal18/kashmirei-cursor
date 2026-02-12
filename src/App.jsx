@@ -14,6 +14,9 @@ import Footer from "./components/Footer/Footer";
 // Pages
 import Home from "./components/pages/Home";
 import WhatWeDo from "./components/pages/WhatWeDo";
+import Donate from "./components/pages/Donate";
+import GetInvolved from "./components/pages/GetInvolved";
+import ScholarStories from "./components/pages/ScholarStories";
 
 const App = () => {
   return (
@@ -25,6 +28,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/what-we-do" element={<WhatWeDo />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/get-involved" element={<GetInvolved />} />
+          <Route path="/scholar-stories" element={<ScholarStories />} /> {/* ✅ NEW */}
         </Routes>
       </main>
 

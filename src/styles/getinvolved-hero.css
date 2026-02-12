@@ -1,0 +1,45 @@
+.gi-hero {
+    position: relative;
+    padding: 160px 0 140px;
+    background: url("../assets/Images/about-home.jpg") center/cover no-repeat;
+    text-align: center;
+  }
+  
+  .gi-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.88);
+  }
+  
+  .gi-hero .container {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  
+  .gi-hero h1 {
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  
+  .gi-hero h1 span {
+    color: #48BEDA;
+  }
+  
+  .gi-sub {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .gi-small {
+    margin-top: 18px;
+    font-size: 15px;
+    color: #555;
+    line-height: 1.8;
+  }
+  

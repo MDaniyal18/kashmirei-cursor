@@ -1,0 +1,64 @@
+/* ================================
+   DONATE HERO
+================================ */
+
+.section-donate-hero {
+    padding: 120px 0 60px;
+    text-align: center;
+    background: #ffffff;
+  }
+  
+  .donate-hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Title Wrapper */
+  .donate-title-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  
+  /* Title */
+  .donate-title {
+    font-size: 48px;
+    font-weight: 800;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* SVG Circle */
+  .donate-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 220px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  /* Ellipse stroke animation */
+  .donate-circle ellipse {
+    fill: none;
+    stroke: #6cc04a; /* Green */
+    stroke-width: 4;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: drawCircle 1.5s ease forwards;
+  }
+  
+  /* Animation */
+  @keyframes drawCircle {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  /* Subtitle */
+  .section-donate-hero p {
+    font-size: 16px;
+    color: #666;
+  }
+  

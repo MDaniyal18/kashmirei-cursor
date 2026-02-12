@@ -1,0 +1,46 @@
+.section-gi-support {
+    padding: 140px 0;
+    background: #ffffff;
+  }
+  
+  .gi-support-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .gi-support-left span {
+    font-size: 12px;
+    color: #48BEDA;
+  }
+  
+  .gi-support-left h2 {
+    font-size: 42px;
+    margin: 20px 0;
+  }
+  
+  .gi-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #48BEDA;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  
+  .gi-support-image img {
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  .gi-support-stats h3 {
+    font-size: 40px;
+    color: #48BEDA;
+  }
+  
+  .gi-support-stats p {
+    margin-bottom: 25px;
+  }
+  

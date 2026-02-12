@@ -1,0 +1,49 @@
+/* ================================
+   DONATE - PAYMENT SECTION
+================================ */
+
+.section-donate-payment {
+  padding: 100px 0;
+  background: #ffffff;
+  text-align: center;
+}
+
+.donate-payment-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* PayPal Button */
+.paypal-button {
+  margin-bottom: 40px;
+}
+
+.paypal-button img {
+  width: 220px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.paypal-button img:hover {
+  transform: translateY(-3px);
+}
+
+/* Zelle */
+.donate-zelle {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.donate-zelle span {
+  font-weight: 600;
+}
+
+/* Check */
+.donate-check {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
