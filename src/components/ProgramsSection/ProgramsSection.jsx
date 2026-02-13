@@ -2,11 +2,10 @@ import React from "react";
 import "../../styles/programs.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, EffectCoverflow } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
 
 import image1 from "../../assets/Images/programs-image1.jpg";
 import image2 from "../../assets/Images/programs-image2.jpg";
@@ -16,9 +15,9 @@ import image4 from "../../assets/Images/programs-image4.jpg";
 const ProgramsSection = () => {
   return (
     <section className="section-programs">
-      <div className="programs-container">
 
-        {/* HEADER */}
+      {/* ================= HEADER ================= */}
+      <div className="programs-container">
         <div className="programs-top">
           <div>
             <span className="programs-label">PROGRAMS</span>
@@ -26,35 +25,28 @@ const ProgramsSection = () => {
           </div>
 
           <a href="#" className="button-outline">
-            View All Programs
+            VIEW ALL PROGRAMS
           </a>
         </div>
+      </div>
 
-        {/* QUOTE BLOCK */}
-        <div className="programs-quote">
-          <blockquote>
-            “Through mentorship, scholarships and experiential learning,
-            KEI equips scholars with the tools to lead and create impact.”
-          </blockquote>
-        </div>
-
-        {/* SLIDER */}
+      {/* ================= FULL WIDTH SLIDER ================= */}
+      <div className="programs-full">
         <Swiper
-  modules={[Pagination]}
-  slidesPerView={3}
-  spaceBetween={30}
-  loop={true}
-  centeredSlides={false}
-  pagination={{ clickable: true }}
-  breakpoints={{
-    0: { slidesPerView: 1 },
-    768: { slidesPerView: 2 },
-    1200: { slidesPerView: 3 },
-  }}
-  className="programs-swiper"
->
-
-
+          modules={[Pagination]}
+          slidesPerView={3}
+          spaceBetween={40}
+          centeredSlides={true}
+          loop={true}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1200: { slidesPerView: 3 },
+          }}
+          className="programs-swiper"
+        >
+          {/* Slide 1 */}
           <SwiperSlide>
             <div className="program-card">
               <img src={image1} alt="Mentorship Program" />
@@ -67,6 +59,7 @@ const ProgramsSection = () => {
             </div>
           </SwiperSlide>
 
+          {/* Slide 2 */}
           <SwiperSlide>
             <div className="program-card">
               <img src={image2} alt="Scholarships Program" />
@@ -75,11 +68,14 @@ const ProgramsSection = () => {
                 <p>
                   High School, UG & PG, Graduate Abroad (GAP) / IBSP
                 </p>
-                <p><strong>2,500+ High School Scholars</strong></p>
+                <p>
+                  <strong>2,500+ High School Scholars</strong>
+                </p>
               </div>
             </div>
           </SwiperSlide>
 
+          {/* Slide 3 */}
           <SwiperSlide>
             <div className="program-card">
               <img src={image3} alt="Experiential Learning Program" />
@@ -92,6 +88,7 @@ const ProgramsSection = () => {
             </div>
           </SwiperSlide>
 
+          {/* Slide 4 */}
           <SwiperSlide>
             <div className="program-card">
               <img src={image4} alt="Career Awareness Program" />
@@ -105,8 +102,8 @@ const ProgramsSection = () => {
           </SwiperSlide>
 
         </Swiper>
-
       </div>
+
     </section>
   );
 };

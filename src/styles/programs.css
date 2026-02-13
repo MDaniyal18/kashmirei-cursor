@@ -1,182 +1,206 @@
-/* =========================
-   PROGRAMS SECTION
-========================= */
+/* =========================================
+   PROGRAMS SECTION – FINAL CLEAN VERSION
+========================================= */
 
 .section-programs {
-    padding: 140px 0;
+    padding: 140px 0 120px;
     background: #ffffff;
-    overflow: hidden;
   }
+  
+  /* =========================================
+     HEADER
+  ========================================= */
   
   .programs-container {
-    max-width: 1500px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 40px;
   }
-  
-  /* =========================
-     HEADER
-  ========================= */
   
   .programs-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 70px;
+    margin-bottom: 80px;
   }
   
   .programs-label {
     font-size: 12px;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     color: #48BEDA;
-    display: block;
+    text-transform: uppercase;
     margin-bottom: 10px;
+    display: block;
   }
   
   .programs-top h2 {
-    font-size: 46px;
+    font-size: 48px;
     font-weight: 800;
+    margin: 0;
   }
   
+  /* Button */
   .button-outline {
-    padding: 12px 28px;
+    padding: 10px 24px;
     border-radius: 6px;
     background: #48BEDA;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s ease;
-  }
-  
-  .button-outline:hover {
-    background: #3aa7c3;
-  }
-  
-  /* =========================
-     QUOTE ABOVE SLIDER
-  ========================= */
-  
-  .programs-quote {
-    max-width: 900px;
-    margin: 0 auto 60px auto;
-    text-align: center;
-  }
-  
-  .programs-quote blockquote {
-    font-size: 20px;
-    font-style: italic;
-    color: #333;
-    line-height: 1.7;
-  }
-  
-  /* =========================
-     SWIPER
-  ========================= */
-  
-  .programs-swiper {
-    padding-bottom: 70px;
-  }
-  
-  .swiper-slide {
-    opacity: 1;
+    font-size: 14px;
     transition: all 0.3s ease;
   }
   
-  /* =========================
+  .button-outline:hover {
+    background: #3aa9c4;
+  }
+  
+  /* =========================================
+     SLIDER WRAPPER
+  ========================================= */
+  
+  .programs-slider-wrapper {
+    width: 100%;
+    padding: 0 60px;
+  }
+  
+  /* =========================================
+     SWIPER
+  ========================================= */
+  
+  .programs-swiper {
+    padding-bottom: 0;
+  }
+  
+  /* Space between slides and pagination */
+  .programs-swiper .swiper-wrapper {
+    margin-bottom: 60px;
+  }
+  
+  /* Side slides faded */
+  .programs-swiper .swiper-slide {
+    opacity: 0.35;
+    transform: scale(0.92);
+    transition: all 0.4s ease;
+  }
+  
+  /* Active slide */
+  .programs-swiper .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* =========================================
      CARD
-  ========================= */
+  ========================================= */
   
   .program-card {
     position: relative;
-    border-radius: 24px;
+    border-radius: 20px;
     overflow: hidden;
   }
   
   .program-card img {
     width: 100%;
-    height: 440px;
+    height: 420px;
     object-fit: cover;
-    border-radius: 24px;
+    border-radius: 20px;
     display: block;
   }
   
-  /* =========================
-     OVERLAY
-  ========================= */
+  /* =========================================
+     BLUE OVERLAY (ONLY ACTIVE SLIDE)
+  ========================================= */
   
   .program-overlay {
     position: absolute;
-    bottom: 25px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    width: 75%;
+    width: 80%;
     background: #48BEDA;
-    color: #fff;
-    padding: 22px;
-    border-radius: 16px;
+    color: #ffffff;
+    padding: 24px;
+    border-radius: 14px;
     text-align: center;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  
+    opacity: 0;
+    transition: 0.4s ease;
   }
   
+  /* Show only on active */
+  .programs-swiper .swiper-slide-active .program-overlay {
+    opacity: 1;
+  }
+  
+  /* Overlay text */
   .program-overlay h4 {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
+    color: #ffffff;
   }
   
   .program-overlay p {
     font-size: 14px;
     margin-bottom: 4px;
+    color: #ffffff;
   }
   
-  /* =========================
-     PAGINATION (Bars)
-  ========================= */
+  /* =========================================
+     PAGINATION – DOT STYLE (OUTSIDE CARDS)
+  ========================================= */
   
-  .swiper-pagination {
-    margin-top: 40px;
+  .programs-swiper .swiper-pagination {
+    position: relative !important;
+    margin-top: 20px;
     text-align: center;
   }
   
-  .swiper-pagination-bullet {
-    width: 55px;
-    height: 6px;
-    border-radius: 20px;
-    background: #ddd;
+  .programs-swiper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d6d6d6;
     opacity: 1;
     margin: 0 6px !important;
+    transition: all 0.3s ease;
   }
   
-  .swiper-pagination-bullet-active {
+  .programs-swiper .swiper-pagination-bullet-active {
     background: #48BEDA;
+    transform: scale(1.2);
   }
   
-  /* =========================
+  /* =========================================
      RESPONSIVE
-  ========================= */
-  
-  @media (max-width: 1200px) {
-    .programs-container {
-      padding: 0 30px;
-    }
-  }
+  ========================================= */
   
   @media (max-width: 992px) {
+    .program-card img {
+      height: 360px;
+    }
+  
     .programs-top {
       flex-direction: column;
       align-items: flex-start;
       gap: 20px;
     }
-  
-    .program-card img {
-      height: 400px;
-    }
   }
   
   @media (max-width: 768px) {
+    .section-programs {
+      padding: 100px 0;
+    }
+  
     .program-card img {
-      height: 340px;
+      height: 300px;
+    }
+  
+    .programs-top h2 {
+      font-size: 34px;
     }
   }
   

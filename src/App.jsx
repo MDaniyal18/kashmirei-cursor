@@ -9,6 +9,7 @@ import "./styles/footer.css";
 // Layout Components
 import SkipLink from "./components/SkipLink";
 import Header from "./components/Header/Header";
+import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer/Footer";
 
 // Pages
@@ -21,8 +22,10 @@ import ScholarStories from "./components/pages/ScholarStories";
 const App = () => {
   return (
     <>
+    <ScrollToTop />
       <SkipLink />
       <Header />
+      
 
       <main id="main-content">
         <Routes>

@@ -2,46 +2,46 @@
     padding: 140px 0;
     background: #ffffff;
     text-align: center;
-  }
-  
-  .section-ss-videos .container {
+}
+
+.section-ss-videos .container {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 60px;
-  }
-  
-  .ss-label {
+}
+
+.ss-label {
     font-size: 12px;
     color: #48BEDA;
     letter-spacing: 2px;
-  }
-  
-  .section-ss-videos h2 {
+}
+
+.section-ss-videos h2 {
     font-size: 40px;
     margin: 20px 0 60px;
     font-weight: 800;
-  }
-  
-  .ss-video-grid {
+}
+
+.ss-video-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-  }
-  
-  .ss-video-card {
+}
+
+.ss-video-card {
     position: relative;
-  }
-  
-  .ss-video-card img {
+}
+
+.ss-video-card img {
     width: 100%;
     border-radius: 20px;
-  }
-  
-  .play-btn {
+}
+
+.play-btn {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background: #48BEDA;
     color: white;
     width: 60px;
@@ -51,19 +51,18 @@
     align-items: center;
     justify-content: center;
     font-size: 24px;
-  }
-  
-  .ss-video-card h4 {
+}
+
+.ss-video-card h4 {
     margin-top: 20px;
     font-size: 16px;
-  }
-  
-  .ss-video-card p {
+}
+
+.ss-video-card p {
     font-size: 13px;
     color: #666;
-  }
-  
-  .ss-bottom-btn {
+}
+
+.ss-bottom-btn {
     margin-top: 60px;
-  }
-  
+}
