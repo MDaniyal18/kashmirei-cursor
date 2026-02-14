@@ -36,7 +36,7 @@ const ProgramsSection = () => {
           modules={[Pagination]}
           slidesPerView={3}
           spaceBetween={40}
-          centeredSlides={true}
+          centeredSlides={false}
           loop={true}
           pagination={{ clickable: true }}
           breakpoints={{

@@ -40,6 +40,7 @@
     font-size: 46px;
     font-weight: 800;
     margin: 15px 0 20px;
+    color: #fff;
   }
   
   .impact-header p {
@@ -70,6 +71,7 @@
   .impact-card h4 {
     font-size: 18px;
     margin-bottom: 5px;
+    color: #fff;
   }
   
   .impact-card span {
@@ -89,9 +91,6 @@
      PAGINATION
   ========================= */
   
-/* =========================
-   PAGINATION
-========================= */
 
 .impact-swiper {
     padding-bottom: 80px;   /* Creates space below cards */
