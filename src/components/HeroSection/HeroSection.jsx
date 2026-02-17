@@ -1,17 +1,14 @@
-import React, { useRef } from "react";
+import React from "react";
 import "../../styles/hero.css";
 import heroImage from "../../assets/Images/hero-home.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const HeroSection = () => {
-
-  const swiperRef = useRef(null);
-
   return (
     <section className="section-hero">
       <div className="hero-container">
@@ -20,11 +17,9 @@ const HeroSection = () => {
         <div className="hero-content">
 
           <Swiper
-            modules={[Navigation]}
+            modules={[Pagination]}
             loop={true}
-            onSwiper={(swiper) => {
-              swiperRef.current = swiper;
-            }}
+            pagination={{ clickable: true }}
             className="hero-text-swiper"
           >
 
@@ -44,14 +39,9 @@ const HeroSection = () => {
                   challenged students to realize their full potential through
                   mentoring, training opportunities, and financial support.
                 </p>
-
-                <a href="#" className="hero-btn">
-                  DONATE NOW
-                </a>
               </div>
             </SwiperSlide>
 
-            {/* Same text for testing */}
             <SwiperSlide>
               <div className="hero-slide">
                 <h1>
@@ -68,31 +58,10 @@ const HeroSection = () => {
                   challenged students to realize their full potential through
                   mentoring, training opportunities, and financial support.
                 </p>
-
-                <a href="#" className="hero-btn">
-                  DONATE NOW
-                </a>
               </div>
             </SwiperSlide>
 
           </Swiper>
-
-          {/* CUSTOM ARROWS */}
-          <div className="hero-arrows">
-            <div
-              className="hero-prev"
-              onClick={() => swiperRef.current?.slidePrev()}
-            >
-              ←
-            </div>
-
-            <div
-              className="hero-next"
-              onClick={() => swiperRef.current?.slideNext()}
-            >
-              →
-            </div>
-          </div>
 
         </div>
 

@@ -29,9 +29,9 @@ const StatsSection = () => {
             <span>– KEI Donor</span>
           </blockquote>
 
-          <a href="/donate" className="button">
+          {/* <a href="/donate" className="button">
             Donate Now
-          </a>
+          </a> */}
         </div>
 
         {/* CENTER IMAGE */}

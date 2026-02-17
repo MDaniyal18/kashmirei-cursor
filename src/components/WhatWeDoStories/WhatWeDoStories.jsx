@@ -21,21 +21,21 @@ const WhatWeDoStories = () => {
 
           <div className="wwd-story-card">
             <img src={mehak} alt="Mehak Mohiudin" />
-            <p>“Thanks to the Gooru Navigator Program…”</p>
+            <p>“Thanks to the Gooru Navigator Program, I didn’t need extra tuition—KEI gave me everything I needed to succeed.”</p>
             <h4>Mehak Mohiudin</h4>
             <span>Grade 10 Topper (96%)</span>
           </div>
 
           <div className="wwd-story-card">
             <img src={anayat} alt="Farhat Shabir" />
-            <p>“Mindler was a game-changer!…”</p>
+            <p>“Mindler was a game-changer! AI-guided insights helped me find the right career path I never imagined.”</p>
             <h4>Farhat Shabir</h4>
             <span>Science Student Turned Career Explorer</span>
           </div>
 
           <div className="wwd-story-card">
             <img src={kaira} alt="Aijaz Maqbool" />
-            <p>“The Graduate Abroad Program…”</p>
+            <p>“The Graduate Abroad Program made my journey to a joint PhD at IITM-Deakin seamless—from university selection to applications.”</p>
             <h4>Aijaz Maqbool</h4>
             <span>Global PhD Scholar</span>
           </div>
@@ -46,21 +46,21 @@ const WhatWeDoStories = () => {
 
           <div className="wwd-story-card">
             <img src={mehak} alt="Mehak Mohiudin" />
-            <p>“Thanks to the Gooru Navigator Program…”</p>
+            <p>“I’ve supported KEI for years. Their scholars’ resilience gives me hope for Kashmir’s future.”</p>
             <h4>Mehak Mohiudin</h4>
             <span>Grade 10 Topper (96%)</span>
           </div>
 
           <div className="wwd-story-card">
             <img src={anayat} alt="Farhat Shabir" />
-            <p>“Mindler was a game-changer!…”</p>
+            <p>“Thanks to the Gooru Navigator Program, I didn’t need extra tuition—KEI gave me everything I needed to succeed.”</p>
             <h4>Farhat Shabir</h4>
             <span>Science Student Turned Career Explorer</span>
           </div>
 
           <div className="wwd-story-card">
             <img src={kaira} alt="Aijaz Maqbool" />
-            <p>“The Graduate Abroad Program…”</p>
+            <p>“KEI didn’t just help me study; they helped me dream.”</p>
             <h4>Aijaz Maqbool</h4>
             <span>Global PhD Scholar</span>
           </div>

@@ -5,7 +5,7 @@
 .section-hero {
   padding: 120px 0;
   margin-top: 100px;
-  background: #f3f6f8;
+  background: #f2f3f5;
 }
 
 .hero-container {
@@ -78,34 +78,32 @@
   background: #2ea3c2;
 }
 
+
 /* =====================================
-   ARROWS (RIGHT ALIGNED ONLY)
+   HERO PAGINATION DOTS
 ===================================== */
 
-.hero-arrows {
-  display: flex;
-  justify-content: flex-end; /* Only arrows move right */
-  gap: 20px;
+.hero-text-swiper .swiper-pagination {
+  position: relative !important;
   margin-top: 30px;
+  text-align: center; /*alignment*/
 }
 
-.hero-prev,
-.hero-next {
-  width: 48px;
-  height: 48px;
+.hero-text-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #d0d0d0;
   border-radius: 50%;
-  border: 1px solid #d6d6d6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  cursor: pointer;
-  background: #ffffff;
-  transition: all 0.3s ease;
-
-  outline: none;
-  box-shadow: none;
+  opacity: 1;
+  margin: 0 6px !important;
+  transition: 0.3s ease;
 }
+
+.hero-text-swiper .swiper-pagination-bullet-active {
+  background: #48BEDA;
+  transform: scale(1.2);
+}
+
 
 /* Remove blue click highlight */
 .hero-prev:focus,

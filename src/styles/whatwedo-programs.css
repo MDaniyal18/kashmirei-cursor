@@ -3,75 +3,105 @@
 ================================= */
 
 .section-wwd-programs {
-    padding: 120px 0;
-    background: #f5f6f8;
-  }
-  
-  /* Container */
-  .wwd-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-  
-  /* Grid */
+  padding: 120px 0;
+  background: #fff; /* light grey background for contrast */
+}
+
+/* Container */
+.wwd-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Grid */
+.wwd-programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* ===============================
+   CARD (DISTINGUISHABLE STYLE)
+================================= */
+
+.wwd-program-card {
+  background: #ffffff;
+  padding: 55px 35px;
+  border-radius: 20px;
+  text-align: center;
+
+  /* Stronger shadow for floating effect */
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.06),
+    0 20px 60px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid rgba(0, 0, 0, 0.04);
+
+  transition: all 0.35s ease;
+}
+
+/* Hover Lift */
+.wwd-program-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.08),
+    0 30px 70px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   ICON
+================================= */
+
+.wwd-program-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.wwd-program-icon img {
+  width: 75px;
+  height: auto;
+  display: block;
+}
+
+/* ===============================
+   TEXT
+================================= */
+
+.wwd-program-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.wwd-program-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.wwd-program-card strong {
+  display: block;
+  margin-top: 18px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 992px) {
   .wwd-programs-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: 1fr;
   }
-  
-  /* Card */
+
   .wwd-program-card {
-    background: #ffffff;
-    padding: 45px 30px;
-    border-radius: 18px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
-    transition: 0.3s ease;
+    padding: 45px 25px;
   }
-  
-  .wwd-program-card:hover {
-    transform: translateY(-6px);
-  }
-  
-  /* Icon */
-  .wwd-program-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 25px;
-  }
-  
-  .wwd-program-icon img {
-    width: 70px;
-    height: auto;
-    display: block;
-  }
-  
-  
-  /* Text */
-  .wwd-program-card h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-  }
-  
-  .wwd-program-card p {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #555;
-  }
-  
-  .wwd-program-card strong {
-    display: block;
-    margin-top: 12px;
-    font-weight: 600;
-  }
-  
-  /* Responsive */
-  @media (max-width: 992px) {
-    .wwd-programs-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
+}
