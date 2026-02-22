@@ -3,20 +3,25 @@
 ===================================== */
 
 .section-hero {
-  padding: 120px 0;
+  position: relative;
   margin-top: 100px;
-  background: #bec0c3;
+  overflow: hidden;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
 }
 
 .hero-container {
+  position: relative;
+  z-index: 2;
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 100px 60px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 80px;
+  justify-content: flex-start;
 }
 
 /* =====================================
@@ -24,7 +29,7 @@
 ===================================== */
 
 .hero-content {
-  width: 50%;
+  width: 55%;
   text-align: left;
 }
 
@@ -37,7 +42,7 @@
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 18px;
-  color: #111;
+  color: #ffffff;
 }
 
 .hero-slide h1 span {
@@ -48,12 +53,12 @@
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 18px;
-  color: #222;
+  color: #ffffff;
 }
 
 .hero-slide p {
   font-size: 15px;
-  color: #444;
+  color: rgba(255, 255, 255, 0.88);
   max-width: 500px;
   line-height: 1.7;
   margin-bottom: 28px;
@@ -92,7 +97,7 @@
 .hero-text-swiper .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background: #d0d0d0;
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
   opacity: 1;
   margin: 0 6px !important;
@@ -129,15 +134,27 @@
 ===================================== */
 
 .hero-image {
-  width: 50%;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-image img {
   width: 100%;
-  height: 420px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 22px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  object-position: left top;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* =====================================
@@ -146,13 +163,11 @@
 
 @media (max-width: 992px) {
   .hero-container {
-    flex-direction: column;
-    text-align: center;
+    padding: 80px 30px;
   }
 
-  .hero-content,
-  .hero-image {
-    width: 100%;
+  .hero-content {
+    width: 90%;
   }
 
   .hero-slide h1 {
@@ -161,9 +176,5 @@
 
   .hero-subheading {
     font-size: 18px;
-  }
-
-  .hero-arrows {
-    justify-content: center;
   }
 }
