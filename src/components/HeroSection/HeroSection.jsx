@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/Home/hero.css";
-import heroImage from "../../assets/Images/hero-home.jpg";
+import heroImage from "../../assets/Images/Group-Photo-CMI.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";

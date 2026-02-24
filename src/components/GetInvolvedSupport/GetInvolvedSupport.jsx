@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/Get-Involved/getinvolved-support.css";
 
-import supportImage from "../../assets/Images/about-home.jpg";
+import supportImage from "../../assets/Images/Group-Photos.jpg";
 
 const GetInvolvedSupport = () => {
   return (

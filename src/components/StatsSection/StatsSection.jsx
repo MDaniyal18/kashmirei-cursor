@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/Home/stats.css";
-import statsImage from "../../assets/Images/about-home.jpg"; 
+import statsImage from "../../assets/Images/Young-girl-with-device-DSLE.jpg"; 
 // ⚠️ adjust case if folder is images
 
 const StatsSection = () => {

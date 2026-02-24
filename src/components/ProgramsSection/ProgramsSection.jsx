@@ -7,10 +7,10 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import image1 from "../../assets/Images/programs-image1.jpg";
-import image2 from "../../assets/Images/programs-image2.jpg";
+import image1 from "../../assets/Images/Male-mentor-pair_FAI8504.JPG";
+import image2 from "../../assets/Images/Scholar-Communication.JPG";
 import image3 from "../../assets/Images/programs-image3.jpg";
-import image4 from "../../assets/Images/programs-image4.jpg";
+import image4 from "../../assets/Images/Copy-of-Solo-Pic-Kei-Exam.jpg";
 
 const ProgramsSection = () => {
   return (
