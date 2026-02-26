@@ -3,25 +3,36 @@
 ===================================== */
 
 .section-hero {
-  position: relative;
   margin-top: 100px;
   overflow: hidden;
-  min-height: 560px;
+}
+
+.hero-swiper-full {
+  width: 100%;
+}
+
+.hero-slide-bg {
+  width: 100%;
+  min-height: 620px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
   display: flex;
   align-items: center;
 }
 
-.hero-container {
-  position: relative;
-  z-index: 2;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 100px 60px;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
 
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+.hero-slide-content {
+  position: relative;
+  z-index: 1;
+  padding: 100px 60px;
+  width: 42%;
 }
 
 /* =====================================
@@ -37,7 +48,7 @@
   width: 100%;
 }
 
-.hero-slide h1 {
+.hero-slide-content h1 {
   font-size: 50px;
   font-weight: 800;
   line-height: 1.15;
@@ -45,7 +56,7 @@
   color: #ffffff;
 }
 
-.hero-slide h1 span {
+.hero-slide-content h1 span {
   color: #48BEDA;
 }
 
@@ -56,7 +67,7 @@
   color: #ffffff;
 }
 
-.hero-slide p {
+.hero-slide-content p {
   font-size: 15px;
   color: rgba(255, 255, 255, 0.88);
   max-width: 500px;
@@ -88,13 +99,15 @@
    HERO PAGINATION DOTS
 ===================================== */
 
-.hero-text-swiper .swiper-pagination {
-  position: relative !important;
-  margin-top: 30px;
-  text-align: center; /*alignment*/
+.hero-swiper-full .swiper-pagination {
+  position: absolute !important;
+  bottom: 30px !important;
+  text-align: center;
+  padding-left: 0;
+  z-index: 10;
 }
 
-.hero-text-swiper .swiper-pagination-bullet {
+.hero-swiper-full .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   background: rgba(255, 255, 255, 0.6);
@@ -104,7 +117,7 @@
   transition: 0.3s ease;
 }
 
-.hero-text-swiper .swiper-pagination-bullet-active {
+.hero-swiper-full .swiper-pagination-bullet-active {
   background: #48BEDA;
   transform: scale(1.2);
 }
@@ -133,48 +146,26 @@
    RIGHT IMAGE
 ===================================== */
 
-.hero-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.hero-image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left top;
-  border-radius: 0;
-  box-shadow: none;
-}
 
 /* =====================================
    RESPONSIVE
 ===================================== */
 
 @media (max-width: 992px) {
-  .hero-container {
+  .hero-slide-content {
+    width: 90%;
     padding: 80px 30px;
   }
 
-  .hero-content {
-    width: 90%;
-  }
-
-  .hero-slide h1 {
+  .hero-slide-content h1 {
     font-size: 38px;
   }
 
   .hero-subheading {
     font-size: 18px;
+  }
+
+  .hero-swiper-full .swiper-pagination {
+    padding-left: 0;
   }
 }
