@@ -3,20 +3,36 @@
 ===================================== */
 
 .section-hero {
-  padding: 120px 0;
-  margin-top: 100px;
-  background: #f2f3f5;
+  /* margin-top: 100px; */
+  overflow: hidden;
 }
 
-.hero-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
+.hero-swiper-full {
+  width: 100%;
+}
 
+.hero-slide-bg {
+  width: 100%;
+  min-height: 620px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 80px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+
+.hero-slide-content {
+  position: relative;
+  z-index: 1;
+  padding: 100px 60px;
+  width: 42%;
 }
 
 /* =====================================
@@ -24,7 +40,7 @@
 ===================================== */
 
 .hero-content {
-  width: 50%;
+  width: 55%;
   text-align: left;
 }
 
@@ -32,15 +48,15 @@
   width: 100%;
 }
 
-.hero-slide h1 {
+.hero-slide-content h1 {
   font-size: 50px;
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 18px;
-  color: #111;
+  color: #ffffff;
 }
 
-.hero-slide h1 span {
+.hero-slide-content h1 span {
   color: #48BEDA;
 }
 
@@ -48,12 +64,12 @@
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 18px;
-  color: #222;
+  color: #ffffff;
 }
 
-.hero-slide p {
+.hero-slide-content p {
   font-size: 15px;
-  color: #444;
+  color: rgba(255, 255, 255, 0.88);
   max-width: 500px;
   line-height: 1.7;
   margin-bottom: 28px;
@@ -83,23 +99,25 @@
    HERO PAGINATION DOTS
 ===================================== */
 
-.hero-text-swiper .swiper-pagination {
-  position: relative !important;
-  margin-top: 30px;
-  text-align: center; /*alignment*/
+.hero-swiper-full .swiper-pagination {
+  position: absolute !important;
+  bottom: 30px !important;
+  text-align: center;
+  padding-left: 0;
+  z-index: 10;
 }
 
-.hero-text-swiper .swiper-pagination-bullet {
+.hero-swiper-full .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background: #d0d0d0;
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
   opacity: 1;
   margin: 0 6px !important;
   transition: 0.3s ease;
 }
 
-.hero-text-swiper .swiper-pagination-bullet-active {
+.hero-swiper-full .swiper-pagination-bullet-active {
   background: #48BEDA;
   transform: scale(1.2);
 }
@@ -124,38 +142,19 @@
   border-color: #48BEDA;
 }
 
-/* =====================================
-   RIGHT IMAGE
-===================================== */
 
-.hero-image {
-  width: 50%;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  border-radius: 22px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
-}
 
 /* =====================================
    RESPONSIVE
 ===================================== */
 
 @media (max-width: 992px) {
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
+  .hero-slide-content {
+    width: 90%;
+    padding: 80px 30px;
   }
 
-  .hero-content,
-  .hero-image {
-    width: 100%;
-  }
-
-  .hero-slide h1 {
+  .hero-slide-content h1 {
     font-size: 38px;
   }
 
@@ -163,7 +162,7 @@
     font-size: 18px;
   }
 
-  .hero-arrows {
-    justify-content: center;
+  .hero-swiper-full .swiper-pagination {
+    padding-left: 0;
   }
 }

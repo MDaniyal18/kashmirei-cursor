@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/Home/impact.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Keyboard } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -29,11 +29,15 @@ const ImpactSection = () => {
 
         {/* SLIDER */}
         <Swiper
-          modules={[Pagination]}
+          modules={[Pagination, Keyboard]}
           slidesPerView={2}
           spaceBetween={40}
           loop={true}
           pagination={{ clickable: true }}
+          keyboard={{
+            enabled: true,
+            onlyInViewport: true,
+          }}
           breakpoints={{
             0: { slidesPerView: 1 },
             992: { slidesPerView: 2 },

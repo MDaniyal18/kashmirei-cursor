@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/Programs/programs.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Keyboard } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -33,12 +33,16 @@ const ProgramsSection = () => {
       {/* ================= FULL WIDTH SLIDER ================= */}
       <div className="programs-full">
         <Swiper
-          modules={[Pagination]}
+          modules={[Pagination, Keyboard]}
           slidesPerView={3}
           spaceBetween={40}
           centeredSlides={false}
           loop={true}
           pagination={{ clickable: true }}
+          keyboard={{
+            enabled: true,
+            onlyInViewport: true,
+          }}
           breakpoints={{
             0: { slidesPerView: 1 },
             768: { slidesPerView: 2 },

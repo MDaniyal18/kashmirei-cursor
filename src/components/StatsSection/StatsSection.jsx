@@ -43,9 +43,9 @@ const StatsSection = () => {
         <div className="stats-column">
   <div className="stat-item"><h3>8,000+</h3><p>Scholarships Awarded</p></div>
   <div className="stat-item"><h3>1600+</h3><p>Digital Devices Provided</p></div>
-  <div className="stat-item"><h3>100+</h3><p>Career Workshops Conducted</p></div>
+  <div className="stat-item"><h3>500+</h3><p>Career Workshops Conducted</p></div>
   <div className="stat-item"><h3>96%</h3><p>Scholars Graduate With Distinction</p></div>
-  <div className="stat-item"><h3>200+</h3><p>Alumni Professionals</p></div>
+  <div className="stat-item"><h3>1000+</h3><p>Alumni Professionals</p></div>
         </div>
 
 
