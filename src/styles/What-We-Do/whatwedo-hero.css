@@ -1,32 +1,25 @@
-/* ===============================
-   WHAT WE DO - HERO
-================================= */
-
 .section-wwd-hero {
-    position: relative;
-    height: 420px;
-    background: url("../../assets/Images/about-home.jpg") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  /* Container */
-  .wwd-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-  
-  /* Light overlay */
-  .section-wwd-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.85);
-  }
-  
+  position: relative;
+  height: 420px;
+  background-color: #e2e4e9; /* solid background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Container */
+.wwd-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Remove the overlay */
+.section-wwd-hero::after {
+  content: none;
+}
+
   /* Content */
   .wwd-hero-content {
     position: relative;

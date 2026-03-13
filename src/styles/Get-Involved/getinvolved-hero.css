@@ -1,16 +1,15 @@
 .gi-hero {
-    position: relative;
-    padding: 160px 0 140px;
-    background: url("../../assets/Images/mission.jpg") center/cover no-repeat;
-    text-align: center;
-  }
-  
-  .gi-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(255,255,255,0.88);
-  }
+  position: relative;
+  padding: 160px 0 140px;
+  background-color: #e2e4e9; /* solid background color */
+  text-align: center;
+}
+
+/* Remove the overlay if not needed */
+.gi-hero::after {
+  content: none;
+}
+
   
   .gi-hero .container {
     position: relative;
