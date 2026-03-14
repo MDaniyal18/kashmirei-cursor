@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/Home/hero.css";
 import heroImage1 from "../../assets/Images/hero-home-seerat.jpg";
-import heroImage2 from "../../assets/Images/two-kids-cover.jpeg";
+import heroImage2 from "../../assets/Images/coverimage.jpeg";
 import heroImage3 from "../../assets/Images/girls-cover.jpeg";
 
 import { Swiper, SwiperSlide } from "swiper/react";

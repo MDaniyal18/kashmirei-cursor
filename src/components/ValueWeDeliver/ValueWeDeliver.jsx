@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/Home/value-we-deliver.css";
-import valueImage from "../../assets/Images/value-we-deliver.jpeg";
+import valueImage from "../../assets/Images/valuewe-deliver.png";
 
 const ValueWeDeliver = () => {
   return (
