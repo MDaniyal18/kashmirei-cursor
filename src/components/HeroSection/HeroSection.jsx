@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/Home/hero.css";
 import heroImage1 from "../../assets/Images/hero-home-seerat.jpg";
-import heroImage2 from "../../assets/Images/coverimage.jpeg";
+import heroImage2 from "../../assets/Images/cover_image2.jpeg";
 import heroImage3 from "../../assets/Images/girls-cover.jpeg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -45,7 +45,7 @@ const HeroSection = () => {
         <SwiperSlide>
           <div
             className="hero-slide-bg"
-            style={{ backgroundImage: `url(${heroImage2})` }}
+            style={{ backgroundImage: `url(${heroImage2})`, background: "contain" }}
           >
             <div className="hero-overlay" />
             <div className="hero-slide-content">
