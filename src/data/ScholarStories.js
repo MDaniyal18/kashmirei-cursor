@@ -40,7 +40,7 @@ import AdleenThumb from "../assets/Images/AdleenThumb2.webp";
 import Tabinda from "../assets/Images/Tabinda.webp";
 import TabindaThumb from "../assets/Images/TabindaThumb.webp";
 
-import Anayat from "../assets/Images/anayat_yousuf.webp";
+import Anayat from "../assets/Images/Anayat_yousuf.webp";
 import AnayatThumb from "../assets/Images/AnayatThumb.webp";
 
 import Mehak from "../assets/Images/mahak.jpg";
