@@ -1,68 +1,91 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../../styles/Scholar-Page/scholar-grid.css";
 
-import mehak from "../../assets/Images/mehak.png";
-import anayat from "../../assets/Images/anayat.png";
-import karia from "../../assets/Images/karia.png";
+import scholarStories from "../../data/ScholarStories";
 
 const ScholarStoriesGrid = () => {
+
+  const [showAll, setShowAll] = useState(false);
+
+  const storiesToShow = showAll
+    ? scholarStories
+    : scholarStories.slice(0, 9);
+
   return (
-    <section className="section-ss-grid">
+    <section id="scholar-stories-grid" className="section-ss-grid">
       <div className="container">
 
         <div className="ss-grid">
 
-          {/* Card 1 */}
-          <div className="ss-card">
-            <img src={mehak} alt="Mehak" />
-            <p>“Thanks to the Gooru Navigator Program…”</p>
-            <h4>Mehak Mohiudin</h4>
-            <span>Grade 10 Topper (96%)</span>
-          </div>
+          {storiesToShow.map((story) => {
 
-          {/* Card 2 */}
-          <div className="ss-card">
-            <img src={anayat} alt="Anayat" />
-            <p>“Mindler was a game-changer!…”</p>
-            <h4>Farhat Shabir</h4>
-            <span>Science Student Turned Career Explorer</span>
-          </div>
+            const preview =
+              story?.paragraphs?.length
+                ? story.paragraphs[0]
+                    .slice(0, 110)
+                    .replace(/\s+\S*$/, "") + "..."
+                : "";
 
-          {/* Card 3 */}
-          <div className="ss-card">
-            <img src={karia} alt="Kaira" />
-            <p>“The Graduate Abroad Program…”</p>
-            <h4>Aijaz Maqbool</h4>
-            <span>Global PhD Scholar</span>
-          </div>
+            return (
 
-          {/* Duplicate for layout (like live site 6 grid) */}
-          <div className="ss-card">
-            <img src={anayat} alt="Donor" />
-            <p>“I’ve supported KEI for years…”</p>
-            <h4>Donor Reflection</h4>
-            <span>Long-term Donor</span>
-          </div>
+              <div className="ss-card" key={story.id}>
 
-          <div className="ss-card">
-            <img src={mehak} alt="Mehak" />
-            <p>“KEI gave me everything I needed…”</p>
-            <h4>Mehak Mohiudin</h4>
-            <span>Grade 10 Topper (96%)</span>
-          </div>
+                <img src={story.thumbnail} alt={story.name} />
 
-          <div className="ss-card">
-            <img src={karia} alt="Farhat" />
-            <p>“KEI didn’t just help me study…”</p>
-            <h4>Farhat Shabir</h4>
-            <span>Science Student Turned Career Explorer</span>
-          </div>
+                <p>“{preview}”</p>
+
+                <h4>{story.name}</h4>
+
+                <Link
+                  to={`/blog/${story.slug}`}
+                  className="ss-read-more"
+                  onClick={() =>
+                    sessionStorage.setItem("scrollToScholarGrid", "true")
+                  }
+                >
+                  Read More →
+                </Link>
+
+              </div>
+
+            );
+          })}
 
         </div>
 
         <div className="ss-buttons">
-          <button className="btn-primary">READ MORE SCHOLAR STORIES</button>
-          <button className="btn-outline">SUPPORT A SCHOLAR'S JOURNEY</button>
+
+          {!showAll && (
+            <button
+              className="btn-primary"
+              onClick={() => setShowAll(true)}
+            >
+              READ MORE SCHOLAR STORIES
+            </button>
+          )}
+
+          <button className="btn-outline">
+            SUPPORT A SCHOLAR'S JOURNEY
+          </button>
+
+        </div>
+
+        {/* Back to Top */}
+
+        <div className="ss-back-top">
+
+          <button
+            onClick={() =>
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+              })
+            }
+          >
+            Back to Top ↑
+          </button>
+
         </div>
 
       </div>

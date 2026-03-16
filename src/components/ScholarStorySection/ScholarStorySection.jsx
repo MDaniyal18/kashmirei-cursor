@@ -5,52 +5,68 @@ import "../../styles/Scholar-Page/story-grid.css";
 
 const ScholarStorySection = () => {
 
-  // Get unique years automatically
   const years = [...new Set(scholarStories.map(story => story.year))];
 
   // Sort newest year first
   years.sort((a, b) => b - a);
 
   return (
-    <section className="story-archive">
+    <section id="scholar-stories-grid" className="story-archive">
 
-      {years.map(year => {
+      <div className="story-wrapper">
 
-        const storiesByYear = scholarStories.filter(
-          story => story.year === year
-        );
+        {years.map((year) => {
 
-        return (
+          const storiesByYear = scholarStories
+            .filter((story) => story.year === year)
+            .sort((a, b) => b.id - a.id);
 
-          <div key={year} className="year-section">
+          return (
 
-            <h2 className="year-heading">{year}</h2>
+            <div key={year} className="year-section">
 
-            <div className="story-grid">
+              <h2 className="year-heading">{year}</h2>
 
-              {storiesByYear.map(story => (
+              <div className="story-grid">
 
-                <Link
-                  key={story.id}
-                  to={`/blog/${story.slug}`}   // ✅ Correct navigation
-                  className="story-card"
-                >
+                {storiesByYear.map((story) => (
 
-                  <img src={story.thumbnail} alt={story.name} />  {/* ✅ Thumbnail */}
+                  <Link
+                    key={story.id}
+                    id={`story-card-${story.id}`}
+                    to={`/blog/${story.slug}`}
+                    className="story-card"
+                    onClick={() => {
+                      sessionStorage.setItem("scrollToScholarGrid", "true");
+                      sessionStorage.setItem("clickedStoryId", story.id);
+                    }}
+                  >
 
-                  <p className="story-name">{story.name}</p>
+                    <div className="story-thumb">
+                      <img
+                        src={story.thumbnail}
+                        alt={story.name}
+                        loading="lazy"
+                      />
+                    </div>
 
-                </Link>
+                    <p className="story-name">
+                      {story.name}
+                    </p>
 
-              ))}
+                  </Link>
+
+                ))}
+
+              </div>
 
             </div>
 
-          </div>
+          );
 
-        );
+        })}
 
-      })}
+      </div>
 
     </section>
   );

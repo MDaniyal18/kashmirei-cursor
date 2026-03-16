@@ -3,156 +3,195 @@
 ===================================== */
 
 .section-ss-grid {
-    padding: 140px 0;
-    background: #f2f3f5; /* Light grey page background */
-  }
-  
-  .section-ss-grid .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-  
-  /* =====================================
-     GRID
-  ===================================== */
-  
+  padding: 140px 0;
+  background: #f2f3f5;
+}
+
+.section-ss-grid .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* =====================================
+   GRID
+===================================== */
+
+.ss-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 40px;
+  margin-top: 40px;
+}
+
+/* =====================================
+   CARD
+===================================== */
+
+.ss-card {
+  position: relative;
+  background: #f8f9fb;
+  padding: 60px 35px 35px;
+  border-radius: 14px;
+
+  border: 1px solid #e9eaee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.ss-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* =====================================
+   AVATAR
+===================================== */
+
+.ss-card img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border: 6px solid #ffffff;
+  background: #ffffff;
+}
+
+/* =====================================
+   QUOTE
+===================================== */
+
+.ss-card p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  font-style: italic;
+  color: #444;
+  margin-bottom: 22px;
+}
+
+/* =====================================
+   NAME
+===================================== */
+
+.ss-card h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+/* =====================================
+   DESIGNATION
+===================================== */
+
+.ss-card span {
+  font-size: 12px;
+  color: #48BEDA;
+  font-weight: 500;
+}
+
+/* =====================================
+   READ MORE
+===================================== */
+
+.ss-read-more {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #48BEDA;
+  text-decoration: none;
+}
+
+.ss-read-more:hover {
+  text-decoration: underline;
+}
+
+/* =====================================
+   BACK TO TOP
+===================================== */
+
+.ss-back-top {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.ss-back-top button {
+  background: #48BEDA;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ss-back-top button:hover {
+  background: #3aa9c4;
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.ss-buttons {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: #48BEDA;
+  color: #ffffff;
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #3aa9c4;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #48BEDA;
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1.5px solid #48BEDA;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #48BEDA;
+  color: #ffffff;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 992px) {
+
   .ss-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px 40px; /* vertical + horizontal spacing */
-    margin-top: 40px;
+    grid-template-columns: 1fr;
   }
-  
-  /* =====================================
-     CARD
-  ===================================== */
-  
-  .ss-card {
-    position: relative;
-    background: #f8f9fb; /* soft card grey */
-    padding: 60px 35px 35px;
-    border-radius: 14px;
-  
-    border: 1px solid #e9eaee;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  
-    text-align: center;
-    transition: 0.3s ease;
-  }
-  
-  /* Subtle hover (very soft lift) */
-  .ss-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
-  }
-  
-  /* =====================================
-     AVATAR (Floating)
-  ===================================== */
-  
-  .ss-card img {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    object-fit: cover;
-  
-    position: absolute;
-    top: -36px;
-    left: 50%;
-    transform: translateX(-50%);
-  
-    border: 6px solid #ffffff;
-    background: #ffffff;
-  }
-  
-  /* =====================================
-     QUOTE TEXT
-  ===================================== */
-  
-  .ss-card p {
-    font-size: 13.5px;
-    line-height: 1.7;
-    font-style: italic;
-    color: #444;
-    margin-bottom: 22px;
-  }
-  
-  /* =====================================
-     NAME
-  ===================================== */
-  
-  .ss-card h4 {
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 6px;
-    color: #111;
-  }
-  
-  /* =====================================
-     DESIGNATION
-  ===================================== */
-  
-  .ss-card span {
-    font-size: 12px;
-    color: #48BEDA;
-    font-weight: 500;
-  }
-  
-  /* =====================================
-     BUTTONS
-  ===================================== */
-  
-  .ss-buttons {
-    margin-top: 70px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  /* Primary Button */
-  .btn-primary {
-    background: #48BEDA;
-    color: #ffffff;
-    padding: 12px 26px;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-  
-  .btn-primary:hover {
-    background: #3aa9c4;
-  }
-  
-  /* Outline Button */
-  .btn-outline {
-    background: transparent;
-    color: #48BEDA;
-    padding: 12px 26px;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    border: 1.5px solid #48BEDA;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-  
-  .btn-outline:hover {
-    background: #48BEDA;
-    color: #ffffff;
-  }
-  
-  /* =====================================
-     RESPONSIVE
-  ===================================== */
-  
-  @media (max-width: 992px) {
-    .ss-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
+
+}

@@ -21,7 +21,13 @@ const Blog = () => {
       <div className="story-container">
 
         {/* Back button */}
-        <Link to="/scholar-stories" className="back-button">
+        <Link
+          to="/scholar-stories"
+          className="back-button"
+          onClick={() =>
+            sessionStorage.setItem("scrollToScholarGrid", "true")
+          }
+        >
           ← Back to Scholar Stories
         </Link>
 

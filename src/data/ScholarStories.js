@@ -1,62 +1,62 @@
 import Gousia from "../assets/Images/Gousia.webp";
-import GousiaThumb from "../assets/Images/GousiaThumb.webp";
+import GousiaThumb from "../assets/Thumbnails/GousiaThumb.webp";
 
 import Snobar from "../assets/Images/Snobar.webp";
-import SnoberThumb from "../assets/Images/SnoberThumb.webp";
+import SnoberThumb from "../assets/Thumbnails/SnoberThumb.webp";
 
 import Irfan from "../assets/Images/Irfan.webp";
-import IrfanThumb from "../assets/Images/IrfanThumb.webp";
+import IrfanThumb from "../assets/Thumbnails/IrfanThumb.webp";
 
 import Azhar from "../assets/Images/Azhar.webp";
-import AzharThumb from "../assets/Images/AzharThumb.webp";
+import AzharThumb from "../assets/Thumbnails/AzharThumb.webp";
 
 import Saba from "../assets/Images/Saba.webp";
-import SabaThumb from "../assets/Images/SabaThumb.webp";
+import SabaThumb from "../assets/Thumbnails/SabaThumb.webp";
 
 import Nadeem from "../assets/Images/Nadeem.webp";
-import NadeemThumb from "../assets/Images/NadeemThumb.webp";
+import NadeemThumb from "../assets/Thumbnails/NadeemThumb.webp";
 
 import Shabdhar from "../assets/Images/Shabdhar.webp";
-// import Saba from "../assets/Images/Saba.webp";
+// import Saba from "../assets/Thumbnails/Saba.webp";
 
 import umerabdullah from "../assets/Images/umerabdullah.jpg";
-import UmerThumb from "../assets/Images/UmerThumb.webp";
+import UmerThumb from "../assets/Thumbnails/UmerThumb.webp";
 
 import Idrees from "../assets/Images/Idrees.webp";
-import IdreesThumb from "../assets/Images/IdreesThumb.webp";
+import IdreesThumb from "../assets/Thumbnails/IdreesThumb.webp";
 
 import Fiza from "../assets/Images/Fiza.jpg";
-import FizaThumb from "../assets/Images/FizaThumb.webp";
+import FizaThumb from "../assets/Thumbnails/FizaThumb.webp";
 
 import Murtaza from "../assets/Images/Murtaza.webp";
-import MurtazaThumb from "../assets/Images/MurtazaThumb.webp";
+import MurtazaThumb from "../assets/Thumbnails/MurtazaThumb.webp";
 
 import Akhter from "../assets/Images/Akhter.webp";
-import AkhterThumb from "../assets/Images/AkhterThumb.webp";
+import AkhterThumb from "../assets/Thumbnails/AkhterThumb.webp";
 
 import Adleen from "../assets/Images/Adleen.webp";
-import AdleenThumb from "../assets/Images/AdleenThumb2.webp";
+import AdleenThumb from "../assets/Thumbnails/AdleenThumb2.webp";
 
 import Tabinda from "../assets/Images/Tabinda.webp";
-import TabindaThumb from "../assets/Images/TabindaThumb.webp";
+import TabindaThumb from "../assets/Thumbnails/TabindaThumb.webp";
 
 import Anayat from "../assets/Images/Anayat_yousuf.webp";
-import AnayatThumb from "../assets/Images/AnayatThumb.webp";
+import AnayatThumb from "../assets/Thumbnails/AnayatThumb.webp";
 
 import Mehak from "../assets/Images/mahak.jpg";
-import MehakThumb from "../assets/Images/MehakThumb.webp";
+import MehakThumb from "../assets/Thumbnails/MehakThumb.webp";
 
 import Karia from "../assets/Images/Karia.webp";
-import KariaThumb from "../assets/Images/KariaThumb.webp";
+import KariaThumb from "../assets/Thumbnails/KariaThumb.webp";
 
 import Tabish from "../assets/Images/Tabish.webp";
-import TabishThumb from "../assets/Images/TabishThumb.webp";
+import TabishThumb from "../assets/Thumbnails/TabishThumb.webp";
 
 import Snober from "../assets/Images/Snober_mehraj.webp";
-import SnoberThumb2 from "../assets/Images/SnoberThumb2.webp";
+import SnoberThumb2 from "../assets/Thumbnails/SnoberThumb2.webp";
 
 import Owais from "../assets/Images/Owais.webp";
-import OwaisThumb from "../assets/Images/OwaisThumb.webp";
+import OwaisThumb from "../assets/Thumbnails/OwaisThumb.webp";
 
 
 
@@ -89,7 +89,7 @@ const scholarStories = [
 
   {
     id: 2,
-    name: "Snobar",
+    name: "Snobar Mehraj",
     year: 2024,
     slug: "snober-mehraj",   // used in URL
     thumbnail: SnoberThumb,  // used in grid
@@ -110,6 +110,7 @@ const scholarStories = [
 
     ]
   },
+
   {
     id: 3,
     name: "Irfan",
@@ -120,9 +121,7 @@ const scholarStories = [
     date: "March 1, 2025",
     image: Irfan,
     paragraphs: [
-        "Asalamualaikum", 
-        
-        "My name is Irfan Shafi, and I am from Budgam. I am currently pursuing my MBBS at GMC Baramulla.",
+        "Asalamualaikum, My name is Irfan Shafi, and I am from Budgam. I am currently pursuing my MBBS at GMC Baramulla.",
         
         "My journey with KEI started in 2017 via the HSSP program. KEI helped me a lot in my journey to reach where I am right now.",
         
@@ -186,7 +185,7 @@ const scholarStories = [
     id: 7,
     name: "Sabdhar Bashir",
     year: 2024,    
-    slug: "snober-mehraj",   // used in URL
+    slug: "sabhdhar-bashir",   // used in URL
     thumbnail: SnoberThumb,  // used in grid
     title: "Shabdhar's Story with KEI",
     date: "March 20, 2025",
