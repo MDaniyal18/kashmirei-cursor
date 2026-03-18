@@ -3,132 +3,235 @@
 ========================= */
 
 .section-impact {
-    padding: 180px 0;
-    background: #0f1b24;   /* Deep premium navy tone */
-    color: #fff;
-  }
-  
-  .impact-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      rgba(0,0,0,0.75),
-      rgba(0,0,0,0.75)
-    );
-  }
-  
-  .impact-container {
-    position: relative;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
-  
-  .impact-header {
-    margin-bottom: 70px;
-    max-width: 600px;
-  }
-  
-  .impact-label {
-    font-size: 12px;
-    letter-spacing: 1px;
-    color: #48BEDA;
-    font-weight: 600;
-  }
-  
-  .impact-header h2 {
-    font-size: 46px;
-    font-weight: 800;
-    margin: 15px 0 20px;
-    color: #fff;
-  }
-  
-  .impact-header p {
-    font-size: 15px;
-    line-height: 1.8;
-    color: #ddd;
-  }
-  
-  /* =========================
-     CARDS
-  ========================= */
-  
-  .impact-card {
-    background: #2c2c2c;
-    padding: 30px;
-    border-radius: 16px;
-    position: relative;
-  }
-  
-  .impact-card img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    object-fit: cover;
-    border: 2px solid white;
-    box-sizing: border-box;
-  }
-  
-  .impact-card h4 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    color: #fff;
-  }
-  
-  .impact-card span {
-    font-size: 13px;
-    color: #48BEDA;
-    display: block;
-    margin-bottom: 15px;
-  }
-  
-  .impact-card p {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #ccc;
-  }
-  
-  /* =========================
-     PAGINATION
-  ========================= */
-  
+  padding: 180px 0;
+  background: #0f1b24;
+  color: #fff;
+}
+
+.impact-container {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+/* HEADER */
+
+.impact-header {
+  margin-bottom: 70px;
+  max-width: 600px;
+}
+
+.impact-label {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #48BEDA;
+  font-weight: 600;
+}
+
+.impact-header h2 {
+  font-size: 46px;
+  font-weight: 800;
+  margin: 15px 0 20px;
+  color: #fff;
+}
+
+.impact-header p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.impact-card {
+  background: #2c2c2c;
+  padding: 30px;
+  border-radius: 16px;
+  position: relative;
+}
+
+.impact-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.impact-card h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.impact-card span {
+  font-size: 13px;
+  color: #48BEDA;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.impact-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+/* =========================
+   PAGINATION
+========================= */
 
 .impact-swiper {
-    padding-bottom: 80px;   /* Creates space below cards */
+  padding-bottom: 80px;
+}
+
+.section-impact .swiper-pagination {
+  position: relative !important;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.section-impact .swiper-pagination-bullet {
+  width: 55px;
+  height: 6px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.3);
+  opacity: 1;
+  margin: 0 8px !important;
+  transition: 0.3s ease;
+}
+
+.section-impact .swiper-pagination-bullet-active {
+  background: #48BEDA;
+}
+
+
+/* =====================================
+   TABLET (≤ 992px)
+===================================== */
+
+@media (max-width: 992px) {
+
+  .section-impact {
+    padding: 120px 0;
   }
-  
-  .section-impact .swiper-pagination {
-    position: relative !important;
-    margin-top: 50px;
-    text-align: center;
+
+  .impact-container {
+    padding: 0 40px;
   }
-  
+
+  .impact-header h2 {
+    font-size: 34px;
+  }
+
+  .impact-header p {
+    font-size: 14px;
+  }
+
+  .impact-card {
+    padding: 25px;
+  }
+
+  .impact-card h4 {
+    font-size: 16px;
+  }
+
+  .impact-card p {
+    font-size: 13.5px;
+  }
+
+  .impact-swiper {
+    padding-bottom: 70px;
+  }
+
   .section-impact .swiper-pagination-bullet {
-    width: 55px;
-    height: 6px;
-    border-radius: 20px;
-    background: rgba(255,255,255,0.3);
-    opacity: 1;
-    margin: 0 8px !important;
-    transition: 0.3s ease;
-  }
-  
-  .section-impact .swiper-pagination-bullet-active {
-    background: #48BEDA;
-  }
-  
-  
-  .swiper-pagination-bullet {
     width: 40px;
-    height: 6px;
-    border-radius: 20px;
-    background: #777;
-    opacity: 1;
-    margin: 0 6px !important;
   }
-  
-  .swiper-pagination-bullet-active {
-    background: #48BEDA;
+
+}
+
+
+/* =====================================
+   MOBILE (≤ 768px)
+===================================== */
+
+@media (max-width: 768px) {
+
+  .section-impact {
+    padding: 90px 0;
   }
-  
+
+  .impact-container {
+    padding: 0 20px;
+  }
+
+  .impact-header {
+    margin-bottom: 50px;
+  }
+
+  .impact-header h2 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .impact-header p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .impact-card {
+    padding: 20px;
+  }
+
+  .impact-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .impact-card h4 {
+    font-size: 15px;
+  }
+
+  .impact-card span {
+    font-size: 12px;
+  }
+
+  .impact-card p {
+    font-size: 13px;
+  }
+
+  .impact-swiper {
+    padding-bottom: 60px;
+  }
+
+  .section-impact .swiper-pagination-bullet {
+    width: 30px;
+    height: 5px;
+  }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE (≤ 480px)
+===================================== */
+
+@media (max-width: 480px) {
+
+  .section-impact {
+    padding: 70px 0;
+  }
+
+  .impact-header h2 {
+    font-size: 22px;
+  }
+
+  .impact-card p {
+    font-size: 12.5px;
+  }
+
+}

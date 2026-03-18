@@ -30,8 +30,7 @@ const ImpactSection = () => {
         {/* SLIDER */}
         <Swiper
           modules={[Pagination, Keyboard]}
-          slidesPerView={2}
-          spaceBetween={40}
+          spaceBetween={30}
           loop={true}
           pagination={{ clickable: true }}
           keyboard={{
@@ -39,15 +38,27 @@ const ImpactSection = () => {
             onlyInViewport: true,
           }}
           breakpoints={{
-            0: { slidesPerView: 1 },
-            992: { slidesPerView: 2 },
+            0: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 1,   // ✅ tablet cleaner layout
+              spaceBetween: 25,
+            },
+            992: {
+              slidesPerView: 2,   // ✅ desktop
+              spaceBetween: 40,
+            },
           }}
           className="impact-swiper"
         >
 
+          {/* CARD 1 */}
           <SwiperSlide>
             <div className="impact-card">
               <div className="quote-icon">”</div>
+
               <div className="impact-user">
                 <img src={mehak} alt="Mehak Fayaz" />
                 <div>
@@ -55,6 +66,7 @@ const ImpactSection = () => {
                   <span>Pursuing Medicine</span>
                 </div>
               </div>
+
               <p>
                 Coming from an underprivileged background, Mehak received
                 financial and mentoring support from KEI, enabling her to
@@ -63,9 +75,11 @@ const ImpactSection = () => {
             </div>
           </SwiperSlide>
 
+          {/* CARD 2 */}
           <SwiperSlide>
             <div className="impact-card">
               <div className="quote-icon">”</div>
+
               <div className="impact-user">
                 <img src={karia} alt="Kaira Scholar" />
                 <div>
@@ -73,6 +87,7 @@ const ImpactSection = () => {
                   <span>Leadership Scholar</span>
                 </div>
               </div>
+
               <p>
                 Through KEI’s leadership workshops and mentorship programs,
                 Kaira developed the confidence and clarity to pursue her
@@ -81,9 +96,11 @@ const ImpactSection = () => {
             </div>
           </SwiperSlide>
 
+          {/* CARD 3 */}
           <SwiperSlide>
             <div className="impact-card">
               <div className="quote-icon">”</div>
+
               <div className="impact-user">
                 <img src={anayat} alt="Anayat Scholar" />
                 <div>
@@ -91,6 +108,7 @@ const ImpactSection = () => {
                   <span>Engineering Aspirant</span>
                 </div>
               </div>
+
               <p>
                 Azhar’s journey reflects resilience and determination.
                 With KEI’s scholarship and career guidance support, he is
@@ -102,6 +120,7 @@ const ImpactSection = () => {
         </Swiper>
 
       </div>
+
     </section>
   );
 };

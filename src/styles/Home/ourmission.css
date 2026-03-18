@@ -4,7 +4,7 @@
 
 .section-our-mission {
   position: relative;
-  padding: 120px 0;                /* reduced for compact look */
+  padding: 120px 0;
   background: #f6f7f8;
   overflow: hidden;
 }
@@ -17,9 +17,9 @@
   position: absolute;
   top: 20px;
   left: 100px;
-  font-size: 140px;                /* larger like screenshot */
+  font-size: 140px;
   font-weight: 600;
-  color: rgba(0, 0, 0, 0.025);     /* softer */
+  color: rgba(0, 0, 0, 0.025);
   letter-spacing: 2px;
   white-space: nowrap;
   pointer-events: none;
@@ -53,8 +53,6 @@
   width: 52%;
 }
 
-/* Small label */
-
 .ourmission-label {
   font-size: 12px;
   letter-spacing: 1.5px;
@@ -62,29 +60,21 @@
   font-weight: 600;
   margin-bottom: 16px;
   display: block;
-  text-transform: none;
 }
 
-/* Main Heading */
-
 .ourmission-content h2 {
-  font-size: 50px;                 /* slightly larger */
+  font-size: 50px;
   font-weight: 800;
   margin-bottom: 22px;
   line-height: 1.1;
   color: #000;
 }
 
-/* Subheading */
-
 .ourmission-content h3 {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 14px;
-  color: #000;
 }
-
-/* Quote */
 
 .ourmission-quote {
   font-size: 15px;
@@ -93,34 +83,26 @@
   margin-bottom: 6px;
 }
 
-/* Donor */
-
 .ourmission-donor {
   font-size: 14px;
   margin-bottom: 28px;
-  color: #000;
 }
-
-/* Why KEI Matters */
 
 .ourmission-content h4 {
   font-family: "Roboto", Sans-serif;
-    font-size: 26px;
-    font-weight: 400;
-    color: #050505;
+  font-size: 26px;
+  font-weight: 400;
 }
 
 .ourmission-content p {
   font-size: 15px;
   line-height: 1.8;
   color: #333;
-  margin-bottom: 26px;            /* tighter */
+  margin-bottom: 26px;
   max-width: 520px;
 }
 
-/* =====================================
-   BUTTON
-===================================== */
+/* BUTTON */
 
 .ourmission-btn {
   display: inline-block;
@@ -138,9 +120,7 @@
   background: #2ea3c2;
 }
 
-/* =====================================
-   RIGHT IMAGE
-===================================== */
+/* IMAGE */
 
 .ourmission-image {
   width: 48%;
@@ -148,22 +128,28 @@
 
 .ourmission-image img {
   width: 100%;
-  height: 380px;                   /* reduced to match screenshot */
+  height: 380px;
   object-fit: cover;
   border-radius: 22px;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.06);
 }
 
+
 /* =====================================
-   RESPONSIVE
+   TABLET (≤ 992px)
 ===================================== */
 
 @media (max-width: 992px) {
 
+  .section-our-mission {
+    padding: 100px 0;
+  }
+
   .ourmission-container {
     flex-direction: column;
-    gap: 60px;
+    gap: 50px;
     padding: 0 30px;
+    text-align: center;
   }
 
   .ourmission-content,
@@ -172,19 +158,113 @@
   }
 
   .ourmission-bg-text {
-    font-size: 90px;
+    font-size: 80px;
     left: 20px;
     top: 20px;
   }
 
   .ourmission-content h2 {
-    font-family: "Franklin Gothic Demi", Sans-serif;
-    font-size: 50px;
-    font-weight: 700;
-    color: #050505;
+    font-size: 34px;
+  }
+
+  .ourmission-content h3 {
+    font-size: 18px;
+  }
+
+  .ourmission-content h4 {
+    font-size: 22px;
+  }
+
+  .ourmission-content p {
+    font-size: 14px;
+    max-width: 100%;
   }
 
   .ourmission-image img {
-    height: auto;
+    height: 320px;
   }
+
+}
+
+
+/* =====================================
+   MOBILE (≤ 768px)
+===================================== */
+
+@media (max-width: 768px) {
+
+  .section-our-mission {
+    padding: 80px 0;
+  }
+
+  .ourmission-container {
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .ourmission-bg-text {
+    font-size: 60px;
+    left: 10px;
+  }
+
+  .ourmission-content h2 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .ourmission-content h3 {
+    font-size: 16px;
+  }
+
+  .ourmission-content h4 {
+    font-size: 20px;
+  }
+
+  .ourmission-quote {
+    font-size: 13px;
+  }
+
+  .ourmission-content p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .ourmission-btn {
+    padding: 10px 22px;
+    font-size: 13px;
+  }
+
+  .ourmission-image img {
+    height: 260px;
+  }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE (≤ 480px)
+===================================== */
+
+@media (max-width: 480px) {
+
+  .section-our-mission {
+    padding: 60px 0;
+  }
+
+  .ourmission-bg-text {
+    font-size: 45px;
+  }
+
+  .ourmission-content h2 {
+    font-size: 22px;
+  }
+
+  .ourmission-content p {
+    font-size: 12.5px;
+  }
+
+  .ourmission-image img {
+    height: 220px;
+  }
+
 }
