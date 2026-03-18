@@ -65,9 +65,15 @@ const HeroSection = () => {
         <SwiperSlide>
           <div
             className="hero-slide-bg"
-            style={{ backgroundImage: `
-              linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-              url(${heroImage3})`, backgroundPosition: "center 50px" }}
+            style={{
+              backgroundImage: `
+                linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+                url(${heroImage3})
+              `,
+              backgroundPosition: "center top"  // ✅ changed
+            }}
+
+            
           >
             <div className="hero-overlay" />
             <div className="hero-slide-content">

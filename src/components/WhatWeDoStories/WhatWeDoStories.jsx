@@ -40,9 +40,6 @@ const WhatWeDoStories = () => {
             <span>Global PhD Scholar</span>
           </div>
 
-        </div>
-
-        <div className="wwd-stories-grid">
 
           <div className="wwd-story-card">
             <img src={mehak} alt="Mehak Mohiudin" />

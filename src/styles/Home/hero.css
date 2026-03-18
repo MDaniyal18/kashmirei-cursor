@@ -143,12 +143,16 @@
 }
 
 
-
 /* =====================================
    RESPONSIVE
 ===================================== */
 
 @media (max-width: 992px) {
+
+  .section-hero {
+    margin-top: 80px; /* ✅ added */
+  }
+
   .hero-slide-content {
     width: 90%;
     padding: 80px 30px;
@@ -165,4 +169,71 @@
   .hero-swiper-full .swiper-pagination {
     padding-left: 0;
   }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .section-hero {
+    margin-top: 60px; /* ✅ added */
+  }
+
+  .hero-slide-bg {
+    min-height: 420px;
+    background-position: center;
+    align-items: flex-end;
+  }
+
+  .hero-slide-content {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .hero-slide-content h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .hero-subheading {
+    font-size: 14px;
+  }
+
+  .hero-slide-content p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .hero-swiper-full .swiper-pagination {
+    bottom: 15px;
+  }
+
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+  .section-hero {
+    margin-top: 50px; /* ✅ added */
+  }
+
+  .hero-slide-bg {
+    min-height: 360px;
+    background-position: center;
+  }
+
+  .hero-slide-content h1 {
+    font-size: 22px;
+  }
+
+  .hero-slide-content p {
+    font-size: 12.5px;
+  }
+
+  .hero-swiper-full .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+
 }

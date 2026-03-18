@@ -4,7 +4,7 @@
 
 .section-wwd-programs {
   padding: 120px 0;
-  background: #fff; /* light grey background for contrast */
+  background: #fff;
 }
 
 /* Container */
@@ -22,7 +22,7 @@
 }
 
 /* ===============================
-   CARD (DISTINGUISHABLE STYLE)
+   CARD
 ================================= */
 
 .wwd-program-card {
@@ -31,7 +31,6 @@
   border-radius: 20px;
   text-align: center;
 
-  /* Stronger shadow for floating effect */
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.06),
     0 20px 60px rgba(0, 0, 0, 0.08);
@@ -41,7 +40,6 @@
   transition: all 0.35s ease;
 }
 
-/* Hover Lift */
 .wwd-program-card:hover {
   transform: translateY(-10px);
   box-shadow:
@@ -49,9 +47,7 @@
     0 30px 70px rgba(0, 0, 0, 0.12);
 }
 
-/* ===============================
-   ICON
-================================= */
+/* ICON */
 
 .wwd-program-icon {
   display: flex;
@@ -63,12 +59,9 @@
 .wwd-program-icon img {
   width: 75px;
   height: auto;
-  display: block;
 }
 
-/* ===============================
-   TEXT
-================================= */
+/* TEXT */
 
 .wwd-program-card h3 {
   font-size: 24px;
@@ -92,16 +85,108 @@
   color: #000;
 }
 
-/* ===============================
-   RESPONSIVE
-================================= */
+
+/* =====================================
+   TABLET (≤ 992px)
+===================================== */
 
 @media (max-width: 992px) {
+
+  .section-wwd-programs {
+    padding: 100px 0;
+  }
+
+  .wwd-container {
+    padding: 0 30px;
+  }
+
   .wwd-programs-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);  /* ✅ 2 cards */
+    gap: 30px;
   }
 
   .wwd-program-card {
     padding: 45px 25px;
   }
+
+  .wwd-program-card h3 {
+    font-size: 20px;
+  }
+
+  .wwd-program-card p {
+    font-size: 14px;
+  }
+
+  .wwd-program-card strong {
+    font-size: 14px;
+  }
+
+  .wwd-program-icon img {
+    width: 65px;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE (≤ 768px)
+===================================== */
+
+@media (max-width: 768px) {
+
+  .section-wwd-programs {
+    padding: 80px 0;
+  }
+
+  .wwd-container {
+    padding: 0 20px;
+  }
+
+  .wwd-programs-grid {
+    grid-template-columns: 1fr;   /* ✅ 1 card */
+    gap: 25px;
+  }
+
+  .wwd-program-card {
+    padding: 40px 20px;
+  }
+
+  .wwd-program-card h3 {
+    font-size: 18px;
+  }
+
+  .wwd-program-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .wwd-program-card strong {
+    font-size: 13px;
+  }
+
+  .wwd-program-icon img {
+    width: 55px;
+  }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE (≤ 480px)
+===================================== */
+
+@media (max-width: 480px) {
+
+  .section-wwd-programs {
+    padding: 60px 0;
+  }
+
+  .wwd-program-card h3 {
+    font-size: 16px;
+  }
+
+  .wwd-program-card p {
+    font-size: 12.5px;
+  }
+
 }

@@ -1,47 +1,131 @@
-/*  */
+/* =====================================
+   HERO SECTION
+===================================== */
+
 .section-wwd-hero {
   position: relative;
   height: 420px;
-  background-color: #e2e4e9; /* solid background color */
+  background-color: #e2e4e9;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
+/* Remove overlay */
+.section-wwd-hero::after {
+  content: none;
+}
+
 /* Container */
+
 .wwd-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
-/* Remove the overlay */
-.section-wwd-hero::after {
-  content: none;
+/* Content */
+
+.wwd-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 20px;
 }
 
-  /* Content */
-  .wwd-hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
+/* Heading */
+
+.section-wwd-hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.section-wwd-hero h1 span {
+  color: #48BEDA;
+}
+
+/* Text */
+
+.section-wwd-hero p {
+  margin-top: 18px;
+  font-size: 17px;
+  color: #333;
+}
+
+
+/* =====================================
+   TABLET (≤ 992px)
+===================================== */
+
+@media (max-width: 992px) {
+
+  .section-wwd-hero {
+    height: 340px;
+    margin-top: 70px; /* spacing below navbar */
+  }
+
+  .wwd-container {
+    padding: 0 30px;
+  }
+
+  .section-wwd-hero h1 {
+    font-size: 36px;
+  }
+
+  .section-wwd-hero p {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =====================================
+   MOBILE (≤ 768px)
+===================================== */
+
+@media (max-width: 768px) {
+
+  .section-wwd-hero {
+    height: 280px;
+    margin-top: 60px;
+  }
+
+  .wwd-container {
     padding: 0 20px;
   }
-  
+
   .section-wwd-hero h1 {
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1.2;
+    font-size: 28px;
+    line-height: 1.3;
   }
-  
-  .section-wwd-hero h1 span {
-    color: #48BEDA;
-  }
-  
+
   .section-wwd-hero p {
-    margin-top: 18px;
-    font-size: 17px;
-    color: #333;
+    font-size: 14px;
+    margin-top: 14px;
   }
-  
+
+}
+
+
+/* =====================================
+   SMALL MOBILE (≤ 480px)
+===================================== */
+
+@media (max-width: 480px) {
+
+  .section-wwd-hero {
+    height: 240px;
+    margin-top: 70px;
+  }
+
+  .section-wwd-hero h1 {
+    font-size: 24px;
+  }
+
+  .section-wwd-hero p {
+    font-size: 13px;
+  }
+
+}

@@ -1,46 +1,142 @@
-/*.gi-hero { position: relative; padding: 160px 0 140px; background: #f2f3f5; text-align: center; } .gi-hero::after { content: ""; position: absolute; inset: 0; background: rgba(255,255,255,0.88); } */
+/* =====================================
+   HERO SECTION
+===================================== */
 
 .gi-hero {
   position: relative;
   padding: 160px 0 140px;
-  background-color: #e2e4e9; /* solid background color */
+  background-color: #e2e4e9;
   text-align: center;
 }
 
-/* Remove the overlay if not needed */
+/* Remove overlay */
 .gi-hero::after {
   content: none;
 }
 
-  
+/* Container */
+
+.gi-hero .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Heading */
+
+.gi-hero h1 {
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.gi-hero h1 span {
+  color: #48BEDA;
+}
+
+/* Subtitle */
+
+.gi-sub {
+  margin-top: 25px;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Description */
+
+.gi-small {
+  margin-top: 18px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* =====================================
+   TABLET (≤ 992px)
+===================================== */
+
+@media (max-width: 992px) {
+
+  .gi-hero {
+    padding: 120px 0 100px;
+    margin-top: 70px; /* spacing below navbar */
+  }
+
   .gi-hero .container {
-    position: relative;
-    z-index: 2;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 30px;
   }
-  
+
   .gi-hero h1 {
-    font-size: 54px;
-    font-weight: 800;
-    line-height: 1.2;
+    font-size: 38px;
   }
-  
-  .gi-hero h1 span {
-    color: #48BEDA;
-  }
-  
+
   .gi-sub {
-    margin-top: 25px;
-    font-size: 20px;
-    color: #333;
+    font-size: 16px;
+    margin-top: 20px;
   }
-  
+
   .gi-small {
-    margin-top: 18px;
-    font-size: 15px;
-    color: #555;
-    line-height: 1.8;
+    font-size: 14px;
+    line-height: 1.7;
   }
-  
+
+}
+
+/* =====================================
+   MOBILE (≤ 768px)
+===================================== */
+
+@media (max-width: 768px) {
+
+  .gi-hero {
+    padding: 90px 0 80px;
+    margin-top: 60px;
+  }
+
+  .gi-hero .container {
+    padding: 0 20px;
+  }
+
+  .gi-hero h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .gi-sub {
+    font-size: 14px;
+    margin-top: 18px;
+  }
+
+  .gi-small {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+}
+
+/* =====================================
+   SMALL MOBILE (≤ 480px)
+===================================== */
+
+@media (max-width: 480px) {
+
+  .gi-hero {
+    padding: 70px 0 60px;
+    margin-top: 50px;
+  }
+
+  .gi-hero h1 {
+    font-size: 24px;
+  }
+
+  .gi-sub {
+    font-size: 13px;
+  }
+
+  .gi-small {
+    font-size: 12.5px;
+  }
+
+}
