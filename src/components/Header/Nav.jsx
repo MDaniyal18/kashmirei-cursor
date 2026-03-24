@@ -10,7 +10,7 @@ const NAV_LINKS = [
   {
     label: "Our Impact",
     dropdown: [
-      { path: "/impact-by-numbers", label: "Impact By Number" },
+      { path: "/impact-by-numbers", label: "Impact by numbers" },
       { path: "/scholar-stories", label: "Scholar Stories" },
       { path: "/alumni-stories", label: "Alumni Stories" },
     ],
