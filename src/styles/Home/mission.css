@@ -1,7 +1,7 @@
 .mission-section {
-  background: #ffffff;
-  padding: 100px 0;
-  font-family: "Inter", sans-serif;
+  background: #f2f3f5;
+  padding: 50px 0 40px;
+  font-family: "Roboto", Arial, sans-serif;
 }
 
 .mission-container {
@@ -20,15 +20,19 @@
 }
 
 .mission-subtitle {
-  font-size: 12px;
-  letter-spacing: 1.5px;
-  color: #29a3b1;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
   font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #48BEDA;
   margin-bottom: 12px;
+  display: block;
 }
 
 .mission-title {
-  font-size: 38px;
+  font-family: "Franklin Gothic Demi", "Roboto", sans-serif;
+  font-size: 32px;
   font-weight: 700;
   margin-bottom: 18px;
   color: #000;
@@ -36,6 +40,7 @@
 
 .mission-description {
   font-size: 15px;
+  font-weight: 700;
   color: #555;
   margin-bottom: 35px;
   line-height: 1.7;
@@ -89,7 +94,7 @@
 .mission-check {
   width: 26px;
   height: 26px;
-  background: #2ea3b0;
+  background: #48BEDA;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -128,20 +133,26 @@
 
 /* Button */
 .mission-btn {
+  display: inline-block;
   margin-top: 10px;
-  padding: 10px 24px;
-  background: #2ea3b0;
-  color: white;
+  padding: 12px 26px;
+  background: #48BEDA;
+  color: #ffffff;
   border: none;
-  border-radius: 4px;
-  font-size: 12px;
+  border-radius: 6px;
+  font-family: "Franklin Gothic Demi", "Roboto", sans-serif;
+  font-size: 13px;
   font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .mission-btn:hover {
-  background: #238d99;
+  background: #3aa9c4;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(72, 190, 218, 0.3);
 }
 
 /* ================= RESPONSIVE ================= */

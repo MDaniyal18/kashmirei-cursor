@@ -3,7 +3,7 @@
 ========================= */
 
 .section-impact {
-  padding: 180px 0;
+  padding: 50px 0 40px;
   background: #0f1b24;
   color: #fff;
 }
@@ -23,14 +23,14 @@
 }
 
 .impact-label {
-  font-size: 12px;
+  font-size: 17px;
   letter-spacing: 1px;
   color: #48BEDA;
   font-weight: 600;
 }
 
 .impact-header h2 {
-  font-size: 46px;
+  font-size: 32px;
   font-weight: 800;
   margin: 15px 0 20px;
   color: #fff;
@@ -38,6 +38,7 @@
 
 .impact-header p {
   font-size: 15px;
+  font-weight: 700;
   line-height: 1.8;
   color: #ddd;
 }
@@ -117,7 +118,7 @@
 @media (max-width: 992px) {
 
   .section-impact {
-    padding: 120px 0;
+    padding: 40px 0 30px;
   }
 
   .impact-container {
@@ -125,7 +126,7 @@
   }
 
   .impact-header h2 {
-    font-size: 34px;
+    font-size: 28px;
   }
 
   .impact-header p {
@@ -162,7 +163,7 @@
 @media (max-width: 768px) {
 
   .section-impact {
-    padding: 90px 0;
+    padding: 36px 0 24px;
   }
 
   .impact-container {
@@ -174,7 +175,7 @@
   }
 
   .impact-header h2 {
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.3;
   }
 
@@ -223,11 +224,11 @@
 @media (max-width: 480px) {
 
   .section-impact {
-    padding: 70px 0;
+    padding: 28px 0 20px;
   }
 
   .impact-header h2 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .impact-card p {

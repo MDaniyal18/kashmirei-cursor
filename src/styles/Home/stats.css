@@ -3,7 +3,7 @@
 ========================= */
 
 .section-stats {
-    padding: 160px 0;
+    padding: 50px 0 40px;
     background: #f2f3f5;
     width: 100%;
   }
@@ -33,7 +33,7 @@
   }
   
   .stats-label {
-    font-size: 13px;
+    font-size: 17px;
     font-weight: 600;
     letter-spacing: 1px;
     color: #48BEDA;
@@ -143,12 +143,51 @@
   }
   
   /* =========================
+     CTA BUTTON
+  ========================= */
+
+  .stats-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0 20px 40px;
+  }
+
+  .stats-cta-text {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 15px;
+    color: #444;
+    margin: 0;
+  }
+
+  .stats-btn-primary {
+    display: inline-block;
+    background: #48BEDA;
+    color: #ffffff;
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-family: "Franklin Gothic Demi", "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .stats-btn-primary:hover {
+    background: #3aa9c4;
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(72, 190, 218, 0.3);
+  }
+
+  /* =========================
      RESPONSIVE (TABLET & BELOW)
   ========================= */
   
   @media (max-width: 900px) {
     .section-stats {
-      padding: 100px 0;
+      padding: 40px 0 30px;
     }
   
     .stats-container {

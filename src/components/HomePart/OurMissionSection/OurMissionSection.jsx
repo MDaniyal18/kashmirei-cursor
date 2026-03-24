@@ -13,31 +13,37 @@ const OurMissionSection = () => {
 
       <div className="ourmission-container">
 
-        {/* LEFT CONTENT */}
+        {/* CONTENT */}
         <div className="ourmission-content">
 
           <span className="ourmission-label">About KEI</span>
 
-          <h2>Our Mission</h2>
+          <h2>We Believe</h2>
 
-          <h3>Brief Emotional Introduction</h3>
-
-          <p className="ourmission-quote">
-            “KEI scholars form a community of resilience and purpose.
-            Supporting them means investing in a brighter Kashmir—and
-            a better world.”
+          <p className="ourmission-believe">
+            Every young person has the potential to change the world,
+            regardless of their background or circumstances.
           </p>
 
-          <div className="ourmission-donor">– KEI Donor</div>
-
-          <h4>Why KEI Matters</h4>
-
-          <p>
-            We believe that every young person has the potential to change
-            the world, regardless of their background or circumstances.
-            KEI ensures a supportive structure of financial scholarships,
-            mentors and digital resources provided to students to succeed.
-          </p>
+          <div className="ourmission-vm">
+            <div className="ourmission-vm-item">
+              <h5>OUR VISION</h5>
+              <p>
+                To make education the primary imperative in the empowerment
+                and development of individuals, institutions, and communities
+                in the conflict-ridden regions of the world.
+              </p>
+            </div>
+            <div className="ourmission-vm-item">
+              <h5>OUR MISSION</h5>
+              <p>
+                To provide bright but at risk students in conflict ridden
+                regions like Kashmir a supportive and leadership oriented
+                educational environment through mentorship, experiential
+                opportunities and financial assistance.
+              </p>
+            </div>
+          </div>
 
           <a href="#" className="ourmission-btn">
             DOWNLOAD ANNUAL REPORT
@@ -45,7 +51,7 @@ const OurMissionSection = () => {
 
         </div>
 
-        {/* RIGHT IMAGE */}
+        {/* IMAGE */}
         <div className="ourmission-image">
           <img src={missionImage} alt="KEI Scholars" />
         </div>

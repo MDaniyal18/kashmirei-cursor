@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../../styles/Home/mission.css";
 import missionImage from "../../../assets/Images/mission.jpg";
 
@@ -58,7 +59,7 @@ const MissionSection = () => {
     </div>
   </div>
 
-  <button className="mission-btn">DONATE NOW</button>
+  <Link to="/get-involved" className="mission-btn">GET INVOLVED</Link>
 </div>
 
 
