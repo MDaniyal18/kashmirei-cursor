@@ -1,29 +1,68 @@
 import "../../../styles/Get-Involved/getinvolved-hero.css";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Keyboard } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
+// images
+import giImage1 from "../../../assets/Images/I-am.jpg";
+import giImage2 from "../../../assets/Images/experiential-learning.webp";
+import giImage3 from "../../../assets/Images/career-counselling.webp";
+
 const GetInvolvedHero = () => {
   return (
-    <section className="gi-hero">
-      <div
-  className="container"
-  style={{ opacity: 0, visibility: "hidden", pointerEvents: "none" }}
->
-  <h1>
-    Be the difference,
-    <br />
-    <span>Transform a life.</span>
-  </h1>
+    // ✅ tabIndex added so section can receive keyboard focus if needed
+    <section className="gi-hero" tabIndex={0}>
 
-  <p className="gi-sub">
-    Your involvement is the spark that ignites change. Support Kashmir’s
-    youth with your time, skills, or resources.
-  </p>
+      <Swiper
+        modules={[Pagination, Keyboard]}
+        loop={true}
+        pagination={{ clickable: true }}
 
-  <p className="gi-small">
-    Whether you’re a donor, mentor, volunteer, or advocate—your support
-    changes lives. KEI is more than an organization. It’s a community of
-    believers who know that access to education can transform generations.
-  </p>
-</div>
+        /* ✅ FIXED KEYBOARD SETTINGS */
+        keyboard={{
+          enabled: true,
+          onlyInViewport: false, // 🔥 KEY FIX (global keyboard control)
+          pageUpDown: false,
+        }}
+
+        /* ✅ SMOOTH TRANSITION */
+        speed={800}
+
+        slidesPerView={1}
+        spaceBetween={0}
+
+        className="gi-swiper"
+      >
+
+        {/* Slide 1 */}
+        <SwiperSlide>
+          <div
+            className="gi-slide"
+            style={{ backgroundImage: `url(${giImage1})` }}
+          />
+        </SwiperSlide>
+
+        {/* Slide 2 */}
+        <SwiperSlide>
+          <div
+            className="gi-slide"
+            style={{ backgroundImage: `url(${giImage2})` }}
+          />
+        </SwiperSlide>
+
+        {/* Slide 3 */}
+        <SwiperSlide>
+          <div
+            className="gi-slide"
+            style={{ backgroundImage: `url(${giImage3})` }}
+          />
+        </SwiperSlide>
+
+      </Swiper>
+
     </section>
   );
 };

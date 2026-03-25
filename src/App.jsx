@@ -21,15 +21,21 @@ import ScholarStories from "./components/pages/ScholarStories";
 import ImpactByNumbers from "./components/pages/ImpactByNumbers";
 import AlumniStories from "./components/pages/AlumniStories";
 
-// ✅ NEW PAGES
+// Get Involved Pages
 import BecomeMentor from "./components/pages/GetInvolvedWays_Pages/BecomeMentor";
 import Volunteer from "./components/pages/GetInvolvedWays_Pages/VolunteerWithUs";
 import Sponsor from "./components/pages/GetInvolvedWays_Pages/SponsorAScholar";
 
+// Mentorship Pages
+import MentorshipSuccessStories from "./components/pages/GetInvolvedWays_Pages/MentorshipSuccessStories/MentorshipSuccessStories";
+
+// ✅ CORRECT IMPORT
+import MentorshipStoryPage from "./components/pages/GetInvolvedWays_Pages/MentorshipStoryPage";
+
 // Blog Page
 import Blog from "./components/OurImpactPart/ScholarStoryPart/ScholarStorySection/Blog";
 
-// Video Player Page
+// Video Player Pages
 import ScholarVideoPlayer from "./components/OurImpactPart/ScholarStoryPart/ScholarStorySection/ScholarVideoPlayer";
 import AlumniVideoPlayer from "./components/OurImpactPart/AlumniPart/AlumniStorySection/AlumniVideoPlayer";
 
@@ -42,27 +48,36 @@ const App = () => {
 
       <main id="main-content">
         <Routes>
+
           <Route path="/" element={<Home />} />
           <Route path="/what-we-do" element={<WhatWeDo />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/get-involved" element={<GetInvolved />} />
 
-          {/* ✅ NEW ROUTES */}
           <Route path="/become-a-mentor" element={<BecomeMentor />} />
           <Route path="/volunteer-with-us" element={<Volunteer />} />
           <Route path="/sponsor-a-scholar" element={<Sponsor />} />
 
-          {/* Our Impact dropdown pages */}
+          <Route
+            path="/mentorship-success-stories"
+            element={<MentorshipSuccessStories />}
+          />
+
+          {/* ✅ THIS WORKS NOW */}
+          <Route
+            path="/mentorship/:slug"
+            element={<MentorshipStoryPage />}
+          />
+
           <Route path="/impact-by-numbers" element={<ImpactByNumbers />} />
           <Route path="/scholar-stories" element={<ScholarStories />} />
           <Route path="/alumni-stories" element={<AlumniStories />} />
 
-          {/* Blog */}
           <Route path="/blog/:slug" element={<Blog />} />
 
-          {/* Videos */}
           <Route path="/scholar-video/:slug" element={<ScholarVideoPlayer />} />
           <Route path="/alumni-video/:slug" element={<AlumniVideoPlayer />} />
+
         </Routes>
       </main>
 

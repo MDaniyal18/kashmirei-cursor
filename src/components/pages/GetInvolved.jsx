@@ -5,8 +5,9 @@ import GetInvolvedSupport from "../GetInvolvedPart/GetInvolvedSupport/GetInvolve
 const GetInvolved = () => {
   return (
     <>
-      <GetInvolvedHero />
+      
       <GetInvolvedWays />
+      <GetInvolvedHero />
       <GetInvolvedSupport />
     </>
   );

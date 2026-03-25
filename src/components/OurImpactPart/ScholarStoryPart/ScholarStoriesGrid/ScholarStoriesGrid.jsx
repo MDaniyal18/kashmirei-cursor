@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../../../styles/Scholar-Page/scholar-grid.css";
-
 import scholarStories from "../../../../data/ScholarStories";
+
 const ScholarStoriesGrid = () => {
   const [showAll, setShowAll] = useState(false);
 
+  // Sort stories by year DESC
+  const sortedStories = [...scholarStories].sort(
+    (a, b) => (b.year || 0) - (a.year || 0)
+  );
+
+  // Show 10 initially, rest on "Explore More"
   const storiesToShow = showAll
-    ? scholarStories
-    : scholarStories.slice(0, 2);
+    ? sortedStories
+    : sortedStories.slice(0, 10);
 
   const toggleStories = () => {
     setShowAll(!showAll);
@@ -31,23 +37,13 @@ const ScholarStoriesGrid = () => {
       <div className="container">
         <div className="ss-grid">
           {storiesToShow.map((story) => {
-            const preview =
-              story?.paragraphs?.length
-                ? story.paragraphs
-                    .slice(0, 2)
-                    .join(" ")
-                    .slice(0, 400)
-                    .replace(/\s+\S*$/, "") + "..."
-                : "";
+            const preview = story?.paragraphs?.join(" ") || "";
 
             return (
               <div className="ss-card" key={story.id}>
                 <img src={story.thumbnail} alt={story.name} />
-
-                <p>“{preview}”</p>
-
+                <p className="ss-preview">“{preview}”</p>
                 <h4>{story.name}</h4>
-
                 <Link
                   to={`/blog/${story.slug}`}
                   className="ss-read-more"
@@ -70,9 +66,9 @@ const ScholarStoriesGrid = () => {
               : "EXPLORE MORE SCHOLAR STORIES"}
           </button>
 
-          <button className="btn-outline">
+          <Link to="/donate" className="btn-outline">
             SUPPORT A SCHOLAR'S JOURNEY
-          </button>
+          </Link>
         </div>
 
         <div className="ss-back-top">

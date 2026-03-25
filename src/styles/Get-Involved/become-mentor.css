@@ -4,7 +4,7 @@
 }
 
 .gi-page .container {
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 40px;
   text-align: center;
@@ -13,62 +13,151 @@
 .gi-page h1 {
   font-size: 42px;
   font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+/* Card */
+.content-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.content-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.content-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.content-card h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.content-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Highlight box */
+.highlight-box {
+  background: #eef7fb;
+  border-left: 4px solid #48BEDA;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+/* List */
+.criteria-list {
+  padding-left: 18px;
   margin-bottom: 20px;
 }
 
-.gi-page p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #555;
+.criteria-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* Divider */
+.content-card hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+/* CTA text */
+.cta-text {
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* ================= BUTTONS ================= */
+
+.apply-button,
+.back-button {
+  padding: 12px 20px;
+  background: #48BEDA;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Hover fix */
+.apply-button:hover,
+.apply-button:focus,
+.apply-button:active,
+.apply-button:visited,
+.back-button:hover {
+  background: #3aa7c3;
+  color: #fff;
+}
+
+/* Secondary button */
+.secondary-btn {
+  background: transparent;
+  color: #48BEDA;
+  border: 2px solid #48BEDA;
+}
+
+.secondary-btn:hover {
+  background: #48BEDA;
+  color: #fff;
+}
+
+/* Stories Button Wrapper */
+.stories-btn-wrapper {
+  margin-top: 30px;
+  text-align: center;
 }
 
 /* Back Button */
 .back-button {
-  display: inline-block;
-  margin-bottom: 25px;
-  padding: 8px 16px;
-  background: #48BEDA;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-size: 14px;
-  font-family: "Inter", Arial, sans-serif;
-  cursor: pointer;
+  margin-top: 20px;
 }
 
-.back-button:hover {
-  background: #3aa7c3;
-}
+/* ================= RESPONSIVE ================= */
 
-/* ======================================
-   Responsive for Tablets (≤ 992px)
-====================================== */
 @media (max-width: 992px) {
   .gi-page {
     padding: 120px 0;
-  }
-
-  .gi-page .container {
-    padding: 0 30px;
   }
 
   .gi-page h1 {
     font-size: 36px;
   }
 
-  .gi-page p {
-    font-size: 15px;
-  }
-
-  .back-button {
-    font-size: 13px;
-    padding: 7px 14px;
+  .content-card {
+    padding: 30px;
   }
 }
 
-/* ======================================
-   Responsive for Mobile (≤ 768px)
-====================================== */
 @media (max-width: 768px) {
   .gi-page {
     padding: 100px 0;
@@ -82,19 +171,23 @@
     font-size: 30px;
   }
 
-  .gi-page p {
+  .content-card {
+    padding: 25px;
+  }
+
+  .content-card p,
+  .criteria-list li {
     font-size: 14px;
   }
 
+  .apply-button,
   .back-button {
-    font-size: 12px;
-    padding: 6px 12px;
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
   }
 }
 
-/* ======================================
-   Responsive for Extra Small (≤ 480px)
-====================================== */
 @media (max-width: 480px) {
   .gi-page {
     padding: 80px 0;
@@ -104,12 +197,13 @@
     font-size: 26px;
   }
 
-  .gi-page p {
-    font-size: 13px;
+  .content-card {
+    padding: 20px;
   }
 
+  .apply-button,
   .back-button {
-    font-size: 12px;
-    padding: 5px 10px;
+    font-size: 13px;
+    padding: 11px;
   }
 }

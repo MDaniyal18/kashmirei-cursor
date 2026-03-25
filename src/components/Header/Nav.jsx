@@ -6,7 +6,6 @@ import logo from "../../assets/Images/logo.png";
 const NAV_LINKS = [
   { path: "/", label: "Home" },
   { path: "/what-we-do", label: "What We Do" },
-  { path: "/get-involved", label: "Get Involved" },
   {
     label: "Our Impact",
     dropdown: [
@@ -15,6 +14,7 @@ const NAV_LINKS = [
       { path: "/alumni-stories", label: "Alumni Stories" },
     ],
   },
+  { path: "/get-involved", label: "Get Involved" },
   { path: "/donate", label: "Donate" },
 ];
 

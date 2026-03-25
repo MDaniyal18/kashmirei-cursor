@@ -19,7 +19,7 @@
 
 .ss-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
   gap: 60px 40px;
   margin-top: 50px;
 }
@@ -43,7 +43,6 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
 .ss-card:hover {
@@ -71,15 +70,22 @@
 }
 
 /* =====================================
-   QUOTE
+   TEXT (FIXED HEIGHT + CLAMP)
 ===================================== */
 
-.ss-card p {
+.ss-preview {
   font-size: 15px;
   line-height: 1.8;
   font-style: italic;
   color: #444;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 9; /* 9 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  max-height: calc(1.8em * 9);
 }
 
 /* =====================================
@@ -89,7 +95,8 @@
 .ss-card h4 {
   font-size: 17px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-top: auto;
+  margin-bottom: 8px;
   color: #111;
 }
 
@@ -99,7 +106,6 @@
 
 .ss-read-more {
   display: inline-block;
-  margin-top: auto;
   font-size: 13px;
   font-weight: 600;
   color: #48BEDA;
@@ -189,17 +195,18 @@
   }
 
   .ss-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* still 2 per row on tablet */
     gap: 50px 24px;
   }
 
   .ss-card {
     padding: 70px 28px 36px;
-    min-height: 300px;
   }
 
-  .ss-card p {
+  .ss-preview {
     font-size: 14px;
+    -webkit-line-clamp: 9;
+    max-height: calc(1.7em * 9);
   }
 
   .ss-card h4 {
@@ -217,12 +224,11 @@
   }
 
   .ss-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* single column on mobile */
     gap: 50px;
   }
 
   .ss-card {
-    min-height: auto;
     padding: 68px 24px 32px;
   }
 
@@ -232,9 +238,11 @@
     top: -38px;
   }
 
-  .ss-card p {
+  .ss-preview {
     font-size: 13px;
     line-height: 1.7;
+    -webkit-line-clamp: 6; /* fewer lines for mobile */
+    max-height: calc(1.7em * 6);
   }
 
   .ss-card h4 {

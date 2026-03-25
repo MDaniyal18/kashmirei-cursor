@@ -4,40 +4,40 @@ import "../../../styles/ImpactByNumbers/impact-by-numbers.css";
 const ImpactSection = () => {
   const impactStats = [
     {
-      number: "2,800+",
-      title: "High School Scholars",
+      number: "8,000+",
+      title: "Scholarships Awarded",
       description:
-        "Students supported through KEI’s scholarship programs, helping young learners continue their education with confidence and consistency.",
+        "Thousands of students have received financial support through KEI, enabling them to pursue their education without barriers.",
     },
     {
-      number: "1-on-1",
-      title: "Mentorship Support",
+      number: "1600+",
+      title: "Digital Devices Provided",
       description:
-        "Personalized mentoring that helps scholars navigate academics, careers, leadership growth, and long-term life decisions.",
+        "Access to digital learning tools has empowered students to stay connected, learn effectively, and thrive in a modern academic environment.",
     },
     {
-      number: "3+",
-      title: "Core Program Areas",
+      number: "500+",
+      title: "Career Workshops Conducted",
       description:
-        "KEI focuses on scholarships, mentorship, and experiential learning to create a strong and holistic support system for scholars.",
+        "Workshops and sessions designed to guide students in career planning, skill-building, and making informed academic decisions.",
     },
     {
-      number: "100s",
-      title: "Workshops & Sessions",
+      number: "96%",
+      title: "Scholars Graduate With Distinction",
       description:
-        "Scholars benefit from regular career awareness sessions, supercoach support, workshops, and leadership development opportunities.",
+        "A remarkable success rate showcasing the academic excellence and dedication of KEI-supported scholars.",
     },
     {
-      number: "Years of",
-      title: "Community Impact",
+      number: "2000+",
+      title: "Alumni Network",
       description:
-        "KEI continues to build lasting educational impact by supporting resilient students and investing in their long-term growth.",
+        "A growing community of alumni who continue to inspire, mentor, and contribute back to the ecosystem.",
     },
     {
       number: "Countless",
-      title: "Dreams Strengthened",
+      title: "Lives Transformed",
       description:
-        "Behind every number is a scholar, a family, and a story of determination made stronger through opportunity and support.",
+        "Beyond numbers, KEI’s impact is reflected in the confidence, growth, and success stories of every scholar supported.",
     },
   ];
 

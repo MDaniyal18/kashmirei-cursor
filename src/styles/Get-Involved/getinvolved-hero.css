@@ -4,149 +4,94 @@
 
 .gi-hero {
   position: relative;
-  padding: 190px 0 165px;
   margin-top: 60px;
-  text-align: center;
-  background-image: url("../../assets/Images/I-am.jpg");
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: transparent;
   overflow: hidden;
+
+  transform: scale(0.9);
+  transform-origin: top center;
+
+  margin-bottom: -60px;
+}
+/* Swiper container */
+.gi-swiper {
+  width: 100%;
 }
 
-/* Transparent overlay */
-.gi-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: transparent;
-  z-index: 1;
-}
+/* Slide background */
+.gi-slide {
+  width: 100%;
 
-/* Container */
+  /* 🔥 Increased height */
+  min-height: 920px;
 
-.gi-hero .container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: relative;
-  z-index: 2;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 40px;
 }
 
-/* Heading */
-
-.gi-hero h1 {
-  font-size: 54px;
-  font-weight: 800;
-  line-height: 1.2;
-  color: #111;
-}
-
-.gi-hero h1 span {
-  color: #48BEDA;
-}
-
-/* Subtitle */
-
-.gi-sub {
-  margin-top: 25px;
-  font-size: 20px;
-  color: #333;
-}
-
-/* Description */
-
-.gi-small {
-  margin-top: 18px;
-  font-size: 15px;
-  color: #555;
-  line-height: 1.8;
+/* ❌ REMOVE OVERLAY (no gray effect) */
+.gi-overlay {
+  display: none;
 }
 
 /* =====================================
-   TABLET (≤ 992px)
+   PAGINATION
+===================================== */
+
+.gi-swiper .swiper-pagination {
+  position: absolute !important;
+  bottom: 25px !important;
+  text-align: center;
+}
+
+.gi-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  opacity: 1;
+  margin: 0 6px !important;
+  transition: 0.3s ease;
+}
+
+.gi-swiper .swiper-pagination-bullet-active {
+  background: #48BEDA;
+  transform: scale(1.2);
+}
+
+/* =====================================
+   RESPONSIVE
 ===================================== */
 
 @media (max-width: 992px) {
-  .gi-hero {
-    padding: 145px 0 120px;
-    margin-top: 70px;
-    background-size: contain;
-    background-position: center center;
-  }
-
-  .gi-hero .container {
-    padding: 0 30px;
-  }
-
-  .gi-hero h1 {
-    font-size: 38px;
-  }
-
-  .gi-sub {
-    font-size: 16px;
-    margin-top: 20px;
-  }
-
-  .gi-small {
-    font-size: 14px;
-    line-height: 1.7;
+  .gi-slide {
+    min-height: 600px; /* slightly reduced but still tall */
   }
 }
-
-/* =====================================
-   MOBILE (≤ 768px)
-===================================== */
 
 @media (max-width: 768px) {
-  .gi-hero {
-    padding: 110px 0 90px;
-    margin-top: 60px;
-    background-size: contain;
-    background-position: center center;
+  .gi-slide {
+    min-height: 450px;
   }
 
-  .gi-hero .container {
-    padding: 0 20px;
-  }
-
-  .gi-hero h1 {
-    font-size: 28px;
-    line-height: 1.3;
-  }
-
-  .gi-sub {
-    font-size: 14px;
-    margin-top: 18px;
-  }
-
-  .gi-small {
-    font-size: 13px;
-    line-height: 1.6;
+  .gi-swiper .swiper-pagination {
+    bottom: 15px !important;
   }
 }
 
-/* =====================================
-   SMALL MOBILE (≤ 480px)
-===================================== */
-
 @media (max-width: 480px) {
-  .gi-hero {
-    padding: 85px 0 70px;
-    margin-top: 50px;
-    background-size: contain;
+  .gi-slide {
+    min-height: 360px;
   }
 
-  .gi-hero h1 {
-    font-size: 24px;
-  }
-
-  .gi-sub {
-    font-size: 13px;
-  }
-
-  .gi-small {
-    font-size: 12.5px;
+  .gi-swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
   }
 }
