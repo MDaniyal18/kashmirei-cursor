@@ -36,7 +36,7 @@ import MentorshipStoryPage from "./components/pages/GetInvolvedWays_Pages/Mentor
 import Blog from "./components/OurImpactPart/ScholarStoryPart/ScholarStorySection/Blog";
 
 // Video Player Pages
-import ScholarVideoPlayer from "./components/OurImpactPart/ScholarStoryPart/ScholarStorySection/ScholarVideoPlayer";
+// import ScholarVideoPlayer from "./components/OurImpactPart/ScholarStoryPart/ScholarStorySection/ScholarVideoPlayer";
 import AlumniVideoPlayer from "./components/OurImpactPart/AlumniPart/AlumniStorySection/AlumniVideoPlayer";
 
 const App = () => {
@@ -75,7 +75,7 @@ const App = () => {
 
           <Route path="/blog/:slug" element={<Blog />} />
 
-          <Route path="/scholar-video/:slug" element={<ScholarVideoPlayer />} />
+          {/* <Route path="/scholar-video/:slug" element={<ScholarVideoPlayer />} /> */}
           <Route path="/alumni-video/:slug" element={<AlumniVideoPlayer />} />
 
         </Routes>
