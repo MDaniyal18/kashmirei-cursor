@@ -2,7 +2,7 @@ import Saqib from "../assets/Images/saqib.jpg";
 import saqibthumb from "../assets/Thumbnails/saqibthumb.jpg";
 
 import Ghazanfar from "../assets/Images/ghazanfar.JPG";
-import ghazanfarthumb from "../assets/Thumbnails/Ghazanfarthumb.JPG";
+import ghazanfarthumb from "../assets/Thumbnails/ghazanfarthumb.JPG";
 
 import amina from "../assets/Images/amina.JPG";
 import aminathumb from "../assets/Thumbnails/aminathumb.JPG";
