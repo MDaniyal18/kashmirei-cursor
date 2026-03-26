@@ -64,7 +64,7 @@ const AlumniStoriesVideos = () => {
 
         {alumniVideos.length > 3 && (
           <button className="btn-primary ss-bottom-btn" onClick={toggleVideos}>
-            {showAll ? "SHOW LESS VIDEOS" : "EXPLORE MORE SCHOLAR VIDEOS"}
+            {showAll ? "SHOW LESS VIDEOS" : "EXPLORE MORE AlUMNI VIDEOS"}
           </button>
         )}
       </div>
