@@ -138,7 +138,7 @@ const ImpactSection = () => {
     },
     {
       number: "30%",
-      label: "Preparing for Exams",
+      label: "Preparing for  Professional Exams",
       desc: "Focused on competitive career pathways.",
     },
   ];
