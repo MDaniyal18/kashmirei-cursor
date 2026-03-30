@@ -9,7 +9,7 @@ import imgCAP    from "../../../assets/Images/what-we-do-2.webp";
 import imgMentor from "../../../assets/Images/what-we-do-3.JPG";
 import imgEL     from "../../../assets/Images/what-we-do-4.webp";
 //need to change
-import imgGooru  from "../../../assets/Images/what-we-do-6.png";
+import imgGooru  from "../../../assets/Images/what-we-do-6th.png";
 
 import imgDSLE   from "../../../assets/Images/what-we-do-6.jpg";
 import imgIBSP   from "../../../assets/Images/what-we-do-7.JPG";
