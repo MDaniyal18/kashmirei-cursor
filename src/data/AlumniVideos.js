@@ -17,7 +17,9 @@ import baeedathumb from "../assets/Thumbnails/baeedathumb.jpeg";
 import gurpreetthumb from "../assets/Thumbnails/gurpreetthumb.jpeg";
 import uzmathumb from "../assets/Thumbnails/uzmathumb.jpeg";
 
+
 // Profile picture
+
 import thumbprofile from "../assets/Profile/thumbprofile.png";
 import ghazanfarprofile from "../assets/Profile/ghazanfar.JPG";
 import snoberprofile from "../assets/Profile/snober-profile.png";
