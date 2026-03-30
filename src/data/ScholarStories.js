@@ -61,7 +61,7 @@ import owaisthumb from "../assets/Images/Thumbnails/owaisthumb.png";
 import Jehangir from "../assets/Images/AlumniScholarPics/Jehangir.webp";
 import jehangirthumb from "../assets/Images/Thumbnails/jehangirthumb.png";
 
-import Umair from "../assets/Images/AlumniScholarPics/umair.webp";
+import Umair from "../assets/Images/AlumniScholarPics/Umair.webp";
 import umairthumb from "../assets/Images/Thumbnails/umairthumb.png";
 
 
