@@ -15,7 +15,7 @@ const ValueWeDeliver = () => {
           At KEI, we walk alongside every scholar — from their first classroom to their first career milestone.
           Through a holistic ecosystem of support, we provide financial scholarships, dedicated mentorship,
           digital learning tools, and hands-on career experiences. Our eight programs — spanning High School
-          Preparedness, Career Awareness, Mentorship, Experiential Learning, Gooru Navigator, Digital Smart
+          S, Career Awareness, Mentorship, Experiential Learning, Gooru Navigator, Digital Smart
           Learning, International Bridge Scholarship, and Graduate Abroad — work together to ensure no gifted
           student in Kashmir is held back by circumstance.
         </p>

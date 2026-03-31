@@ -22,10 +22,10 @@ const programs = [
     id: "hsp",
     number: "01",
     color: "#1B4F8A",
-    title: "High School Preparedness Program",
+    title: "High School Support Program",
     subtitle: "Building the foundation for academic excellence",
     description:
-      "The High School Preparedness Program equips students from underserved communities with the academic skills and confidence needed to succeed in competitive high school entrance exams. Through structured coaching, mock tests, and dedicated tutors, we close the gap between potential and opportunity — ensuring every gifted student in Kashmir has a fair shot at quality secondary education.",
+      "The High School Support Program equips students from underserved communities with the academic skills and confidence needed to succeed in competitive high school entrance exams. Through structured coaching, mock tests, and dedicated tutors, we close the gap between potential and opportunity — ensuring every gifted student in Kashmir has a fair shot at quality secondary education.",
     stats: [
       { value: "2,500+", label: "Scholars Supported" },
       { value: "85%", label: "Exam Pass Rate" },
@@ -143,7 +143,7 @@ const programs = [
 // ─── Rainbow clickable overlay positions (% of image width/height) ──────────
 // Each entry: { id, label, left, top, width, height }
 const rainbowHotspots = [
-  { id: "hsp",         label: "High School\nPreparedness",     left: "3%",  top: "52%", width: "14%", height: "40%" },
+  { id: "hsp",         label: "High School\S",     left: "3%",  top: "52%", width: "14%", height: "40%" },
   { id: "cap",         label: "Career\nAwareness",             left: "11%", top: "28%", width: "14%", height: "40%" },
   { id: "mentorship",  label: "Mentorship\nProgram",           left: "23%", top: "8%",  width: "14%", height: "38%" },
   { id: "experiential",label: "Experiential\nLearning",        left: "37%", top: "0%",  width: "14%", height: "35%" },

@@ -16,9 +16,9 @@ const announcements = [
     id: 1,
     category: "Scholarships",
     date: "March 15, 2026",
-    title: "KEI Opens Applications for the 2026 High School Preparedness Programme",
+    title: "KEI Opens Applications for the 2026 High School Support Programme",
     summary: "Eligible students across the Kashmir Valley are invited to apply for the upcoming HSP cohort. Applications open April 1st and close May 15th, 2026.",
-    body: `KEI is proud to announce the opening of applications for the 2026 High School Preparedness Programme (HSP). This programme provides structured academic coaching, mock examinations, and dedicated mentorship to students preparing for competitive high school entrance exams across the Kashmir Valley.\n\nEligibility: Students currently in Grade 7 or 8 with demonstrated academic potential and financial need.\n\nHow to Apply: Applications will be available through the KEI Kashmir office and partner schools from April 1st, 2026. The deadline for submission is May 15th, 2026.\n\nFor more information, contact info@kashmirei.org or call our Kashmir office at +0194 2458153.`,
+    body: `KEI is proud to announce the opening of applications for the 2026 High School S Programme (HSP). This programme provides structured academic coaching, mock examinations, and dedicated mentorship to students preparing for competitive high school entrance exams across the Kashmir Valley.\n\nEligibility: Students currently in Grade 7 or 8 with demonstrated academic potential and financial need.\n\nHow to Apply: Applications will be available through the KEI Kashmir office and partner schools from April 1st, 2026. The deadline for submission is May 15th, 2026.\n\nFor more information, contact info@kashmirei.org or call our Kashmir office at +0194 2458153.`,
     cta: { label: "Learn About HSP", href: "/what-we-do#hsp" },
   },
   {
