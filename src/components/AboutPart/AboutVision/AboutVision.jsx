@@ -29,7 +29,7 @@ const AboutVision = () => {
           </p>
           <p className="about-vision-sub">
             Education is not charity — it's empowerment. By nurturing
-            skills, ethics, and leadership, KEI helps students shape
+            skills, ethics, and leadership, KEI helps scholars shape
             their communities and their futures.
           </p>
           <Link to="/what-we-do" className="about-vision-btn">
