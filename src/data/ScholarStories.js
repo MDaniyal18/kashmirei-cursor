@@ -79,6 +79,7 @@ const scholarStories = [
     title: "Through the Looking Glass",
     date: "March 2025", // adjust if needed
     image: Saqib, // add your main image
+    subtitle: "Engineering & Self-Discovery",
   
     paragraphs: [
   
@@ -109,6 +110,7 @@ const scholarStories = [
     title: "Finding His Voice Through Words",
     date: "March 2025", // adjust if needed
     image: Ghazanfar, // add your main image
+    subtitle: "Poetry & Literature Enthusiast",
   
     paragraphs: [
   
@@ -135,6 +137,7 @@ const scholarStories = [
     title: "A Journey Amina Discovered Along the Way",
     date: "March 2025", // adjust if needed
     image: amina, // add your main image
+    subtitle: "Resilience in Computer Science",
   
     paragraphs: [
   
@@ -161,6 +164,7 @@ const scholarStories = [
     title: "Azhar's Story with KEI",
     date: "April 09, 2024",
     image: Azhar,
+    subtitle: "Research & Academic Excellence",
     paragraphs: [
         "Assalamualikum, my name is Bhat Azhar Ul Haq and I am a student who has been fortunate enough to be involved with Kashmir Education Initiative. Currently I am pursuing master’s at NIT Srinagar and am aspiring to go for the research. My journey has only been possible because of KEI and it is KEI that is holding my hand to go for the research. It is not only the financial support that KEI provides but the moral support that KEI provides in shaping the minds that is to be praised.", 
                 
@@ -179,6 +183,7 @@ const scholarStories = [
     title: "Saba Ahad's Story with KEI",
     date: "April 08, 2024",
     image: Saba,
+    subtitle: "Pharmacy & Community Service",
     paragraphs: [
         "Myself Sabha Ahad, a proud scholar of Kashmir Education Initiative (KEI) scholarship, currently pursuing a Bachelor's degree in Pharmacy from SHREE DHANVANTARY PHARMACY COLLEGE SURAT GUJARAT.", 
         
@@ -197,6 +202,7 @@ const scholarStories = [
     title: "Nadeem's Story with KEI",
     date: "April 06, 2024",
     image: Nadeem,
+    subtitle: "MBBS & Leadership Development",
     paragraphs: [
         "I am Nadeem Fayaz Mir, a scholar of KEI. I have been with KEI from 2017. KEI is not only an organisation that provides scholarships for students but also helps them with other benefits ranging from workshops to build their conversational skills, leadership skills and mentorship programs to guide them through various aspects of studies, career and life. I am currently pursuing my MBBS and am feeling the benefits of what I learnt from KEI. The skills, the out of the box approach to face a problem and being proactive is needed to solve problems and act quickly. While dealing with patients facing an emergency one has to have such traits to act quickly for the benefit of the patient and for their treatment. I wish to utilise those and also add on to those so that I can see myself become the best version of myself. The Kashmir Education Initiative has been with me and guided me to reach where I am currently. I wish to achieve more and become the torch for people who need the light. I hope in the process I become a medium of help for the community."
     ]
@@ -211,6 +217,7 @@ const scholarStories = [
     title: "Shabdhar's Story with KEI",
     date: "March 20, 2025",
     image: Shabdhar,
+    subtitle: "Pharmacy & Global Health Vision",
     paragraphs: [
         "My name is Sabdhar Bashir Malla, and I am from Pohrupeth, Langate, District Kupwara. I am a proud alumni of the Kashmir Education Initiative (KEI). In 2015, I was fortunate enough to be selected for the HSSP Scholarship.", 
         
@@ -231,6 +238,7 @@ const scholarStories = [
     title: "Umer Abdullah's Journey with KEI",
     date: "April 03, 2024",
     image: umerabdullah,
+    subtitle: "Chartered Accountancy Aspirant",
     paragraphs: [
         "As I, Umer Abdullah, embark on my journey towards becoming a Chartered Accountant and pursuing my Bachelor's degree at the Islamia College of Science & Commerce Srinagar, I cannot help but reflect on the pivotal role the Kashmir Education Initiative (KEI) has played in shaping my academic and social trajectory. My association with KEI dates back to 2019, a significant juncture following my completion of the 8th-grade examination. It was then that I became a part of this transformative initiative, a decision that has profoundly influenced my life ever since.", 
         
@@ -249,6 +257,7 @@ const scholarStories = [
     title: "Idree's Journey with KEI",
     date: "March 02, 2024",
     image: Idrees,
+    subtitle: "Medical Success & Resilience",
     paragraphs: [
         "Once I  gave the merit cum means scholarship exam via KEI. I got selected among the KEI scholars. Back then in 9th standard, I had no idea of how to express myself in this world of competition—comparing my life with what I had in 9th. I think a journey with KEI, their support, and my sheer hard work have made me achieve what I am today. There were certain sessions regarding career counseling, cognitive learning workshops on stress management, etc. Some of them just tingled a spark of hope in my subconscious mind, Which embalmed my aim of becoming a doctor.", 
         
@@ -271,6 +280,7 @@ const scholarStories = [
     title: "Fiza Jan's Journey with KEI",
     date: "April 01, 2024",
     image: Fiza,
+    subtitle: "Anesthesia Technology Expert",
     paragraphs: [
         "As I sit down to write these words, I find myself overwhelmed with gratitude and appreciation for the invaluable work carried out by the Kashmir Education Initiative. With each passing day, KEI continues to inspire hope, foster learning, and uplift communities across the region. My name is Fiza Jan and I am also a KEI scholar from 2016 batch. From the depths of my heart, I extend my deepest thanks to each and every member of the Kashmir Education Initiative. My journey with KEI begain as our results for 8th grade got declared.", 
         
@@ -294,6 +304,7 @@ const scholarStories = [
     title: "Murtaza's Journey with KEI",
     date: "March 31, 2024",
     image: Murtaza,
+    subtitle: "MBBS Scholar & Future Leader",
     paragraphs: [
         "Myself Murtaza Ahmad Beigh I m currently pursuing my MBBS from Government Medical College Srinagar.", 
         
@@ -310,6 +321,7 @@ const scholarStories = [
     title: "Akhter's Journey with KEI",
     date: "March 29, 2024",
     image: Akhter,
+    subtitle: "Computer Applications Explorer",
     paragraphs: [
         "Myself Akhter Ali, I am currently pursuing Bachelors of Computer Applications from Islamia College of Science and Commerce, Srinagar.", 
         "I am immensely grateful to Kashmir Education Initiative  for their unwavering support and generosity in providing me with a scholarship. KEI is not only an institute but they are the true pioneers of education. Their commitment to investing in the education and future of students like myself is truly commendable. They have helped in shaping the careers of many students like me. Thanks to their assistance, I have been able to pursue my academic goals with determination and focus. Their  scholarships not only alleviates financial burdens but also inspires us to strive for excellence in our studies and beyond. I am deeply thankful for the opportunities and doors that this scholarship has opened for me, and I am honored to be a part of such a supportive community."
@@ -325,6 +337,7 @@ const scholarStories = [
     title: "Adleen's Journey with KEI",
     date: "March 28, 2024",
     image: Adleen,
+    subtitle: "Medical Training & Mentorship",
     paragraphs: [
         "Myself Adleen Nazir, hailing from Bota Kadal, Lal Bazar, Srinagar. Currently pursuing my bachelor’s degree in “ANAESTHESIA TECHNOLOGY” From “Kashmir Institute of Medical Sciences and Technology”, Srinagar. My journey with” KASHMIR EDUCATION INITIATIVE” began in the year 2018, when I was in my 9th class. The day, when I started my journey with KEI, I got the privilege of becoming a KEI scholar. I still remember the day, when I went to the KEI office for the first time. It was completely a different experience in my life, when everyone was completely unknown to me and I was a kind of extreme introvert and shy person that I couldn’t even be able to introduce myself properly to everybody there. Since, I started the journey with KEI, I got the chance to change myself into a completely different personality. KEI just being like a family helped me to boost my courage, raised my determination towards my goals and ambitions. Prior to this, I got the privilege to become a part of most beneficial workshops. It built in me, the concept of mentorship programmes and the significance of communication and leadership skills. Besides that, I actively participated in workshops of “PSYCHO SOCIAL WELL BEING” as well as “META_COGNITION” that made a positive impact and surely a notable changes in my life. KEI swiftly ushered changes in my life, offering not just only monetary scholarships, but also invaluable mentorship programmes.",
         
@@ -343,6 +356,7 @@ const scholarStories = [
     title: "Tabinda's Journey with KEI",
     date: "March 27, 2024",
     image: Tabinda,
+    subtitle: "Legal Studies & Leadership",
     paragraphs:[
         "I am Tabinda Manzoor, a scholar who embarked on a transformative journey with KEI starting from 2019. Currently, I am a law student (fresher) in University of Kashmir and actively engaged in honing my skills in leadership, teamwork and cognitive functioning. KEI has been instrumental in shaping my academic and personal growth, and I am excited to share my experiences and insights.",
         
@@ -367,6 +381,7 @@ const scholarStories = [
     title: "From Kashmir to Germany! A short story by our scholar Anayat",
     date: "March 28, 2024",
     image: Anayat,
+    subtitle: "Global Education & Study Abroad",
     paragraphs:[
         "I Anayat Yousuf thank Almighty Allah, my parents & Kashmir Education Initiative for supporting, teaching & mentoring me in this Journey from Kashmir to Germany. During career counseling workshops at KEI, I came to know about UWC. It is the podium where my talents/strengths were analyzed and I was given the utmost support to flourish my talent.  My transformative journey began at United World Colleges (UWC). Here, I experienced a holistic education that nurtured me intellectually, socially, emotionally, and ethically. Through rigorous academic programs, diverse extracurricular activities, and meaningful service opportunities, UWC molded me into a well-rounded individual prepared to impact society positively.",
         
@@ -395,6 +410,7 @@ const scholarStories = [
     title: "Mehak's Journey with KEI",
     date: "March 25, 2024",
     image: Mehak,
+    subtitle: "Medical Scholar & Perseverance",
     paragraphs:[
         "I am Mehak Fayaz, MBBS student at Govt. Medical College, Anantnag.",
         
@@ -404,13 +420,14 @@ const scholarStories = [
 
 {
     id: 17,
-    name: "Karia Zainab",
+    name: "Kaira Zainab",
     year: 2024,    
-    slug: "karia-zainab",   // used in URL
+    slug: "kaira-zainab",   // used in URL
     thumbnail: kariathumb,  // used in grid
-    title: "Karia Zainab's Jouney with KEI",
+    title: "Kaira Zainab's Jouney with KEI",
     date: "March 23, 2024",
     image: Karia,
+    subtitle: "Academic Excellence in Pharmacy",
     paragraphs:[
         "My name is Kaira Zainab, and I come from a humble background. Despite my financial limitations, my dreams have always been steadfast. I am immensely grateful to my creator for blessing me with the KEI family. My journey with KEI began in grade 9 in the year 2013.",
        
@@ -433,6 +450,7 @@ const scholarStories = [
     title: "Tabish's Journey with KEI",
     date: "March 23, 2024",
     image: Tabish,
+    subtitle: "CS Scholar & Global Research",
     paragraphs:[
         "Amid the challenges faced in Kashmir, my prospects seemed limited until an opportunity presented itself in the form of the Kashmir Education Initiative (KEI). Little did I know, this organization would become the cornerstone of my transformation. Joining back in 2015 as a scholar marked a turning point in my life. Initially reserved and uncertain, I soon found myself immersed in a world of opportunities and growth.",
         
@@ -460,6 +478,7 @@ const scholarStories = [
     title: "Snober's Jouney with KEI",
     date: "March 20, 2024",
     image: Snober,
+    subtitle: "Finding a Voice in Journalism",
     paragraphs:[
         "I am Snober, a proud alumna of KEI, graduating from its High School Scholarship Program in my 12th-grade year with the class of 2022. My story with KEI is one of self-discovery and empowerment, a journey that began when I was introduced to this institution during my 9th-grade years.",
         
@@ -484,6 +503,7 @@ const scholarStories = [
     title: "Owais Amin's Journey with KEI",
     date: "March 18, 2024",
     image: Owais,
+    subtitle: "Law, Conflict & Photography",
     paragraphs:[
         "My name is Owais Amin Khan, hailing from the quaint village of 'Nikas,' just 5 kilometers from Pulwama. ",
 
@@ -519,6 +539,7 @@ const scholarStories = [
         title: "Jehangir Yousuf's Journey in Medicine",
         date: "March 15, 2024",
         image: Jehangir,
+    subtitle: "NEET Excellence & Medicine",
         paragraphs:[
             "Myself Jehangir Yousuf. I am from Narbal, Budgam. I scored 677 out of 720 in NEET UG 2023. I also scored 492 out of 500 in the 12th class board examination.",
     
@@ -539,6 +560,7 @@ const scholarStories = [
             title: "A TECH CHAMP - KEI SCHOLAR",
             date: "Feb 28, 2024",
             image: Umair,
+    subtitle: "Tech Mastery & Community Lead",
             paragraphs:[
                 "I am Umair Bashir, an alumnus of Kashmir Education Initiative. I started in 2014 as a KEI scholar and then went on to become a volunteer. At first, I thought that KEI was only an organization that provided scholarships, but then I attended workshops and educational programs. These sessions opened my mind and broadened my vision. The financial aid not only helped me cover my tuition fees but also allowed me to focus more on my studies.",
 

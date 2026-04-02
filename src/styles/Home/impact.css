@@ -92,7 +92,7 @@
   position: relative;
   background: #454545;
   border-radius: 0;
-  padding: 55px 20px 20px;
+  padding: 30px 20px 20px;
   display: flex;
   flex-direction: column;
   height: 270px;
@@ -104,7 +104,7 @@
 
 .impact-card-badge {
   position: absolute;
-  top: 0;
+  top: -40px;
   right: 40px;
   width: 80px;
   height: 80px;
@@ -112,13 +112,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.impact-card-badge img {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
-  filter: brightness(0) invert(1); /* makes icon white */
 }
 
 /* ── AVATAR — top left, overlaps card top */
@@ -139,6 +132,34 @@
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
 }
 
+/* ── AUTHOR DETAILS ─────────────────── */
+
+.impact-author-area {
+  display: block;
+  width: 100%;
+}
+
+.impact-author-details {
+  margin-left: 115px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+}
+
+.impact-card-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.impact-card-subtitle {
+  display: block;
+  font-size: 13px;
+  color: #a0a0a0;
+  margin-top: 4px;
+}
+
 /* ── CARD BODY ──────────────────────── */
 
 .impact-card-body {
@@ -154,7 +175,7 @@
   color: #ffffff;
   margin-bottom: 20px;
   margin-top: 10px;
-  padding-right: 100px;
+  padding-right: 20px;
   flex: 1;
 
   display: -webkit-box;
@@ -163,7 +184,7 @@
   overflow: hidden;
 }
 
-/* Name + link — right aligned like kashmirei.com */
+/* Read more link — right aligned like kashmirei.com */
 .impact-card-footer {
   display: flex;
   justify-content: flex-end;
@@ -173,13 +194,6 @@
   padding-top: 14px;
   margin-top: auto;
   flex-wrap: wrap;
-}
-
-.impact-card-name {
-  font-size: 15px;
-  font-weight: 700;
-  color: #47BFDA;
-  margin: 0;
 }
 
 .impact-card-link {

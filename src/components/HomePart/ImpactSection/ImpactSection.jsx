@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import "../../../styles/Home/impact.css";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination, Keyboard } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import scholarStories from "../../../data/ScholarStories";
 import impactBg from "../../../assets/Images/home-impact-bg.jpg";
@@ -34,10 +35,11 @@ const ImpactSection = () => {
 
         <div className="impact-swiper-wrap">
           <Swiper
-            modules={[Autoplay, Pagination]}
+            modules={[Autoplay, Pagination, Keyboard]}
             slidesPerView="auto"
             spaceBetween={20}
             centeredSlides={true}
+            keyboard={{ enabled: true, onlyInViewport: true }}
             loop={true}
             speed={700}
             autoplay={{
@@ -50,29 +52,47 @@ const ImpactSection = () => {
             className="impact-swiper"
           >
             {stories.map((story) => {
-              const preview = story?.paragraphs?.[0] || "";
+              // Smart truncate: ensures we don't split a word and targets a consistent length
+              const truncateText = (text, limit) => {
+                if (!text || text.length <= limit) return text;
+                const lastSpace = text.lastIndexOf(" ", limit);
+                return text.slice(0, lastSpace > 0 ? lastSpace : limit) + "...";
+              };
+
+              const fullText = story?.paragraphs?.[0] || "";
+              const preview = truncateText(fullText, 180);
+              
+              const fullSubtitle = story.subtitle || "Scholar Excellence";
+              // Setting subtitle limit to 40 to accommodate "at least 35" characters safely
+              const displaySubtitle = truncateText(fullSubtitle, 40);
+
               return (
                 <SwiperSlide key={story.id}>
                   <div className="impact-card-wrap">
 
                     {/* Teal badge — top right */}
                     <div className="impact-card-badge">
-                      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36">
-                        <path d="M8 12C8 10.3 9.3 9 11 9h5c0 3.3-2 6-5 7v-4zm12 0C20 10.3 21.3 9 23 9h5c0 3.3-2 6-5 7v-4z" fill="white" opacity="0.9"/>
+                      <svg style={{ transform: "rotate(180deg)" }} width="34" height="34" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8h4v10h-9.983zM0 18L0 10.609C0 4.905 3.748 1.039 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8h4v10H0z"/>
                       </svg>
                     </div>
 
-                    {/* Avatar — top left, overlapping card */}
-                    <div className="impact-avatar">
-                      <img src={story.thumbnail} alt={story.name} />
+                    <div className="impact-author-area">
+                      {/* Avatar — top left, overlapping card */}
+                      <div className="impact-avatar">
+                        <img src={story.thumbnail} alt={story.name} />
+                      </div>
+                      <div className="impact-author-details">
+                        <h4 className="impact-card-name">{story.name}</h4>
+                        <span className="impact-card-subtitle">{displaySubtitle}</span>
+                      </div>
                     </div>
 
                     <div className="impact-card-body">
                       <p className="impact-card-quote">
-                        &ldquo;{preview}&rdquo;
+                        {preview}
                       </p>
                       <div className="impact-card-footer">
-                        <h4 className="impact-card-name">{story.name}</h4>
                         <Link
                           to={`/blog/${story.slug}`}
                           className="impact-card-link"

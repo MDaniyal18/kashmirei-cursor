@@ -12,7 +12,7 @@ const AnnouncementsHero = () => {
       <div className="ann-hero-content">
         <span className="ann-hero-label">STAY INFORMED</span>
         <h1>
-          News, Updates &amp;<br />
+          Activities, Updates &amp;<br />
           <span>Announcements.</span>
         </h1>
       </div>

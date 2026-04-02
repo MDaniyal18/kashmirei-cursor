@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../../styles/Home/value-we-deliver.css";
-import valueImage from "../../../assets/Images/Value-deliver-rainbow picture.png";
+import valueImage from "../../../assets/Images/value-we-deliver-updated.png";
 
 const ValueWeDeliver = () => {
   return (

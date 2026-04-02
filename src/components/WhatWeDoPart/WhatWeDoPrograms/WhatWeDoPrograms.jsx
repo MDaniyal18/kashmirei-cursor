@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "../../../styles/What-We-Do/whatwedo-programs.css";
 
-import rainbowImg from "../../../assets/Images/Value-deliver-rainbow picture.png";
+import rainbowImg from "../../../assets/Images/value-we-deliver-updated.png";
 
 // Program images
 import imgHSP    from "../../../assets/Images/what-we-do-1.jpg";
@@ -166,6 +167,17 @@ const scrollToProgram = (id) => {
 // ─── Component ───────────────────────────────────────────────────────────────
 
 const WhatWeDoPrograms = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const id = location.hash.replace("#program-", "");
+        scrollToProgram(id);
+      }, 500);
+    }
+  }, [location]);
+
   return (
     <>
       {/* ── Rainbow Navigator ─────────────────────────────────────── */}

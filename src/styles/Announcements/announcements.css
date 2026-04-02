@@ -89,12 +89,57 @@
   margin-bottom: 32px;
 }
 
+.ann-title-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
 .ann-grid-header h2 {
   font-family: "Franklin Gothic Demi", sans-serif;
   font-size: 38px;
   font-weight: 600;
   color: #0f1b24;
   margin: 0;
+  animation: announcement-blink 2s infinite;
+}
+
+.ann-mic {
+  z-index: 1;
+}
+
+.ann-mic-top {
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  margin-left: -14px;
+  width: 28px;
+  height: 28px;
+  animation: mic-pulse 1.8s infinite alternate;
+}
+
+.ann-mic-left {
+  width: 32px;
+  height: 32px;
+  animation: mic-pulse 2s infinite alternate 0.3s;
+}
+
+.ann-mic-right {
+  width: 32px;
+  height: 32px;
+  animation: mic-pulse 2.2s infinite alternate 0.6s;
+}
+
+@keyframes announcement-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes mic-pulse {
+  0% { transform: scale(0.8) rotate(-5deg); filter: drop-shadow(0 0 2px rgba(255, 193, 7, 0.5)); }
+  100% { transform: scale(1.1) rotate(15deg); filter: drop-shadow(0 0 10px rgba(255, 193, 7, 0.9)); }
 }
 
 /* Filter bar */
