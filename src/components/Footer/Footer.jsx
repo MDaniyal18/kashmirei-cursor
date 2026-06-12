@@ -10,7 +10,13 @@ const SITEMAP_LINKS = [
   { path: "/scholar-stories", label: "Our Impact" },
   { path: "/about", label: "About" },
   { path: "/donate", label: "Donate" },
-  { path: "/events", label: "Events" },
+  {
+    label: "Events",
+    dropdown: [
+      { path: "/announcements", label: "Announcements" },
+      { path: "/events", label: "Events" },
+    ],
+  },
   { path: "/faq", label: "FAQ" },
 ];
 
@@ -42,11 +48,27 @@ const Footer = () => {
         <div className="footer-col">
           <h4>Sitemap</h4>
           <ul>
-            {SITEMAP_LINKS.map(({ path, label }) => (
-              <li key={path}>
-                <Link to={path}>{label}</Link>
-              </li>
-            ))}
+            {SITEMAP_LINKS.map((item, index) => {
+              if (item.dropdown) {
+                return (
+                  <li key={index} className="footer-sitemap-dropdown">
+                    <span className="footer-sitemap-parent">{item.label}</span>
+                    <ul className="footer-sitemap-sub">
+                      {item.dropdown.map((subItem) => (
+                        <li key={subItem.path}>
+                          <Link to={subItem.path}>{subItem.label}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              }
+              return (
+                <li key={item.path}>
+                  <Link to={item.path}>{item.label}</Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
 

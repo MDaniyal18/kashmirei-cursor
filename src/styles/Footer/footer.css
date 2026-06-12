@@ -213,3 +213,53 @@
   }
 
 }
+
+/* ============================================================
+   NESTED FOOTER SITEMAP (Events Dropdown)
+   ============================================================ */
+
+.footer-sitemap-dropdown {
+  margin-bottom: 16px;
+}
+
+.footer-sitemap-parent {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0d0d0d;
+  margin-bottom: 8px;
+}
+
+.footer-sitemap-sub {
+  list-style: none;
+  padding-left: 14px;
+  border-left: 2px solid rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.footer-sitemap-sub li {
+  margin-bottom: 8px !important;
+}
+
+.footer-sitemap-sub a {
+  font-size: 14.5px !important;
+  opacity: 0.85;
+}
+
+.footer-sitemap-sub a:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .footer-sitemap-sub {
+    display: inline-block;
+    padding-left: 0;
+    border-left: none;
+    text-align: center;
+  }
+  .footer-sitemap-sub li {
+    display: inline-block;
+    margin: 0 8px !important;
+  }
+}

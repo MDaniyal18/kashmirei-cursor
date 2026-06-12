@@ -5,6 +5,8 @@ const DonateForm = () => {
   const [frequency, setFrequency] = useState("one-time"); // one-time / monthly
   const [selectedAmount, setSelectedAmount] = useState(100); // 25, 50, 100, 250, custom
   const [customAmount, setCustomAmount] = useState("");
+  const [givingTier, setGivingTier] = useState("general");
+  const [scholarshipType, setScholarshipType] = useState("general");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -18,6 +20,42 @@ const DonateForm = () => {
   const [errorMsg, setErrorMsg] = useState("");
 
   const presetAmounts = [25, 50, 100, 250];
+
+  const handleGivingTierChange = (e) => {
+    const tier = e.target.value;
+    setGivingTier(tier);
+    
+    // Auto-update amount and preset selection if appropriate
+    if (tier === "hs-full") {
+      setSelectedAmount("custom");
+      setCustomAmount("660");
+      setScholarshipType("hssp");
+    } else if (tier === "hs-partial") {
+      setSelectedAmount("custom");
+      setCustomAmount("360");
+      setScholarshipType("hssp");
+    } else if (tier === "ty-full") {
+      setSelectedAmount("custom");
+      setCustomAmount("500");
+      setScholarshipType("psp");
+    } else if (tier === "ty-partial") {
+      setSelectedAmount("custom");
+      setCustomAmount("300");
+      setScholarshipType("psp");
+    } else if (tier === "pd-full") {
+      setSelectedAmount("custom");
+      setCustomAmount("700");
+      setScholarshipType("gap");
+    } else if (tier === "pd-partial") {
+      setSelectedAmount("custom");
+      setCustomAmount("300");
+      setScholarshipType("gap");
+    } else if (tier === "general") {
+      setSelectedAmount(100);
+      setCustomAmount("");
+      setScholarshipType("general");
+    }
+  };
 
   const handleAmountClick = (amount) => {
     setSelectedAmount(amount);
@@ -77,6 +115,8 @@ const DonateForm = () => {
     setCardZip("");
     setCustomAmount("");
     setSelectedAmount(100);
+    setGivingTier("general");
+    setScholarshipType("general");
   };
 
   if (isSuccess) {
@@ -89,6 +129,18 @@ const DonateForm = () => {
             <p style={{ fontSize: "16px", lineHeight: "1.75", color: "#444", marginBottom: "28px" }}>
               Your donation of <strong>${getFinalAmount()}</strong> ({frequency === "monthly" ? "Monthly Recurring" : "One-Time"}) 
               has been successfully processed. 
+              {givingTier !== "general" && (
+                <>
+                  <br />
+                  Sponsorship Tier: <strong>{givingTier === "hs-full" ? "High School Full" : givingTier === "hs-partial" ? "High School Partial" : givingTier === "ty-full" ? "Transition Year Full" : givingTier === "ty-partial" ? "Transition Year Partial" : givingTier === "pd-full" ? "Pre-Doctoral Full" : "Pre-Doctoral Partial"} Sponsor</strong>
+                </>
+              )}
+              {scholarshipType !== "general" && (
+                <>
+                  <br />
+                  Scholarship Designation: <strong>{scholarshipType === "hssp" ? "High School Support Program (HSSP)" : scholarshipType === "psp" ? "Professional Support Program (PSP)" : scholarshipType === "gap" ? "Graduate Abroad Program (GAP)" : "International Bridge Scholarship Program (IBSP)"}</strong>
+                </>
+              )}
             </p>
             <p style={{ fontSize: "14.5px", color: "#555", marginBottom: "32px" }}>
               A tax receipt has been emailed to <strong>{email}</strong>. The scholars and community of Kashmir 
@@ -119,6 +171,45 @@ const DonateForm = () => {
         <div className="donate-form-card">
           <form onSubmit={handleSubmit}>
             
+            {/* Giving Tier & Scholarship Fields */}
+            <div className="donate-tier-selects" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", marginBottom: "24px" }}>
+              <div>
+                <label className="form-group-label" htmlFor="giving-tier">Giving Tier</label>
+                <select 
+                  id="giving-tier" 
+                  value={givingTier} 
+                  onChange={handleGivingTierChange}
+                  className="input"
+                  style={{ width: "100%", padding: "12px", borderRadius: "6px", border: "1.5px solid #e4eef4", fontSize: "14px", backgroundColor: "#fff", outline: "none", height: "48px" }}
+                >
+                  <option value="general">General Supporter</option>
+                  <option value="hs-full">High School Full Sponsor ($660)</option>
+                  <option value="hs-partial">High School Partial Sponsor ($360)</option>
+                  <option value="ty-full">Transition Year Full Sponsor ($500)</option>
+                  <option value="ty-partial">Transition Year Partial Sponsor ($300)</option>
+                  <option value="pd-full">Pre-Doctoral Full Sponsor ($700)</option>
+                  <option value="pd-partial">Pre-Doctoral Partial Sponsor ($300)</option>
+                </select>
+              </div>
+              
+              <div>
+                <label className="form-group-label" htmlFor="scholarship-type">Type of Scholarship</label>
+                <select 
+                  id="scholarship-type" 
+                  value={scholarshipType} 
+                  onChange={(e) => setScholarshipType(e.target.value)}
+                  className="input"
+                  style={{ width: "100%", padding: "12px", borderRadius: "6px", border: "1.5px solid #e4eef4", fontSize: "14px", backgroundColor: "#fff", outline: "none", height: "48px" }}
+                >
+                  <option value="general">General/Undesignated Scholarship</option>
+                  <option value="hssp">High School Support Program (HSSP)</option>
+                  <option value="psp">Professional Support Program (PSP)</option>
+                  <option value="gap">Graduate Abroad Program (GAP)</option>
+                  <option value="ibsp">International Bridge Scholarship Program (IBSP)</option>
+                </select>
+              </div>
+            </div>
+
             {/* Frequency Toggle */}
             <div style={{ marginBottom: "24px" }}>
               <span className="form-group-label">Donation Frequency</span>

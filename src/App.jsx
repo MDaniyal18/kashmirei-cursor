@@ -15,9 +15,12 @@ import Footer from "./components/Footer/Footer";
 // Pages
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
+import HistoricalFinancials from "./components/pages/HistoricalFinancials";
 import Announcements from "./components/pages/Announcements";
 import Events from "./components/pages/Events";
 import ForScholars from "./components/pages/ForScholars";
+import AllPrograms from "./components/pages/AllPrograms";
+import HowToApplyPage from "./components/pages/HowToApplyPage";
 import ProgramDetail from "./components/pages/ProgramDetail";
 import Donate from "./components/pages/Donate";
 import GetInvolved from "./components/pages/GetInvolved";
@@ -57,7 +60,10 @@ const App = () => {
 
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/about/historical-financials" element={<HistoricalFinancials />} />
           <Route path="/for-scholars" element={<ForScholars />} />
+          <Route path="/for-scholars/programs" element={<AllPrograms />} />
+          <Route path="/for-scholars/how-to-apply" element={<HowToApplyPage />} />
           <Route path="/for-scholars/:id" element={<ProgramDetail />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/get-involved" element={<GetInvolved />} />

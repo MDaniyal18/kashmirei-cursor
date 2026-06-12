@@ -37,7 +37,6 @@ const AboutTeam = () => {
       <div className="about-team-container">
 
         <div className="about-team-header">
-          <div className="about-section-num">05</div>
           <span className="about-label">THE PEOPLE BEHIND KEI</span>
           <h2>Meet the Team.</h2>
           <p className="about-team-sub">
@@ -94,12 +93,17 @@ const AboutTeam = () => {
         */}
 
         <div className="about-team-cta" style={{ textAlign: "center", marginTop: "40px" }}>
-          <p style={{ fontSize: "16px", color: "#555", marginBottom: "16px" }}>
+          <p style={{ fontSize: "16px", color: "#555", marginBottom: "20px" }}>
             If you have any questions, click below.
           </p>
-          <Link to="/faq" className="about-outline-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
-            View FAQ Page
-          </Link>
+          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+            <Link to="/faq" className="about-outline-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
+              View FAQ Page
+            </Link>
+            <a href="mailto:info@kashmirei.org" className="about-filled-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
+              Contact Us
+            </a>
+          </div>
         </div>
 
       </div>

@@ -190,6 +190,10 @@
   .stripe-elements-mock {
     grid-template-columns: 1fr;
   }
+  .donate-tier-selects {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
 }
 
 

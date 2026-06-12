@@ -30,7 +30,6 @@ const HowToApply = () => {
       <div className="events-container">
         
         <div className="events-header" style={{ marginBottom: "50px", textAlign: "center" }}>
-          <span className="events-label" style={{ color: "#47BFDA", letterSpacing: "2px", fontWeight: "600" }}>ADMISSIONS GUIDE</span>
           <h2 style={{ fontSize: "36px", color: "#0f1b24", marginTop: "12px" }}>How to Apply.</h2>
           <p className="events-sub" style={{ maxWidth: "600px", margin: "10px auto 0" }}>
             A transparent, merit-based selection process to ensure support reaches the most deserving and high-potential students in Kashmir.

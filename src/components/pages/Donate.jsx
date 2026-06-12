@@ -12,7 +12,7 @@ const Donate = () => {
       <DonateMethodCards />
       <DonateForm />
       <DonateCompliance />
-      <DonateCallToAction />
+      {/* <DonateCallToAction /> */}
     </>
   );
 };

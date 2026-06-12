@@ -50,6 +50,26 @@
   color: #fff;
 }
 
+.about-filled-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #47BFDA;
+  border: 2px solid #47BFDA;
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: "Franklin Gothic Demi", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.about-filled-btn:hover {
+  background: #35a3c3;
+  border-color: #35a3c3;
+  color: #ffffff;
+}
+
 
 /* ============================================================
    SECTION 2 — OUR STORY (Timeline)

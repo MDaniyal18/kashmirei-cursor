@@ -95,3 +95,301 @@
 .swiper-pagination-bullet-active {
   background: #47BFDA !important;
 }
+
+/* ============================================================
+   NEW ADMISSIONS SECTIONS STYLE (How to Apply, Dates, Links)
+   ============================================================ */
+
+.forscholars-apply-section,
+.forscholars-dates-section,
+.forscholars-links-section {
+  padding: 90px 24px;
+}
+
+.forscholars-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.forscholars-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.forscholars-label {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #47BFDA;
+  margin-bottom: 12px;
+}
+
+.forscholars-header h2 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #0f1b24;
+  margin: 0 0 14px;
+}
+
+.forscholars-sub {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 3-Step Grid */
+.forscholars-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.forscholars-step-card {
+  background: #f4f8fb;
+  border: 1.5px solid #e4eef4;
+  border-radius: 16px;
+  padding: 44px 30px;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.forscholars-step-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(71, 191, 218, 0.1);
+  border-color: rgba(71, 191, 218, 0.4);
+}
+
+.forscholars-step-card .step-num {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font-size: 48px;
+  font-weight: 900;
+  color: #47BFDA;
+  opacity: 0.16;
+  line-height: 1;
+}
+
+.forscholars-step-card h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #0f1b24;
+  margin-bottom: 14px;
+  padding-right: 48px;
+}
+
+.forscholars-step-card p {
+  font-size: 14.5px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.forscholars-apply-cta {
+  text-align: center;
+}
+
+.cta-btn {
+  background: #47BFDA;
+  border: 1.5px solid #47BFDA;
+  color: #ffffff;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 30px;
+  box-shadow: 0 4px 14px rgba(71, 191, 218, 0.25);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  background: #3aa9c4;
+  color: #ffffff;
+}
+
+/* Dates Section */
+.forscholars-dates-section {
+  background: #f4f8fb;
+}
+
+.forscholars-dates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.forscholars-date-card {
+  background: #ffffff;
+  border: 1.5px solid #e4eef4;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.forscholars-date-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.date-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.status-badge {
+  align-self: flex-start;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.forscholars-date-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f1b24;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.date-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.date-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13.5px;
+  border-bottom: 1px dashed #e4eef4;
+  padding-bottom: 10px;
+}
+
+.date-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.date-row strong {
+  color: #666;
+  font-weight: 600;
+}
+
+.date-row span {
+  color: #0f1b24;
+  font-weight: 700;
+}
+
+/* Links Section */
+.forscholars-links-section {
+  background: #ffffff;
+}
+
+.forscholars-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.forscholars-link-card {
+  background: #ffffff;
+  border: 1.5px solid #e4eef4;
+  border-radius: 16px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.forscholars-link-card:hover {
+  border-color: rgba(71, 191, 218, 0.5);
+  box-shadow: 0 10px 25px rgba(71, 191, 218, 0.08);
+}
+
+.forscholars-link-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f1b24;
+  margin: 0 0 12px;
+}
+
+.forscholars-link-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.65;
+  margin: 0 0 28px;
+}
+
+.card-btn {
+  background: #47BFDA;
+  border: 1.5px solid #47BFDA;
+  color: #ffffff;
+  padding: 10px 24px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 8px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.card-btn:hover {
+  background: #3aa9c4;
+  border-color: #3aa9c4;
+  color: #ffffff;
+}
+
+/* Detailed Step Card Style for HowToApplyPage */
+.step-card-detailed {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.step-card-detailed:hover {
+  border-color: rgba(71, 191, 218, 0.4) !important;
+  box-shadow: 0 10px 30px rgba(71, 191, 218, 0.06) !important;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+  .forscholars-steps-grid,
+  .forscholars-dates-grid,
+  .forscholars-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .forscholars-steps-grid,
+  .forscholars-dates-grid,
+  .forscholars-links-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .forscholars-apply-section,
+  .forscholars-dates-section,
+  .forscholars-links-section {
+    padding: 60px 16px;
+  }
+  
+  .forscholars-header h2 {
+    font-size: 28px;
+  }
+}

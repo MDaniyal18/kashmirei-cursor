@@ -41,8 +41,8 @@ const ProgramDetail = () => {
         }}
       >
         <div className="container">
-          <Link to={`/for-scholars#program-${program.id}`} className="prog-detail-back-link">
-            ← Back to For Scholars
+          <Link to={`/for-scholars/programs#program-${program.id}`} className="prog-detail-back-link">
+            ← Back to Programs
           </Link>
           <div className="prog-detail-hero-content">
             <span className="prog-detail-number" style={{ color: program.color }}>

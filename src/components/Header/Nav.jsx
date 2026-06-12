@@ -5,24 +5,17 @@ import logo from "../../assets/Images/KEI-new-logo/logo.png";
 
 const NAV_LINKS = [
   { path: "/", label: "Home" },
-  { path: "/about", label: "About" },
   { path: "/for-scholars", label: "For Scholars" },
+  { path: "/get-involved", label: "Get Involved" },
   {
     label: "Our Impact",
     dropdown: [
-      { path: "/impact-by-numbers", label: "Impact by Numbers" },
+      // { path: "/impact-by-numbers", label: "Impact by Numbers" },
       { path: "/scholar-stories", label: "Scholar Stories" },
       { path: "/alumni-videos", label: "Alumni Videos" },
     ],
   },
-  {
-    label: "Events",
-    dropdown: [
-      { path: "/announcements", label: "Announcements" },
-      { path: "/events", label: "Events" },
-    ],
-  },
-  { path: "/get-involved", label: "Get Involved" },
+  { path: "/about", label: "About" },
   { path: "/donate", label: "Donate" },
 ];
 

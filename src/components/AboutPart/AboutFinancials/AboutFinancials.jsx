@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../../styles/Announcements/announcements.css";
 
 const AboutFinancials = () => {
@@ -38,7 +39,7 @@ const AboutFinancials = () => {
       <div className="container" style={{ maxWidth: "1100px", margin: "0 auto" }}>
         
         <div className="about-financials-header" style={{ marginBottom: "52px", textAlign: "center" }}>
-          <span className="about-label" style={{ color: "#47BFDA", letterSpacing: "2px", fontWeight: "600" }}>FISCAL TRANSPARENCY</span>
+          <span className="about-label" style={{ color: "#47BFDA", letterSpacing: "2px", fontWeight: "600", textTransform: "uppercase" }}>FINANCIALS</span>
           <h2 style={{ fontSize: "42px", color: "#0f1b24", marginTop: "14px", fontFamily: "Franklin Gothic Demi, sans-serif" }}>Latest Financials.</h2>
           <p style={{ fontSize: "15px", color: "#555", maxWidth: "600px", margin: "10px auto 0", lineHeight: "1.8" }}>
             We hold ourselves to the highest standards of financial accountability, ensuring every contribution is fully maximized to benefit Kashmiri scholars.
@@ -82,6 +83,31 @@ const AboutFinancials = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA to Historical Financials */}
+        <div style={{ marginTop: "48px", textAlign: "center" }}>
+          <Link 
+            to="/about/historical-financials" 
+            className="button-outline"
+            style={{
+              backgroundColor: "transparent",
+              borderColor: "#47BFDA",
+              borderWidth: "1.5px",
+              borderStyle: "solid",
+              color: "#47BFDA",
+              padding: "10px 28px",
+              fontSize: "13px",
+              textTransform: "uppercase",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              fontWeight: "600",
+              textDecoration: "none"
+            }}
+          >
+            View Historical Financials →
+          </Link>
         </div>
 
       </div>
