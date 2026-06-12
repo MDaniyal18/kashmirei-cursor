@@ -1,0 +1,93 @@
+/* =========================
+   FOR SCHOLARS — HERO
+========================= */
+
+.section-wwd-hero {
+  position: relative;
+  min-height: 480px;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.wwd-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 20, 35, 0.68);
+  z-index: 0;
+}
+
+.wwd-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  padding: 0 30px;
+}
+
+.wwd-hero-label {
+  display: inline-block;
+  font-family: "Franklin Gothic Book", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #47BFDA;
+  margin-bottom: 18px;
+}
+
+.wwd-hero-content h1 {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 0 0 20px;
+}
+
+.wwd-hero-content h1 span {
+  color: #47BFDA;
+}
+
+.wwd-hero-content p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+@media (max-width: 992px) {
+  .section-wwd-hero {
+    min-height: 380px;
+  }
+  .wwd-hero-content h1 {
+    font-size: 38px;
+  }
+  .wwd-hero-content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-wwd-hero {
+    min-height: 320px;
+  }
+  .wwd-hero-content h1 {
+    font-size: 28px;
+  }
+  .wwd-hero-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-wwd-hero {
+    min-height: 280px;
+  }
+  .wwd-hero-content h1 {
+    font-size: 24px;
+  }
+}

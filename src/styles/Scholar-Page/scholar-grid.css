@@ -251,3 +251,17 @@
     font-size: 15px;
   }
 }
+
+/* =====================================
+   OUR IMPACT LAYOUT RESPONSIVE
+===================================== */
+@media (max-width: 992px) {
+  .our-impact-layout {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+  .our-impact-stats-sidebar {
+    position: static !important;
+    max-width: 100% !important;
+  }
+}

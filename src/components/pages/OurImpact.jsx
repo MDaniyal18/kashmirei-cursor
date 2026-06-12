@@ -48,7 +48,7 @@ const scholarStats = [
   },
 ];
 
-const ScholarStories = () => {
+const OurImpact = () => {
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
@@ -182,4 +182,4 @@ const ScholarStories = () => {
   );
 };
 
-export default ScholarStories;
+export default OurImpact;

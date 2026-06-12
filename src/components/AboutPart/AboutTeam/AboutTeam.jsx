@@ -78,7 +78,7 @@ const AboutTeam = () => {
           </div>
         </div>
 
-        {/* Volunteers */}
+        {/* Volunteers section commented out as requested
         <div className="about-team-tier">
           <h3 className="about-team-tier-title">Our Volunteers</h3>
           <div className="about-volunteers-grid">
@@ -91,10 +91,14 @@ const AboutTeam = () => {
             ))}
           </div>
         </div>
+        */}
 
-        <div className="about-team-cta">
-          <Link to="/get-involved" className="about-outline-btn">
-            Join the Team →
+        <div className="about-team-cta" style={{ textAlign: "center", marginTop: "40px" }}>
+          <p style={{ fontSize: "16px", color: "#555", marginBottom: "16px" }}>
+            If you have any questions, click below.
+          </p>
+          <Link to="/faq" className="about-outline-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
+            View FAQ Page
           </Link>
         </div>
 

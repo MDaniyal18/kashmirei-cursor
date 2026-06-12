@@ -30,7 +30,7 @@ const ValueWeDeliver = () => {
 
         <div className="value-cta">
           <p className="value-cta-text">Want to learn more about these programs?</p>
-          <Link to="/what-we-do" className="value-btn-primary">
+          <Link to="/for-scholars" className="value-btn-primary">
             EXPLORE OUR PROGRAMS
           </Link>
         </div>

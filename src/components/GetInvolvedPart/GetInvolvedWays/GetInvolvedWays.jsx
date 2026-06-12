@@ -18,6 +18,7 @@ const GetInvolvedWays = () => {
 
         <div className="gi-ways-grid">
 
+          {/* Commented out Donate Today card as requested
           <div className="gi-card">
             <Link to="/donate">
               <img src={donateIcon} alt="Donate" />
@@ -25,6 +26,16 @@ const GetInvolvedWays = () => {
             <h3>Donate Today</h3>
             <p>Every contribution creates a ripple effect of opportunity.</p>
             <Link to="/donate">DONATE NOW</Link>
+          </div>
+          */}
+
+          <div className="gi-card">
+            <Link to="/volunteer-with-us">
+              <img src={volunteerIcon} alt="Volunteer" />
+            </Link>
+            <h3>Volunteer With Us</h3>
+            <p>Join hands with us in operations, training, or outreach.</p>
+            <Link to="/volunteer-with-us">VOLUNTEER WITH US</Link>
           </div>
 
           <div className="gi-card">
@@ -37,14 +48,15 @@ const GetInvolvedWays = () => {
           </div>
 
           <div className="gi-card">
-            <Link to="/volunteer-with-us">
-              <img src={volunteerIcon} alt="Volunteer" />
-            </Link>
-            <h3>Volunteer</h3>
-            <p>Join hands with us in operations, training, or outreach.</p>
-            <Link to="/volunteer-with-us">VOLUNTEER WITH US</Link>
+            <a href="mailto:info@kashmirei.org">
+              <img src={sponsorIcon} alt="Partner" />
+            </a>
+            <h3>Partner With Us</h3>
+            <p>Collaborate with us as an institution, university, or corporate partner to amplify impact.</p>
+            <a href="mailto:info@kashmirei.org">PARTNER WITH US</a>
           </div>
 
+          {/* Commented out Sponsor a Scholar card as requested
           <div className="gi-card">
             <Link to="/sponsor-a-scholar">
               <img src={sponsorIcon} alt="Sponsor" />
@@ -53,6 +65,7 @@ const GetInvolvedWays = () => {
             <p>Fund a specific initiative like career workshops or digital learning.</p>
             <Link to="/sponsor-a-scholar">SPONSOR A SCHOLAR</Link>
           </div>
+          */}
 
         </div>
 

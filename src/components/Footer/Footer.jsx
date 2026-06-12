@@ -3,14 +3,15 @@ import { Link } from "react-router-dom";
 import "../../styles/Footer/footer.css";
 import logo from "../../assets/Images/KEI-new-logo/Logos-03.svg";
 
-const FOOTER_QUICK_LINKS = [
+const SITEMAP_LINKS = [
   { path: "/", label: "Home" },
-  { path: "/get-involved", label: "Get Involved" }, // needs correct page
+  { path: "/for-scholars", label: "For Scholars" },
+  { path: "/get-involved", label: "Get Involved" },
+  { path: "/scholar-stories", label: "Our Impact" },
   { path: "/about", label: "About" },
+  { path: "/donate", label: "Donate" },
   { path: "/events", label: "Events" },
-  { path: "/what-we-do", label: "What We Do" },
-  { path: "/scholar-stories", label: "Scholar Stories" },
-  { path: "/donate", label: "Donate" }, // needs correct page
+  { path: "/faq", label: "FAQ" },
 ];
 
 const SOCIAL_LINKS = [
@@ -39,9 +40,9 @@ const Footer = () => {
 
         {/* Column 2 - Quick Links */}
         <div className="footer-col">
-          <h4>Quick Links</h4>
+          <h4>Sitemap</h4>
           <ul>
-            {FOOTER_QUICK_LINKS.map(({ path, label }) => (
+            {SITEMAP_LINKS.map(({ path, label }) => (
               <li key={path}>
                 <Link to={path}>{label}</Link>
               </li>

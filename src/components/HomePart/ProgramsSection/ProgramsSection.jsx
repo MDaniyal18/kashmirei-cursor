@@ -74,7 +74,7 @@ const ProgramsSection = () => {
                   High School, UG & PG, Graduate Abroad (GAP) / IBSP
                 </p>
                 <p>
-                  <strong>2,500+ High School Scholars</strong>
+                  <strong>2,800+ High School Scholars</strong>
                 </p>
               </div>
             </div>

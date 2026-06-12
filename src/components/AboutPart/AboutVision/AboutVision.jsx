@@ -32,7 +32,7 @@ const AboutVision = () => {
             skills, ethics, and leadership, KEI helps scholars shape
             their communities and their futures.
           </p>
-          <Link to="/what-we-do" className="about-vision-btn">
+          <Link to="/for-scholars" className="about-vision-btn">
             Explore Our Programmes →
           </Link>
         </div>

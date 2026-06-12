@@ -17,9 +17,12 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Announcements from "./components/pages/Announcements";
 import Events from "./components/pages/Events";
-import WhatWeDo from "./components/pages/WhatWeDo";
+import ForScholars from "./components/pages/ForScholars";
+import ProgramDetail from "./components/pages/ProgramDetail";
 import Donate from "./components/pages/Donate";
 import GetInvolved from "./components/pages/GetInvolved";
+import OurImpact from "./components/pages/OurImpact";
+import FAQ from "./components/pages/FAQ";
 import ScholarStories from "./components/pages/ScholarStories";
 import ImpactByNumbers from "./components/pages/ImpactByNumbers";
 import AlumniVideos from "./components/pages/AlumniVideos";
@@ -54,9 +57,12 @@ const App = () => {
 
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/what-we-do" element={<WhatWeDo />} />
+          <Route path="/for-scholars" element={<ForScholars />} />
+          <Route path="/for-scholars/:id" element={<ProgramDetail />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/get-involved" element={<GetInvolved />} />
+          <Route path="/our-impact" element={<ScholarStories />} />
+          <Route path="/faq" element={<FAQ />} />
 
           <Route path="/become-a-mentor" element={<BecomeMentor />} />
           <Route path="/volunteer-with-us" element={<Volunteer />} />

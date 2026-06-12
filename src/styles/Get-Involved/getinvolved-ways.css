@@ -40,8 +40,8 @@
   
   .gi-ways-grid {
     display: grid;
-    grid-template-columns: repeat(4, 280px);
-    gap: 60px;
+    grid-template-columns: repeat(3, 300px); /* 3 equal columns centered */
+    gap: 40px;
     justify-content: center;
     margin-top: 60px;
   }
@@ -49,8 +49,8 @@
   /* ================= CARD ================= */
   
   .gi-card {
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 320px; /* Equal dimensions for all cards */
   
     background: #ffffff;
     border-radius: 24px;
@@ -60,9 +60,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Equal item spacing alignment */
   
-    padding: 45px 40px;
+    padding: 35px 25px;
     text-align: center;
   }
   
@@ -136,8 +136,8 @@
   
   @media (max-width: 1200px) {
     .gi-ways-grid {
-      grid-template-columns: repeat(2, 280px);
-      gap: 50px;
+      grid-template-columns: repeat(2, 300px);
+      gap: 40px;
     }
   }
   

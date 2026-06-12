@@ -6,7 +6,7 @@ import logo from "../../assets/Images/KEI-new-logo/logo.png";
 const NAV_LINKS = [
   { path: "/", label: "Home" },
   { path: "/about", label: "About" },
-  { path: "/what-we-do", label: "What We Do" },
+  { path: "/for-scholars", label: "For Scholars" },
   {
     label: "Our Impact",
     dropdown: [

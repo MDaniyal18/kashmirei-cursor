@@ -28,7 +28,7 @@ const programs = [
     description:
       "The High School Support Program equips students from underserved communities with the academic skills and confidence needed to succeed in competitive high school entrance exams. Through structured coaching, mock tests, and dedicated tutors, we close the gap between potential and opportunity — ensuring every gifted student in Kashmir has a fair shot at quality secondary education.",
     stats: [
-      { value: "2,500+", label: "Scholars Supported" },
+      { value: "2,800+", label: "Scholars Supported" },
       { value: "85%", label: "Exam Pass Rate" },
       { value: "10+", label: "Years Running" },
     ],

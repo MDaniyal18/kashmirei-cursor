@@ -49,12 +49,14 @@ const upcomingEvents = [
   },
 ];
 
+import "../../../../styles/Announcements/announcements.css";
+
 const UpcomingEvents = () => {
   return (
-    <section className="section-upcoming-events">
+    <section className="section-upcoming-events" style={{ backgroundColor: "#f4f8fb" }}>
       <div className="events-container">
 
-        <div className="events-header">
+        <div className="events-header" style={{ marginBottom: "44px" }}>
           <span className="events-label">UPCOMING EVENTS</span>
           <h2>Mark Your Calendar.</h2>
           <p className="events-sub">
@@ -68,40 +70,39 @@ const UpcomingEvents = () => {
             <p>No upcoming events right now. Check back soon or subscribe below for updates.</p>
           </div>
         ) : (
-          <div className="events-list">
-            {upcomingEvents.map((ev) => (
-              <div className="event-row" key={ev.id}>
-
-                {/* Date box */}
-                <div className="event-date-box">
-                  <span className="event-month">{ev.month}</span>
-                  <span className="event-day">{ev.day}</span>
-                  <span className="event-year">{ev.year}</span>
-                </div>
-
-                {/* Details */}
-                <div className="event-details">
-                  <div className="event-meta">
-                    <span className="event-type-badge"
-                      style={{ background: TYPE_COLORS[ev.type] }}>
-                      {ev.type}
+          <div className="ann-cards-grid">
+            {upcomingEvents.map((ev) => {
+              const color = TYPE_COLORS[ev.type] || "#47BFDA";
+              return (
+                <div 
+                  className="ann-card" 
+                  key={ev.id}
+                  style={{ "--ann-color": color }}
+                >
+                  <div className="ann-card-top-bar" />
+                  <div className="ann-card-body" style={{ display: "flex", flexDirection: "column" }}>
+                    <div className="ann-card-meta">
+                      <span className="ann-cat-pill" style={{ background: color }}>
+                        {ev.type}
+                      </span>
+                      <span className="ann-card-date">{ev.month} {ev.day}, {ev.year}</span>
+                    </div>
+                    <span style={{ fontSize: "12.5px", color: "#666", display: "block", marginBottom: "12px", fontFamily: "sans-serif" }}>
+                      📍 {ev.location} <br /> 🕐 {ev.time}
                     </span>
-                    <span className="event-location">📍 {ev.location}</span>
-                    <span className="event-time">🕐 {ev.time}</span>
+                    <h3 className="ann-card-title" style={{ fontSize: "17px", minHeight: "48px" }}>{ev.title}</h3>
+                    <p className="ann-card-summary" style={{ fontSize: "14px", color: "#555", lineHeight: "1.7", marginBottom: "16px" }}>{ev.description}</p>
                   </div>
-                  <h3 className="event-title">{ev.title}</h3>
-                  <p className="event-desc">{ev.description}</p>
-                </div>
-
-                {/* Action */}
-                <div className="event-action">
-                  <a href={ev.actionHref} className="event-action-btn">
+                  <a 
+                    href={ev.actionHref} 
+                    className="ann-card-readmore" 
+                    style={{ textDecoration: "none", display: "block", borderTop: "1px solid #e4eef4", padding: "14px 24px", color: color }}
+                  >
                     {ev.actionLabel} →
                   </a>
                 </div>
-
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
 

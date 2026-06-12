@@ -179,7 +179,7 @@
 .section-about-vision {
   position: relative;
   background: #0f1b24;
-  padding: 88px 40px;
+  padding: 183px 40px 88px; /* Adjusted top padding to clear 95px sticky header and match 88px bottom padding */
   overflow: hidden;
 }
 
@@ -984,13 +984,16 @@
 @media (max-width: 992px) {
 
   .section-about-story,
-  .section-about-vision,
   .section-about-values,
   .section-about-partners,
   .section-about-team,
   .section-about-cta,
   .section-about-contact {
     padding: 64px 24px;
+  }
+
+  .section-about-vision {
+    padding: 159px 24px 64px; /* Adjusted top padding to clear sticky header */
   }
 
   .about-story-container {
@@ -1041,13 +1044,16 @@
 @media (max-width: 768px) {
 
   .section-about-story,
-  .section-about-vision,
   .section-about-values,
   .section-about-partners,
   .section-about-team,
   .section-about-cta,
   .section-about-contact {
     padding: 52px 16px;
+  }
+
+  .section-about-vision {
+    padding: 147px 16px 52px; /* Adjusted top padding to clear sticky header */
   }
 
   .about-values-grid { grid-template-columns: 1fr; }

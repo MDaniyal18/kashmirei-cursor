@@ -15,7 +15,7 @@ const timelineItems = [
   {
     year: "Today",
     title: "A Movement, Not Just a Programme",
-    body: "Eight interconnected programmes, 2,500+ scholars supported, and a global diaspora network united by one belief: education is the most powerful force for change in a conflict-affected society.",
+    body: "Eight interconnected programmes, 2,800+ scholars supported, and a global diaspora network united by one belief: education is the most powerful force for change in a conflict-affected society.",
   },
 ];
 

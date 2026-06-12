@@ -52,7 +52,7 @@ How to Apply:
 Applications will be available through the KEI Kashmir office and partner schools.
 
 For more information, contact info@kashmirei.org or call +0194 2458153.`,
-  cta: { label: "Learn About HSP", href: "/what-we-do#program-hsp" },
+  cta: { label: "Learn About HSP", href: "/for-scholars/hsp" },
 },
   {
     id: 2,
@@ -130,7 +130,7 @@ Open to all interested students. These include webinars, speaker sessions, and i
 A highly selective program for students actively applying for graduate studies abroad. Selected scholars are paired with experienced mentors who guide them through the rigorous international application process, including university selection, essays, and interviews.
 
 If you are a talented graduate planning to study abroad, GAP provides the structured mentorship and support needed to help you succeed.`,
-  cta: { label: "Learn About GAP", href: "/what-we-do#program-gap" },
+  cta: { label: "Learn About GAP", href: "/for-scholars/gap" },
 },
 ];
 
