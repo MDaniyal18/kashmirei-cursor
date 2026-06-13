@@ -7,7 +7,7 @@ const AlumniStoriesVideos = () => {
   const [showAll, setShowAll] = useState(false);
 
   const ITEMS_PER_ROW = 3;
-  const DEFAULT_ROWS = 5;
+  const DEFAULT_ROWS = 3;
 
   const videosToShow = showAll
     ? alumniVideos
