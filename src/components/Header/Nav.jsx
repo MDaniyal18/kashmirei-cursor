@@ -7,14 +7,7 @@ const NAV_LINKS = [
   { path: "/", label: "Home" },
   { path: "/for-scholars", label: "For Scholars" },
   { path: "/get-involved", label: "Get Involved" },
-  {
-    label: "Our Impact",
-    dropdown: [
-      // { path: "/impact-by-numbers", label: "Impact by Numbers" },
-      { path: "/scholar-stories", label: "Scholar Stories" },
-      { path: "/alumni-videos", label: "Alumni Videos" },
-    ],
-  },
+  { path: "/our-impact", label: "Our Impact" },
   { path: "/about", label: "About" },
   { path: "/donate", label: "Donate" },
 ];

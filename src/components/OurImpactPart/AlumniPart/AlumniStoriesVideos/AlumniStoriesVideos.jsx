@@ -30,7 +30,7 @@ const AlumniStoriesVideos = () => {
   };
 
   return (
-    <section id="scholar-videos-section" className="section-ss-videos">
+    <section id="scholar-videos-section" className="section-ss-videos ss-videos-dark">
       <div className="container">
         <span className="ss-label">KEI ALUMNI SUCCESS</span>
         <h2>

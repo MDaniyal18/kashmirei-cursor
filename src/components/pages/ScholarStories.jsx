@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ScholarStoriesHero from "../OurImpactPart/ScholarStoryPart/ScholarStoriesHero/ScholarStoriesHero";
+import AlumniStoriesVideos from "../OurImpactPart/AlumniPart/AlumniStoriesVideos/AlumniStoriesVideos";
 import scholarStories from "../../data/ScholarStories";
 import "../../styles/Scholar-Page/scholar-grid.css";
 
@@ -178,6 +179,8 @@ const ScholarStories = () => {
 
         </div>
       </section>
+
+      <AlumniStoriesVideos />
     </>
   );
 };

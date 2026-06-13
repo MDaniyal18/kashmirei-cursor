@@ -210,3 +210,22 @@
     min-width: unset;
   }
 }
+
+/* =========================================
+   DARK THEME OVERRIDES
+   ========================================= */
+.section-ss-videos.ss-videos-dark {
+  background: #0f1b24;
+}
+
+.section-ss-videos.ss-videos-dark h2 {
+  color: #ffffff;
+}
+
+.section-ss-videos.ss-videos-dark .ss-video-name {
+  color: #ffffff;
+}
+
+.section-ss-videos.ss-videos-dark .ss-video-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
