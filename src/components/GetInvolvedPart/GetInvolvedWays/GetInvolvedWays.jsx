@@ -28,8 +28,11 @@ const partners = [
 ];
 
 const GetInvolvedWays = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState(null);
+  const [activeDrawer, setActiveDrawer] = useState(null);
+
+  const closeDrawer = () => {
+    setActiveDrawer(null);
+  };
 
   return (
     <section className="gi-ways">
@@ -42,14 +45,10 @@ const GetInvolvedWays = () => {
 
         <div className="gi-ways-grid">
 
+          {/* Volunteer Card */}
           <div 
-            className={`gi-card ${activeSection === "volunteer" ? "gi-card-active" : ""}`} 
-            onClick={() => {
-              setActiveSection(prev => prev === "volunteer" ? null : "volunteer");
-              setTimeout(() => {
-                document.getElementById("gi-inline-details")?.scrollIntoView({ behavior: "smooth", block: "start" });
-              }, 100);
-            }} 
+            className="gi-card" 
+            onClick={() => setActiveDrawer("volunteer")} 
             style={{ cursor: "pointer" }}
           >
             <span style={{ display: "block" }}>
@@ -71,24 +70,17 @@ const GetInvolvedWays = () => {
               }}
               onClick={(e) => {
                 e.stopPropagation();
-                setActiveSection(prev => prev === "volunteer" ? null : "volunteer");
-                setTimeout(() => {
-                  document.getElementById("gi-inline-details")?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }, 100);
+                setActiveDrawer("volunteer");
               }}
             >
               VOLUNTEER WITH US
             </button>
           </div>
 
+          {/* Mentor Card */}
           <div 
-            className={`gi-card ${activeSection === "mentor" ? "gi-card-active" : ""}`} 
-            onClick={() => {
-              setActiveSection(prev => prev === "mentor" ? null : "mentor");
-              setTimeout(() => {
-                document.getElementById("gi-inline-details")?.scrollIntoView({ behavior: "smooth", block: "start" });
-              }, 100);
-            }} 
+            className="gi-card" 
+            onClick={() => setActiveDrawer("mentor")} 
             style={{ cursor: "pointer" }}
           >
             <span style={{ display: "block" }}>
@@ -110,18 +102,19 @@ const GetInvolvedWays = () => {
               }}
               onClick={(e) => {
                 e.stopPropagation();
-                setActiveSection(prev => prev === "mentor" ? null : "mentor");
-                setTimeout(() => {
-                  document.getElementById("gi-inline-details")?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }, 100);
+                setActiveDrawer("mentor");
               }}
             >
               BECOME A MENTOR
             </button>
           </div>
 
-          {/* Interactive Card triggering Partners Drawer */}
-          <div className="gi-card" onClick={() => setDrawerOpen(true)} style={{ cursor: "pointer" }}>
+          {/* Partner Card */}
+          <div 
+            className="gi-card" 
+            onClick={() => setActiveDrawer("partners")} 
+            style={{ cursor: "pointer" }}
+          >
             <span style={{ display: "block" }}>
               <img src={sponsorIcon} alt="Partner" />
             </span>
@@ -141,7 +134,7 @@ const GetInvolvedWays = () => {
               }}
               onClick={(e) => {
                 e.stopPropagation();
-                setDrawerOpen(true);
+                setActiveDrawer("partners");
               }}
             >
               PARTNER WITH US
@@ -150,128 +143,6 @@ const GetInvolvedWays = () => {
 
         </div>
 
-        {/* Inline Detail Section */}
-        {activeSection && (
-          <div id="gi-inline-details" className="gi-inline-details-container">
-            <button className="gi-details-close" onClick={() => setActiveSection(null)}>✕ Close Section</button>
-            
-            {activeSection === "volunteer" && (
-              <div className="gi-details-content volunteer-details">
-                <div className="gi-details-header">
-                  <span className="gi-details-label">GET INVOLVED / VOLUNTEER</span>
-                  <h2>Volunteer With Us</h2>
-                </div>
-                <p className="gi-details-intro">
-                  KEI is a volunteer-driven organization, and we offer a wide range of 
-                  opportunities for individuals who are passionate about creating impact.
-                </p>
-                <div className="gi-details-card">
-                  <h3>How can you help?</h3>
-                  <p>
-                    You can contribute your time and skills by supporting specific ongoing 
-                    projects or by assisting in our broader organizational efforts.
-                  </p>
-                  <p>
-                    Our volunteers and interns actively engage in a variety of initiatives, 
-                    including managing scholarship programs, mentoring students across 
-                    primary, secondary, undergraduate, and graduate levels, and delivering 
-                    guest lectures at educational institutions.
-                  </p>
-                  <p>
-                    In addition, volunteers support outreach initiatives, enhance our 
-                    digital presence, conduct research and field studies, and contribute 
-                    to fundraising efforts that sustain our mission.
-                  </p>
-                  <p>
-                    We are always open to fresh ideas and innovative approaches. If you have 
-                    a vision or initiative you would like to contribute, we would love to 
-                    hear from you.
-                  </p>
-                  
-                  <div className="gi-details-action">
-                    <p className="cta-text">To get started, click the button below and share your details with us.</p>
-                    <a
-                      href="https://docs.google.com/forms/d/e/YOUR_FORM_LINK_HERE/viewform"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-primary"
-                      style={{ padding: "14px 28px", fontSize: "13px", display: "inline-block", textDecoration: "none" }}
-                    >
-                      Fill Volunteer Information Form
-                    </a>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {activeSection === "mentor" && (
-              <div className="gi-details-content mentor-details">
-                <div className="gi-details-header">
-                  <span className="gi-details-label">GET INVOLVED / MENTOR</span>
-                  <h2>Become a Mentor</h2>
-                </div>
-                <p className="gi-details-intro">
-                  Share your knowledge and guide scholars towards a brighter future.
-                  Your mentorship can shape careers and transform lives.
-                </p>
-                
-                <div className="gi-details-card">
-                  <div className="mentor-highlight-box">
-                    <h4>One Mentor, One Scholar</h4>
-                    <p>
-                      Support a high school scholar by volunteering <strong>2 hours per month</strong> 
-                      for a minimum of <strong>one year</strong>. Help guide their academic journey 
-                      and future goals.
-                    </p>
-                  </div>
-
-                  <hr className="gi-details-separator" />
-
-                  <h3>Mentorship Sign-Up</h3>
-                  <p><strong>Dear Mentor,</strong></p>
-                  <p>Thank you for your interest in supporting KEI scholars.</p>
-                  <p>Before applying, please confirm that you meet the following criteria:</p>
-                  
-                  <ul className="gi-requirements-list">
-                    <li>
-                      Have completed higher secondary education and are currently in college or hold a degree.
-                    </li>
-                    <li>
-                      Can commit <strong>2–4 hours per month</strong> for at least <strong>a year</strong>.
-                    </li>
-                    <li>
-                      Are willing to mentor a student and guide them in their academic and long-term goals 
-                      (no tutoring required).
-                    </li>
-                  </ul>
-
-                  <div className="gi-details-action">
-                    <p className="cta-text">If you meet these criteria, please proceed to the application form.</p>
-                    <div className="gi-buttons-row">
-                      <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfKvVgYMBk7IyH-rIR43V9B-3ZQUyZunFZxMWYi2Wq3VZu4Lg/viewform?usp=sf_link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn-primary"
-                        style={{ padding: "14px 28px", fontSize: "13px", display: "inline-block", textDecoration: "none" }}
-                      >
-                        Sign up / Apply Online
-                      </a>
-                      <Link
-                        to="/mentorship-success-stories"
-                        className="btn-outline"
-                        style={{ padding: "14px 28px", fontSize: "13px", display: "inline-block", textDecoration: "none" }}
-                      >
-                        Mentorship Program Success Stories
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-
         <blockquote className="gi-quote">
           “Supporting KEI is like investing in the future of humanity.”
           <span>– KEI Supporter</span>
@@ -279,38 +150,169 @@ const GetInvolvedWays = () => {
 
       </div>
 
-      {/* ── Partners Side Drawer popup ────────────────────────────────── */}
-      {drawerOpen && (
-        <div className="gi-modal-backdrop" onClick={() => setDrawerOpen(false)}>
+      {/* ── Side Drawer Popup ────────────────────────────────── */}
+      {activeDrawer && (
+        <div className="gi-modal-backdrop" onClick={closeDrawer}>
           <div className="gi-modal-drawer" onClick={(e) => e.stopPropagation()}>
-            <button className="gi-modal-close" onClick={() => setDrawerOpen(false)}>✕</button>
+            <button className="gi-modal-close" onClick={closeDrawer}>✕</button>
             
-            <div className="gi-modal-header">
-              <span className="gi-modal-label">OUR PARTNERS</span>
-              <h2 className="gi-modal-title">Working Together for Lasting Change</h2>
-            </div>
-            
-            <div className="gi-modal-body">
-              <div className="gi-modal-partners-list">
-                {partners.map((p) => (
-                  <div className="gi-partner-item" key={p.name}>
-                    <div className="gi-partner-avatar" style={{ backgroundColor: p.color }}>
-                      {p.initials}
-                    </div>
-                    <div className="gi-partner-info">
-                      <h4>{p.name}</h4>
-                      <p>{p.desc}</p>
-                    </div>
+            {activeDrawer === "partners" && (
+              <>
+                <div className="gi-modal-header">
+                  <span className="gi-modal-label">OUR PARTNERS</span>
+                  <h2 className="gi-modal-title">Working Together for Lasting Change</h2>
+                </div>
+                
+                <div className="gi-modal-body">
+                  <div className="gi-modal-partners-list">
+                    {partners.map((p) => (
+                      <div className="gi-partner-item" key={p.name}>
+                        <div className="gi-partner-avatar" style={{ backgroundColor: p.color }}>
+                          {p.initials}
+                        </div>
+                        <div className="gi-partner-info">
+                          <h4>{p.name}</h4>
+                          <p>{p.desc}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="gi-modal-footer">
-              <a href="mailto:info@kashmirei.org" className="gi-modal-btn">
-                Become a Partner →
-              </a>
-            </div>
+                </div>
+                
+                <div className="gi-modal-footer">
+                  <a href="mailto:info@kashmirei.org" className="gi-modal-btn">
+                    Become a Partner →
+                  </a>
+                </div>
+              </>
+            )}
+
+            {activeDrawer === "volunteer" && (
+              <>
+                <div className="gi-modal-header" style={{ borderLeft: "5px solid #47BFDA" }}>
+                  <span className="gi-modal-label">GET INVOLVED / VOLUNTEER</span>
+                  <h2 className="gi-modal-title">Volunteer With Us</h2>
+                </div>
+                
+                <div className="gi-modal-body">
+                  <p style={{ fontSize: "14.5px", lineHeight: "1.6", color: "#444", marginBottom: "20px" }}>
+                    KEI is a volunteer-driven organization, and we offer a wide range of 
+                    opportunities for individuals who are passionate about creating impact.
+                  </p>
+                  
+                  <div style={{ marginTop: "24px" }}>
+                    <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1b24", marginBottom: "12px" }}>How can you help?</h3>
+                    <p style={{ fontSize: "14px", lineHeight: "1.6", color: "#555", marginBottom: "14px" }}>
+                      You can contribute your time and skills by supporting specific ongoing 
+                      projects or by assisting in our broader organizational efforts.
+                    </p>
+                    <p style={{ fontSize: "14px", lineHeight: "1.6", color: "#555", marginBottom: "14px" }}>
+                      Our volunteers and interns actively engage in a variety of initiatives, 
+                      including managing scholarship programs, mentoring students across 
+                      primary, secondary, undergraduate, and graduate levels, and delivering 
+                      guest lectures at educational institutions.
+                    </p>
+                    <p style={{ fontSize: "14px", lineHeight: "1.6", color: "#555", marginBottom: "14px" }}>
+                      In addition, volunteers support outreach initiatives, enhance our 
+                      digital presence, conduct research and field studies, and contribute 
+                      to fundraising efforts that sustain our mission.
+                    </p>
+                    <p style={{ fontSize: "14px", lineHeight: "1.6", color: "#555", marginBottom: "14px" }}>
+                      We are always open to fresh ideas and innovative approaches. If you have 
+                      a vision or initiative you would like to contribute, we would love to 
+                      hear from you.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="gi-modal-footer">
+                  <p style={{ fontSize: "13.5px", fontWeight: "600", color: "#0f1b24", marginBottom: "12px" }}>To get started, click the button below and share your details with us.</p>
+                  <a
+                    href="https://docs.google.com/forms/d/e/YOUR_FORM_LINK_HERE/viewform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="gi-modal-btn"
+                  >
+                    Fill Volunteer Information Form
+                  </a>
+                </div>
+              </>
+            )}
+
+            {activeDrawer === "mentor" && (
+              <>
+                <div className="gi-modal-header" style={{ borderLeft: "5px solid #47BFDA" }}>
+                  <span className="gi-modal-label">GET INVOLVED / MENTOR</span>
+                  <h2 className="gi-modal-title">Become a Mentor</h2>
+                </div>
+                
+                <div className="gi-modal-body">
+                  <p style={{ fontSize: "14.5px", lineHeight: "1.6", color: "#444", marginBottom: "20px" }}>
+                    Share your knowledge and guide scholars towards a brighter future.
+                    Your mentorship can shape careers and transform lives.
+                  </p>
+                  
+                  <div style={{
+                    background: "#f4f8fb",
+                    borderLeft: "4px solid #47BFDA",
+                    padding: "18px",
+                    borderRadius: "0 12px 12px 0",
+                    marginBottom: "20px"
+                  }}>
+                    <h4 style={{ fontSize: "16px", fontWeight: "700", color: "#0f1b24", margin: "0 0 6px" }}>One Mentor, One Scholar</h4>
+                    <p style={{ margin: 0, fontSize: "13.5px", color: "#555", lineHeight: "1.5" }}>
+                      Support a high school scholar by volunteering <strong>2 hours per month</strong> 
+                      for a minimum of <strong>one year</strong>. Help guide their academic journey 
+                      and future goals.
+                    </p>
+                  </div>
+
+                  <div style={{ marginTop: "24px" }}>
+                    <h3 style={{ fontSize: "16px", fontWeight: "700", color: "#0f1b24", marginBottom: "10px" }}>Mentorship Sign-Up Requirements</h3>
+                    <p style={{ fontSize: "13.5px", color: "#555", marginBottom: "12px" }}>Before applying, please confirm that you:</p>
+                    
+                    <ul style={{ paddingLeft: "18px", margin: "0 0 20px", listStyleType: "decimal" }}>
+                      <li style={{ fontSize: "13.5px", color: "#555", lineHeight: "1.6", marginBottom: "8px" }}>
+                        Have completed higher secondary education and are currently in college or hold a degree.
+                      </li>
+                      <li style={{ fontSize: "13.5px", color: "#555", lineHeight: "1.6", marginBottom: "8px" }}>
+                        Can commit <strong>2–4 hours per month</strong> for at least <strong>a year</strong>.
+                      </li>
+                      <li style={{ fontSize: "13.5px", color: "#555", lineHeight: "1.6", marginBottom: "8px" }}>
+                        Are willing to mentor a student and guide them in their academic and long-term goals 
+                        (no tutoring required).
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="gi-modal-footer">
+                  <p style={{ fontSize: "13.5px", fontWeight: "600", color: "#0f1b24", marginBottom: "12px" }}>If you meet these criteria, please proceed to the application form.</p>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSfKvVgYMBk7IyH-rIR43V9B-3ZQUyZunFZxMWYi2Wq3VZu4Lg/viewform?usp=sf_link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="gi-modal-btn"
+                    >
+                      Sign up / Apply Online
+                    </a>
+                    <Link
+                      to="/mentorship-success-stories"
+                      className="gi-modal-btn"
+                      style={{
+                        background: "transparent",
+                        border: "2.5px solid #47BFDA",
+                        color: "#47BFDA"
+                      }}
+                    >
+                      Success Stories →
+                    </Link>
+                  </div>
+                </div>
+              </>
+            )}
+
           </div>
         </div>
       )}
