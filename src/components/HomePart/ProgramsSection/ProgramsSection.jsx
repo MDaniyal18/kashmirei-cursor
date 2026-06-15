@@ -58,7 +58,7 @@ const ProgramsSection = () => {
               <div className="program-overlay">
                 <h4>Mentorship</h4>
                 <p>
-                  1-on-1 Mentoring, Supercoach Sessions, Leadership with CMI
+                  1-on-1 Mentoring, Supercoach Sessions, Leadership Training
                 </p>
               </div>
             </div>
@@ -87,7 +87,7 @@ const ProgramsSection = () => {
               <div className="program-overlay">
                 <h4>Experiential Learning</h4>
                 <p>
-                  AI Career Mapping, Workshops, Career Awareness Events
+                  AI Career Mapping, Workshops, CMI Leadership Events
                 </p>
               </div>
             </div>

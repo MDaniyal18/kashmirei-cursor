@@ -7,18 +7,22 @@ const ForScholars = () => {
   const applySteps = [
     {
       step: "01",
-      title: "Review Eligibility",
-      desc: "Verify that you meet program-specific criteria, such as Class 9 enrollment and income thresholds for HSSP."
+      title: "Application Form",
+      desc: (
+        <>
+          Complete the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKvVgYMBk7IyH-rIR43V9B-3ZQUyZunFZxMWYi2Wq3VZu4Lg/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" style={{ color: "#47BFDA", textDecoration: "underline", fontWeight: "600" }}>online application form</a>. Alternatively, offline application forms are present at your respective schools, or you can visit the KEI office for the same.
+        </>
+      )
     },
     {
       step: "02",
-      title: "Fill Application",
-      desc: "Complete the online admissions form or download the physical application to fill out manually."
+      title: "Contact for Examination Date",
+      desc: "Contact the KEI office directly to get the official schedule and details regarding the upcoming entrance examination date."
     },
     {
       step: "03",
-      title: "Submit & Test",
-      desc: "Submit your documents, and attend the aptitude test or personal interviews as per the schedule."
+      title: "Roll Slip & Center Details",
+      desc: "Contact the KEI office to receive your roll slip, center allotment details, and other instructions for the examination."
     }
   ];
 

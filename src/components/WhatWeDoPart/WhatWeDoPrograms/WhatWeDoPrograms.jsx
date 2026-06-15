@@ -56,11 +56,10 @@ const programs = [
     title: "Mentorship Program",
     subtitle: "Guiding scholars with real-world wisdom",
     description:
-      "Our Mentorship Program pairs each scholar with a dedicated mentor from the global Kashmiri diaspora and broader professional community. Through regular one-on-one sessions, scholars receive personalised guidance on academics, career planning, and personal growth. With additional Supercoach sessions and leadership training in partnership with the Chartered Management Institute (CMI, UK), scholars develop the mindset and skills of future leaders.",
+      "Our Mentorship Program pairs each scholar with a dedicated mentor from the global Kashmiri diaspora and broader professional community. Through regular one-on-one sessions, scholars receive personalised guidance on academics, career planning, and personal growth. With additional Supercoach sessions and leadership training, scholars develop the mindset and skills of future leaders.",
     stats: [
       { value: "300+", label: "Active Mentors" },
       { value: "1,000+", label: "Mentorship Sessions/Year" },
-      { value: "CMI", label: "UK Partnership" },
     ],
     image: imgMentor,
   },
@@ -73,9 +72,9 @@ const programs = [
     description:
       "The Experiential Learning Program takes scholars out of the classroom and into real environments where knowledge comes alive. From hospital and laboratory visits to entrepreneurship workshops and community projects, scholars experience how education translates into action. These hands-on experiences deepen curiosity, sharpen critical thinking, and help scholars connect classroom learning to real-world challenges.",
     stats: [
-      { value: "60+", label: "Workshops Conducted" },
-      { value: "25+", label: "Partner Organisations" },
-      { value: "1,200+", label: "Scholars Engaged" },
+      { value: "500+", label: "Workshops Conducted" },
+      { value: "2, 00+", label: "Scholars Engaged" },
+      // { value: "CMI", label: "Partnership" },
     ],
     image: imgEL,
   },
@@ -98,13 +97,12 @@ const programs = [
     id: "dsle",
     number: "06",
     color: "#8B2E2E",
-    title: "Digital Smart Learning Environment",
+    title: "Digital Smart Learning Ecosystem",
     subtitle: "Bringing world-class digital tools to Kashmir",
     description:
-      "The Digital Smart Learning Environment (DSLE) program equips scholars with devices, internet connectivity, and digital literacy skills. By establishing smart learning labs in schools and providing tablets and laptops to selected scholars, KEI eliminates the digital divide that holds back so many talented students. Scholars learn to harness technology for research, collaboration, and creative problem-solving — essential competencies for the 21st century.",
+      "The Digital Smart Learning Ecosystem (DSLE) program equips scholars with devices, internet connectivity, and digital literacy skills. By establishing smart learning labs in schools and providing tablets and laptops to selected scholars, KEI eliminates the digital divide that holds back so many talented students. Scholars learn to harness technology for research, collaboration, and creative problem-solving — essential competencies for the 21st century.",
     stats: [
-      { value: "1,000+", label: "Devices Distributed" },
-      { value: "15+", label: "Smart Labs Set Up" },
+      { value: "1,600+", label: "Devices Distributed" },
       { value: "100%", label: "Digital Literacy Focus" },
     ],
     image: imgDSLE,
@@ -131,7 +129,7 @@ const programs = [
     title: "Graduate Abroad Program",
     subtitle: "Launching scholars onto the global stage",
     description:
-      "The Graduate Abroad Program (GAP) supports exceptional scholars in pursuing masters and doctoral degrees at prestigious universities worldwide. Beyond financial scholarships, KEI provides mentorship from alumni who have walked the same path, assistance with research proposals, and post-study career guidance. GAP alumni go on to become doctors, engineers, researchers, and leaders who return their success to Kashmir through impact and inspiration.",
+      "The Graduate Abroad Program (GAP) supports exceptional scholars in pursuing masters and doctoral degrees at prestigious universities worldwide. Beyond academic scholarships, KEI provides mentorship from alumni who have walked the same path, assistance with research proposals, and post-study career guidance. GAP alumni go on to become doctors, engineers, researchers, and leaders who return their success to Kashmir through impact and inspiration.",
     stats: [
       { value: "30+", label: "Graduate Scholars" },
       { value: "10+", label: "Countries" },

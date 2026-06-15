@@ -7,43 +7,36 @@ const HowToApplyPage = () => {
   const steps = [
     {
       num: "01",
-      title: "Review Eligibility Criteria",
-      desc: "Before starting your application, verify that you meet the criteria for the specific program. For the High School Support Program (HSSP), students must be in Class 9, have scored 75% or higher in Class 8, and have an annual family income under 3,00,000 INR. Other programs (PSP, GAP) have their own academic and enrollment prerequisites.",
+      title: "Application Form",
+      desc: (
+        <>
+          Complete the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKvVgYMBk7IyH-rIR43V9B-3ZQUyZunFZxMWYi2Wq3VZu4Lg/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" style={{ color: "#47BFDA", textDecoration: "underline", fontWeight: "600" }}>online application form</a> to submit your application digitally. Alternatively, offline application forms are present at your respective schools, or you can visit the KEI office to obtain and fill out a physical form.
+        </>
+      ),
       details: [
-        "Academic records: Mark sheets from the previous academic year.",
-        "Income threshold: Verified annual household income within current limits.",
-        "School/College registration: Active enrollment in a recognized Kashmiri educational institution."
+        "Online submission: Fill out and submit via the active admissions portal.",
+        "School collection: Offline packets are distributed directly to partner schools.",
+        "Office collection: Collect physical forms from the main KEI office in Srinagar."
       ]
     },
     {
       num: "02",
-      title: "Obtain & Fill the Application",
-      desc: "Applications can be filled online through our active admission portals during the application window. Alternatively, you can download the application form PDF from our website, or collect a physical form from the KEI office in Srinagar or district centers. Fill in all sections thoroughly, including student profile, academic history, and contact coordinates.",
+      title: "Contact for Examination Date",
+      desc: "Contact the KEI office directly to get the official schedule and details regarding the upcoming entrance examination date.",
       details: [
-        "Ensure names match official certificates exactly.",
-        "Provide a functional mobile number and email address for correspondence.",
-        "Include reference details from school headmasters or teachers."
+        "Inquiries: Call or visit the KEI Srinagar office or local coordinators.",
+        "Admissions dashboard: Stay updated by reviewing calendar dates on our website.",
+        "SMS/Email alerts: Registered applicants receive notifications on their registered coordinates."
       ]
     },
     {
       num: "03",
-      title: "Submit Supporting Documents",
-      desc: "Compile and submit all necessary documentation to support your application. Incomplete applications or those missing mandatory verifications cannot be processed. Submissions can be uploaded directly to our portal or hand-delivered to the KEI office/district centers.",
+      title: "Roll Slip & Center Details",
+      desc: "Contact the KEI office to receive your roll slip, center allotment details, and other instructions for the examination day.",
       details: [
-        "Income Certificate issued by a Tehsildar or Gazetted Officer.",
-        "Recent report card or official marks sheet.",
-        "Aadhaar Card or valid Government identity proof.",
-        "Passport size photographs (3 copies)."
-      ]
-    },
-    {
-      num: "04",
-      title: "Written Test & Selection Interview",
-      desc: "Shortlisted candidates (for HSSP) will be invited to sit for the KEI Aptitude Test. This test assesses logic, basic math, english grammar, and science competencies. Candidates who qualify the written test will proceed to an interview with our selection committee, which includes KEI staff and external academics to assess motivation and potential.",
-      details: [
-        "Aptitude Test: Held at multiple centers across Kashmir districts.",
-        "Personal Interview: A friendly conversation focusing on goals, interests, and family background.",
-        "Final Selection: Notification sent via SMS, email, and published on the KEI website."
+        "Roll slips: Disbursed through the office or local coordinator networks.",
+        "Center allotment: Check details mapped on your roll slip carefully.",
+        "Examination day: Bring your printed or physical roll slip to the center."
       ]
     }
   ];
@@ -116,7 +109,7 @@ const HowToApplyPage = () => {
       <section style={{ padding: "80px 40px" }}>
         <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
           <h2 style={{ fontSize: "28px", color: "#0f1b24", marginBottom: "40px", textAlign: "center" }}>
-            Four Steps to Secure Your Scholarship
+            Three Steps to Secure Your Scholarship
           </h2>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
@@ -172,45 +165,6 @@ const HowToApplyPage = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Document Checklist Sidebar / Card ───────────────────── */}
-      <section style={{ padding: "60px 40px", backgroundColor: "#f4f8fb" }}>
-        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <div style={{
-            background: "#ffffff",
-            borderRadius: "16px",
-            border: "1.5px solid #e4eef4",
-            padding: "40px",
-            boxShadow: "0 10px 30px rgba(0,0,0,0.04)"
-          }}>
-            <h3 style={{ fontSize: "24px", color: "#0f1b24", marginBottom: "16px", display: "flex", alignItems: "center", gap: "10px" }}>
-              📋 Required Documents Checklist
-            </h3>
-            <p style={{ fontSize: "14.5px", color: "#666", marginBottom: "24px" }}>
-              Keep scanned or photocopied versions of these files ready before initiating your application to avoid delays.
-            </p>
-
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "16px" }}>
-              {[
-                { title: "Income Certificate", desc: "Issued by Tehsildar or competent Revenue Authority." },
-                { title: "Academic Report Cards", desc: "Marks list from last qualifying annual examination." },
-                { title: "Identification Proof", desc: "Aadhaar Card, Student ID, or Birth Certificate." },
-                { title: "Passport Photographs", desc: "Recent color photographs with light backgrounds." },
-                { title: "Category Certificate", desc: "If applying under specific quotas or orphaned category." },
-                { title: "Enrollment Slip", desc: "College admissions slip or fee receipt (for PSP applicants)." }
-              ].map((doc, idx) => (
-                <div key={idx} style={{ display: "flex", gap: "12px", background: "#f8fbfd", padding: "16px", borderRadius: "10px", border: "1px solid #eef4f7" }}>
-                  <div style={{ color: "#47BFDA", fontSize: "18px", fontWeight: "bold" }}>✓</div>
-                  <div>
-                    <h4 style={{ fontSize: "14.5px", fontWeight: "700", color: "#0f1b24", margin: "0 0 4px" }}>{doc.title}</h4>
-                    <p style={{ fontSize: "13px", color: "#666", margin: 0, lineHeight: "1.4" }}>{doc.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -274,7 +228,7 @@ const HowToApplyPage = () => {
             If you need assistance with application forms or eligibility determinations, contact our admissions help desk.
           </p>
           <a 
-            href="mailto:admissions@kashmirei.org" 
+            href="mailto:info@kashmirei.org" 
             className="button-outline"
             style={{
               backgroundColor: "#47BFDA",

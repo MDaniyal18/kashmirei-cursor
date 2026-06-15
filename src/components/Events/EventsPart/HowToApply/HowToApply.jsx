@@ -5,23 +5,22 @@ const HowToApply = () => {
   const steps = [
     {
       num: "01",
-      title: "Review Eligibility Criteria",
-      desc: "Verify that you meet the program-specific requirements, such as a minimum 75% score in Grade 8 for HSSP, and that your family's annual income is within the required threshold."
+      title: "Application Form",
+      desc: (
+        <>
+          Complete the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKvVgYMBk7IyH-rIR43V9B-3ZQUyZunFZxMWYi2Wq3VZu4Lg/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" style={{ color: "#47BFDA", textDecoration: "underline", fontWeight: "600" }}>online application form</a>. Alternatively, offline application forms are present at your respective schools, or you can visit the KEI office for the same.
+        </>
+      )
     },
     {
       num: "02",
-      title: "Obtain & Fill Application",
-      desc: "Download the official application form from our website or collect it from the KEI Srinagar office. Complete all fields accurately, including academic history and references."
+      title: "Contact for Examination Date",
+      desc: "Contact the KEI office directly to get the official schedule and details regarding the upcoming entrance examination date."
     },
     {
       num: "03",
-      title: "Submit Documents",
-      desc: "Provide necessary supporting documents including recent report cards, family income certificate, and identity proof. Submit physical copies at designated district centers or online."
-    },
-    {
-      num: "04",
-      title: "Assessment & Interview",
-      desc: "Qualified applicants will be invited to sit for the KEI Aptitude Test. Shortlisted students from the exam are interviewed by our selection panel to confirm final cohorts."
+      title: "Roll Slip & Center Details",
+      desc: "Contact the KEI office to receive your roll slip, center allotment details, and other instructions for the examination day."
     }
   ];
 

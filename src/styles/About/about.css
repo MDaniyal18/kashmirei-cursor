@@ -589,6 +589,35 @@
   margin: 0 0 4px;
 }
 
+.about-team-name-input {
+  font-family: "Franklin Gothic Demi", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f1b24;
+  margin: 0 0 4px;
+  background: transparent;
+  border: 1px dashed transparent;
+  border-radius: 4px;
+  text-align: center;
+  width: 100%;
+  padding: 4px 6px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.about-team-name-input:hover {
+  background: #f0f4f8;
+  border-color: #cbd5e0;
+}
+
+.about-team-name-input:focus {
+  background: #ffffff;
+  border-color: #47BFDA;
+  border-style: solid;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(71, 191, 218, 0.15);
+}
+
 .about-team-role {
   font-family: "Franklin Gothic Book", sans-serif;
   font-size: 12px;
