@@ -302,9 +302,10 @@
 }
 
 .forscholars-links-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: center;
   gap: 32px;
+  flex-wrap: wrap;
 }
 
 .forscholars-link-card {
@@ -316,6 +317,8 @@
   flex-direction: column;
   justify-content: space-between;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  flex: 1 1 350px;
+  max-width: 480px;
 }
 
 .forscholars-link-card:hover {

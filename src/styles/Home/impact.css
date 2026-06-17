@@ -248,11 +248,19 @@
   font-weight: 600;
   letter-spacing: 0.5px;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .impact-cta-btn:hover {
   background: #3aa9c4;
+  color: #ffffff;
+}
+
+.impact-cta-btn:active {
+  background: #2ea3c4;
+  color: #ffffff !important;
+  transform: scale(0.97);
+  outline: none;
 }
 
 /* =====================================

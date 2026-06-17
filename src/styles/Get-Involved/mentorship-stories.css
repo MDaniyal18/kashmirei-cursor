@@ -148,10 +148,19 @@
   border-radius: 6px;
   border: none;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
   background: #3aa9c4;
+  color: #ffffff;
+}
+
+.btn-primary:active {
+  background: #2ea3c4;
+  color: #ffffff !important;
+  transform: scale(0.97);
+  outline: none;
 }
 
 .btn-outline {
@@ -161,11 +170,20 @@
   border-radius: 6px;
   border: 1.5px solid #47BFDA;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
   background: #47BFDA;
   color: #fff;
+}
+
+.btn-outline:active {
+  background: #3aa9c4;
+  border-color: #3aa9c4;
+  color: #ffffff !important;
+  transform: scale(0.97);
+  outline: none;
 }
 
 /* ================= RESPONSIVE ================= */

@@ -5,16 +5,16 @@ import "../../../styles/What-We-Do/whatwedo-programs.css";
 import rainbowImg from "../../../assets/Images/value-we-deliver-updated.png";
 
 // Program images
-import imgHSP    from "../../../assets/Images/what-we-do-1.jpg";
+import imgHSP    from "../../../assets/Images/what-we-do-1.JPG";
 import imgCAP    from "../../../assets/Images/what-we-do-2.webp";
 import imgMentor from "../../../assets/Images/what-we-do-3.JPG";
-import imgEL     from "../../../assets/Images/what-we-do-4.webp";
+import imgEL     from "../../../assets/Images/what-we-do-4.jpg";
 //need to change
 import imgGooru  from "../../../assets/Images/what-we-do-6th.png";
 
-import imgDSLE   from "../../../assets/Images/what-we-do-6.JPG";
-import imgIBSP   from "../../../assets/Images/what-we-do-7.JPG";
-import imgGAP    from "../../../assets/Images/what-we-do-8.jpg";
+import imgDSLE   from "../../../assets/Images/what-we-do-2.png";
+import imgIBSP   from "../../../assets/Images/what-we-do-8.jpg";
+import imgGAP    from "../../../assets/Images/what-we-do-7th.JPG";
 
 // ─── Data ───────────────────────────────────────────────────────────────────
 

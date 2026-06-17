@@ -10,7 +10,8 @@ const HowToApplyPage = () => {
       title: "Application Form",
       desc: (
         <>
-          Complete the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKvVgYMBk7IyH-rIR43V9B-3ZQUyZunFZxMWYi2Wq3VZu4Lg/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" style={{ color: "#47BFDA", textDecoration: "underline", fontWeight: "600" }}>online application form</a> to submit your application digitally. Alternatively, offline application forms are present at your respective schools, or you can visit the KEI office to obtain and fill out a physical form.
+          Complete the {/* FUTURE ONLINE FORM LINK: Paste google form link or HTML doc link here in href, e.g. href="your_link_here" and remove onClick */}
+          <a href="#" onClick={(e) => { e.preventDefault(); alert("Form Will be Available Soon"); }} style={{ color: "#47BFDA", textDecoration: "underline", fontWeight: "600", cursor: "pointer" }}>online application form</a> to submit your application digitally. Alternatively, offline application forms are present at your respective schools, or you can visit the KEI office to obtain and fill out a physical form.
         </>
       ),
       details: [
@@ -34,7 +35,7 @@ const HowToApplyPage = () => {
       title: "Roll Slip & Center Details",
       desc: "Contact the KEI office to receive your roll slip, center allotment details, and other instructions for the examination day.",
       details: [
-        "Roll slips: Disbursed through the office or local coordinator networks.",
+        "Roll slips: Disbursed through our online network.",
         "Center allotment: Check details mapped on your roll slip carefully.",
         "Examination day: Bring your printed or physical roll slip to the center."
       ]

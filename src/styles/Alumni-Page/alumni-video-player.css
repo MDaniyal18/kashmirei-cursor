@@ -133,11 +133,18 @@
 }
 
 .video-back-btn:hover,
-.video-back-btn:focus,
-.video-back-btn:active {
+.video-back-btn:focus {
   color: #ffffff;
-  background: #2FA8C4;;
+  background: #2FA8C4;
   text-decoration: none;
+  outline: none;
+}
+
+.video-back-btn:active {
+  color: #ffffff !important;
+  background: #1f8ba6;
+  text-decoration: none;
+  transform: scale(0.97);
   outline: none;
 }
 

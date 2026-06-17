@@ -10,7 +10,8 @@ const ForScholars = () => {
       title: "Application Form",
       desc: (
         <>
-          Complete the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKvVgYMBk7IyH-rIR43V9B-3ZQUyZunFZxMWYi2Wq3VZu4Lg/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" style={{ color: "#47BFDA", textDecoration: "underline", fontWeight: "600" }}>online application form</a>. Alternatively, offline application forms are present at your respective schools, or you can visit the KEI office for the same.
+          Complete the {/* FUTURE ONLINE FORM LINK: Paste google form link or HTML doc link here in href, e.g. href="your_link_here" and remove onClick */}
+          <a href="#" onClick={(e) => { e.preventDefault(); alert("Form Will be Available Soon"); }} style={{ color: "#47BFDA", textDecoration: "underline", fontWeight: "600", cursor: "pointer" }}>online application form</a>. Alternatively, offline application forms are present at your respective schools, or you can visit the KEI office for the same.
         </>
       )
     },
@@ -32,11 +33,11 @@ const ForScholars = () => {
       status: "Upcoming",
       statusColor: "#f39c12",
       timeline: [
-        { label: "Online Registration Opens", date: "July 01, 2026" },
-        { label: "Application Submission Deadline", date: "August 20, 2026" },
-        { label: "Release of Admit Cards / Roll Numbers", date: "August 30, 2026" },
-        { label: "KEI HSSP Test", date: "September 10, 2026" },
-        { label: "Selection Interviews & Document Verification", date: "September 25, 2026" }
+        { label: "Applications Open", date: "October 01, 2026" },
+        { label: "Application Submission Deadline", date: "October 25, 2026" },
+        { label: "Release of Admit Cards / Roll Numbers", date: "November 15, 2026" },
+        { label: "KEI HSSP Test", date: "November 29, 2026" },
+        // { label: "Results & Document Verification", date: "December 20, 2026" }
       ]
     }
     /*
@@ -59,18 +60,10 @@ const ForScholars = () => {
 
   const applicationLinks = [
     {
-      title: "Apply Online (Admissions Portal)",
-      desc: "Submit your registration details, academic scores, and digital copies of your documents online.",
-      btnText: "Start Online Application",
-      link: "#",
-      external: true
-    },
-    {
       title: "Download Application Form (PDF)",
       desc: "Prefer paper? Download our official offline form, print it, and submit it at our offices.",
       btnText: "Download PDF Form",
-      link: "#",
-      external: false
+      action: "download-alert"
     },
     {
       title: "Submit Admissions Inquiry",
@@ -179,13 +172,21 @@ const ForScholars = () => {
               <div key={idx} className="forscholars-link-card">
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
-                <div className="link-card-action">
-                  {item.link.startsWith("mailto:") || item.link === "#" ? (
+                 <div className="link-card-action">
+                  {item.action === "download-alert" ? (
+                    <a 
+                      href="#" 
+                      onClick={(e) => { e.preventDefault(); alert("Form will be available soon, stay tuned"); }} 
+                      className="button-outline card-btn"
+                    >
+                      {item.btnText}
+                    </a>
+                  ) : item.link && (item.link.startsWith("mailto:") || item.link === "#") ? (
                     <a href={item.link} className="button-outline card-btn">
                       {item.btnText}
                     </a>
                   ) : (
-                    <Link to={item.link} className="button-outline card-btn">
+                    <Link to={item.link || "#"} className="button-outline card-btn">
                       {item.btnText}
                     </Link>
                   )}

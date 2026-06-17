@@ -299,11 +299,39 @@
   margin: 0 0 6px;
 }
 
+.gi-partner-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #47BFDA;
+  background: rgba(71, 191, 218, 0.08);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
 .gi-partner-info p {
   font-size: 13.5px;
   color: #666;
   line-height: 1.6;
   margin: 0;
+}
+
+.gi-partner-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #47BFDA;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.gi-partner-link:hover {
+  text-decoration: underline;
+  opacity: 0.85;
 }
 
 .gi-modal-footer {
@@ -328,6 +356,14 @@
 
 .gi-modal-btn:hover {
   background: #3aa9c4;
+  color: #ffffff;
+}
+
+.gi-modal-btn:active {
+  background: #2ea3c4;
+  color: #ffffff !important;
+  transform: scale(0.97);
+  outline: none;
 }
 
 @media (max-width: 768px) {

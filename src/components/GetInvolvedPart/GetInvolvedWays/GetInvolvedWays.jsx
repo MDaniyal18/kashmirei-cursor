@@ -7,23 +7,34 @@ import mentorIcon from "../../../assets/Images/GetInvolved-icon/getinvolved-ment
 import sponsorIcon from "../../../assets/Images/GetInvolved-icon/getinvolved-sponsor.webp";
 
 const partners = [
+  /*
   {
     initials: "IMT",
     color: "#1B4F8A",
     name: "Iqbal Memorial Trust",
     desc: "Standardised testing frameworks and experiential learning opportunities for KEI scholars across Kashmir.",
   },
+  */
   {
-    initials: "MCW",
-    color: "#47BFDA",
-    name: "MCW Global",
-    desc: "Access to the Young Leaders Access Programme — connecting KEI scholars with global leadership networks.",
+    initials: "PW",
+    color: "#1A1D20",
+    name: "Physics Wallah (PW)",
+    desc: "Through KEI's collaboration with Physics Wallah (PW), KEI scholars receive access to PW's Premium Power Batch, providing specialized preparation for competitive examinations such as NEET, JEE, CLAT, and other national-level entrance exams. The initiative supports Class 11 and 12 scholars by equipping them with the resources and guidance needed to excel in these highly competitive examinations and pursue their academic aspirations.",
+    url: "https://www.pw.live/",
   },
   {
     initials: "CMI",
     color: "#2E7D32",
-    name: "Chartered Management Institute",
-    desc: "Leadership certification and professional development training for high-achieving mentorship scholars.",
+    name: "Competitiveness Mindset Institute (CMI)",
+    desc: "Competitiveness Mindset Institute (CMI) is a US 501(c)(3) and India 80(G) certified non-profit organization founded in 2017 in Princeton, New Jersey, USA. It is committed to providing world-class training aimed at making Indian professionals a globally competitive and ethical workforce. CMI produces original, research-backed training content in the areas of competitiveness and ethical leadership.CMI provides this training through its FLY Training programs, using the latest Active Learning methodologies.",
+    url: "https://www.competitivenessmindset.org",
+  },
+  {
+    initials: "MDR",
+    color: "#F39C12",
+    name: "Mindler",
+    desc: "KEI's collaboration with Mindler equips scholars with the knowledge and guidance needed to make informed academic and career decisions. Through this partnership, scholars explore diverse career opportunities and educational streams, understand the pathways to achieve their goals, and develop personalized career plans along with alternate options to navigate their future with confidence and clarity..",
+    url: "https://www.mindler.com/",
   },
 ];
 
@@ -118,8 +129,8 @@ const GetInvolvedWays = () => {
             <span style={{ display: "block" }}>
               <img src={sponsorIcon} alt="Partner" />
             </span>
-            <h3>Partner With Us</h3>
-            <p>Collaborate with us as an institution, university, or corporate partner to amplify impact.</p>
+            <h3>Build With Us</h3>
+            <p>Collaborate with us as an organisation, or corporate partner to amplify impact.</p>
             <button 
               style={{
                 background: "none",
@@ -137,7 +148,7 @@ const GetInvolvedWays = () => {
                 setActiveDrawer("partners");
               }}
             >
-              PARTNER WITH US
+              BUILD WITH US
             </button>
           </div>
 
@@ -159,7 +170,7 @@ const GetInvolvedWays = () => {
             {activeDrawer === "partners" && (
               <>
                 <div className="gi-modal-header">
-                  <span className="gi-modal-label">OUR PARTNERS</span>
+                  <span className="gi-modal-label"> Collaborations </span>
                   <h2 className="gi-modal-title">Working Together for Lasting Change</h2>
                 </div>
                 
@@ -172,7 +183,20 @@ const GetInvolvedWays = () => {
                         </div>
                         <div className="gi-partner-info">
                           <h4>{p.name}</h4>
+                          <span className="gi-partner-tag">
+                           With Kashmir Education Initiative's Collaboration
+                          </span>
                           <p>{p.desc}</p>
+                          {p.url && (
+                            <a
+                              href={p.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="gi-partner-link"
+                            >
+                              Visit Website →
+                            </a>
+                          )}
                         </div>
                       </div>
                     ))}

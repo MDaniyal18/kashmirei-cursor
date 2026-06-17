@@ -54,6 +54,14 @@
   
   .button-outline:hover {
     background: #3aa9c4;
+    color: #ffffff;
+  }
+
+  .button-outline:active {
+    background: #2ea3c4;
+    color: #ffffff !important;
+    transform: scale(0.97);
+    outline: none;
   }
   
   /* =========================================
@@ -233,6 +241,13 @@
 .prog-detail-back-link:hover {
   opacity: 1;
   color: #ffffff;
+}
+
+.prog-detail-back-link:active {
+  opacity: 0.7;
+  color: #ffffff !important;
+  transform: scale(0.97);
+  outline: none;
 }
 
 .prog-detail-hero-content {

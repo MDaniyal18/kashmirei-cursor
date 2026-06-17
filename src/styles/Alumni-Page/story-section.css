@@ -119,11 +119,18 @@
 }
 
 .back-button:hover,
-.back-button:focus,
-.back-button:active {
+.back-button:focus {
   color: #ffffff;
   background: #3aa7c3;
   text-decoration: none;
+}
+
+.back-button:active {
+  color: #ffffff !important;
+  background: #2ea3c2;
+  text-decoration: none;
+  transform: scale(0.97);
+  outline: none;
 }
 
   /* bottom navigation wrapper */

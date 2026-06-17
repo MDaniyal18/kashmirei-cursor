@@ -9,6 +9,37 @@ const PersonIcon = () => (
   </svg>
 );
 
+const TeamMemberAvatar = ({ name }) => {
+  const [hasError, setHasError] = useState(false);
+
+  const formattedName = name ? name.trim().toLowerCase().replace(/\s+/g, "_") : "";
+  const isPlaceholder = !name || name.trim() === "—" || name.toLowerCase().includes("coming soon");
+
+  useEffect(() => {
+    setHasError(false);
+  }, [name]);
+
+  if (isPlaceholder || hasError) {
+    return <PersonIcon />;
+  }
+
+  const imgUrl = new URL(`../../../assets/Images/Team/${formattedName}.png`, import.meta.url).href;
+
+  return (
+    <img 
+      src={imgUrl} 
+      alt={name} 
+      onError={() => setHasError(true)} 
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        borderRadius: "50%"
+      }}
+    />
+  );
+};
+
 const defaultBoardMembers = [
   { name: "Faisal Farooq", title: "President" },
   { name: "Irfan Banihali", title: "Treasurer" },
@@ -86,24 +117,24 @@ const AboutTeam = () => {
             Our strength lies in the people who dedicate their time and
             expertise to building a brighter future for Kashmiri youth.
           </p>
-          {hasEdits && (
-            <button
-              onClick={handleReset}
-              style={{
-                background: "transparent",
-                border: "none",
-                color: "#47BFDA",
-                cursor: "pointer",
-                fontSize: "13px",
-                fontWeight: "600",
-                textDecoration: "underline",
-                marginTop: "12px",
-                padding: 0
-              }}
-            >
-              Reset Names to Default
-            </button>
-          )}
+          {/* {hasEdits && (
+            // <button
+            //   onClick={handleReset}
+            //   style={{
+            //     background: "transparent",
+            //     border: "none",
+            //     color: "#47BFDA",
+            //     cursor: "pointer",
+            //     fontSize: "13px",
+            //     fontWeight: "600",
+            //     textDecoration: "underline",
+            //     marginTop: "12px",
+            //     padding: 0
+            //   }}
+            // >
+            //   Reset Names to Default
+            // </button>
+          )} */}
         </div>
 
         {/* Board of Directors */}
@@ -113,7 +144,7 @@ const AboutTeam = () => {
             {board.map((m, i) => (
               <div className="about-team-card" key={i}>
                 <div className="about-avatar-wrap">
-                  <PersonIcon />
+                  <TeamMemberAvatar name={m.name} />
                 </div>
                 <input
                   type="text"
@@ -136,7 +167,7 @@ const AboutTeam = () => {
             {ops.map((m, i) => (
               <div className="about-team-card" key={i}>
                 <div className="about-avatar-wrap">
-                  <PersonIcon />
+                  <TeamMemberAvatar name={m.name} />
                 </div>
                 <input
                   type="text"

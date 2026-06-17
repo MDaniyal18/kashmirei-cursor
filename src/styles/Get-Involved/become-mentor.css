@@ -112,11 +112,20 @@
 /* Hover fix */
 .apply-button:hover,
 .apply-button:focus,
-.apply-button:active,
-.apply-button:visited,
-.back-button:hover {
+.back-button:hover,
+.back-button:focus {
   background: #3aa7c3;
   color: #fff;
+  text-decoration: none;
+}
+
+.apply-button:active,
+.back-button:active {
+  background: #2ea3c2;
+  color: #fff !important;
+  transform: scale(0.97);
+  outline: none;
+  text-decoration: none;
 }
 
 /* Secondary button */
@@ -124,11 +133,20 @@
   background: transparent;
   color: #47BFDA;
   border: 2px solid #47BFDA;
+  transition: all 0.3s ease;
 }
 
 .secondary-btn:hover {
   background: #47BFDA;
   color: #fff;
+}
+
+.secondary-btn:active {
+  background: #3aa9c4;
+  border-color: #3aa9c4;
+  color: #fff !important;
+  transform: scale(0.97);
+  outline: none;
 }
 
 /* Stories Button Wrapper */

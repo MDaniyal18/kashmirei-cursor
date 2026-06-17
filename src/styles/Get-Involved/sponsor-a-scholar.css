@@ -41,6 +41,14 @@
   
   .back-button:hover {
     background: #3aa7c3;
+    color: white;
+  }
+  
+  .back-button:active {
+    background: #2ea3c2;
+    color: white !important;
+    transform: scale(0.97);
+    outline: none;
   }
   
   /* ======================================

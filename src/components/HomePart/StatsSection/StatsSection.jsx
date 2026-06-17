@@ -54,7 +54,7 @@ const StatsSection = () => {
 
       <div className="stats-cta">
         <p className="stats-cta-text">See the full scope of our impact.</p>
-        <Link to="/impact-by-numbers" className="stats-btn-primary">
+        <Link to="/our-impact" className="stats-btn-primary">
           IMPACT BY NUMBERS
         </Link>
       </div>

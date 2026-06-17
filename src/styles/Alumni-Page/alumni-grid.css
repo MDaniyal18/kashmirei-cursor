@@ -134,10 +134,17 @@
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .ss-back-top button:hover {
   background: #2FA8C4;
+}
+
+.ss-back-top button:active {
+  background: #2ea3c4;
+  transform: scale(0.97);
+  outline: none;
 }
 
 /* =====================================
@@ -162,11 +169,19 @@
   font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
   background: #2FA8C4;
+  color: #ffffff;
+}
+
+.btn-primary:active {
+  background: #1f8ba6;
+  color: #ffffff !important;
+  transform: scale(0.97);
+  outline: none;
 }
 
 .btn-outline {
@@ -179,12 +194,20 @@
   font-weight: 600;
   border: 1.5px solid #47BFDA;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
   background: #47BFDA;
   color: #ffffff;
+}
+
+.btn-outline:active {
+  background: #3aa9c4;
+  border-color: #3aa9c4;
+  color: #ffffff !important;
+  transform: scale(0.97);
+  outline: none;
 }
 
 /* =====================================

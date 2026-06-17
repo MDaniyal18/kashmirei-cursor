@@ -1,12 +1,12 @@
 // Shared programs data for KEI website
-import imgHSP    from "../assets/Images/what-we-do-1.jpg";
-import imgCAP    from "../assets/Images/what-we-do-2.webp";
-import imgMentor from "../assets/Images/what-we-do-3.JPG";
-import imgEL     from "../assets/Images/what-we-do-4.webp";
-import imgGooru  from "../assets/Images/what-we-do-6th.png";
-import imgDSLE   from "../assets/Images/what-we-do-6.JPG";
-import imgIBSP   from "../assets/Images/what-we-do-7.JPG";
-import imgGAP    from "../assets/Images/what-we-do-8.jpg";
+import imgHSP    from "../assets/Images/what-we-do-hssp.JPG";
+import imgCAP    from "../assets/Images/what-we-do-cap.webp";
+import imgMentor from "../assets/Images/what-we-do-mentor.JPG";
+import imgEL     from "../assets/Images/what-we-do-elp.jpg";
+import imgGooru  from "../assets/Images/what-we-do-gooru.JPG";
+import imgDSLE   from "../assets/Images/what-we-do-dsle.png";
+import imgIBSP   from "../assets/Images/what-we-do-5.png";
+import imgGAP    from "../assets/Images/what-we-do-gap.JPG";
 
 export const programs = [
   {
@@ -30,7 +30,7 @@ export const programs = [
       { title: "Community Engagement", desc: "To encourage scholars to actively contribute to their communities, building leadership qualities and fostering a sense of social responsibility." }
     ],
     eligibility: {
-      academic: "Applicants must have secured at least 75% in their Grade 8 results.",
+      academic: "Applicants must have secured at least 70% in their Grade 8 Term Ist results.",
       financial: "The applicant's family annual income must not exceed INR 5 lakhs."
     },
     selectionProcess: [

@@ -87,11 +87,19 @@
   border-radius: 6px;
   font-weight: 600;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .hero-btn:hover {
   background: #2ea3c2;
+  color: #ffffff;
+}
+
+.hero-btn:active {
+  background: #1f8ba6;
+  color: #ffffff !important;
+  transform: scale(0.97);
+  outline: none;
 }
 
 

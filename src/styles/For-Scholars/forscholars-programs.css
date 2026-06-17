@@ -730,6 +730,11 @@
   transform: translateY(-1px);
 }
 
+.prog-modal-btn:active {
+  transform: translateY(1px) scale(0.97);
+  outline: none;
+}
+
 .prog-modal-btn.btn-primary {
   color: #ffffff;
 }

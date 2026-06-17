@@ -690,6 +690,14 @@ button,select {
     text-decoration: none
 }
 
+[type=button]:active,[type=submit]:active,button:active {
+    background-color: #3aa7c3;
+    border-color: #3aa7c3;
+    color: #fff !important;
+    transform: scale(0.97);
+    outline: none;
+}
+
 [type=button]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled) {
     cursor: pointer
 }

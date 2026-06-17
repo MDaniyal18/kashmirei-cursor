@@ -79,6 +79,20 @@
     font-weight: 600;
     display: inline-block;
     margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .stats-content .button:hover {
+    background: #3aa9c4;
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(72, 190, 218, 0.3);
+  }
+
+  .stats-content .button:active {
+    background: #2ea3c4;
+    color: #ffffff !important;
+    transform: scale(0.97);
+    outline: none;
   }
   
   /* =========================
@@ -179,6 +193,14 @@
     background: #3aa9c4;
     color: #ffffff;
     box-shadow: 0 8px 24px rgba(72, 190, 218, 0.3);
+  }
+
+  .stats-btn-primary:active {
+    background: #2ea3c4;
+    color: #ffffff !important;
+    transform: scale(0.97);
+    outline: none;
+    box-shadow: 0 4px 12px rgba(72, 190, 218, 0.2);
   }
 
   /* =========================

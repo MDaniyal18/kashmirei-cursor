@@ -486,6 +486,22 @@
   margin: 0;
 }
 
+.about-partner-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: "Franklin Gothic Demi", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #47BFDA;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.about-partner-link:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
 .about-partners-cta {
   text-align: left;
 }
