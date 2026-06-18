@@ -27,12 +27,7 @@ const ValueWeDeliver = () => {
         <h2 className="value-title">Empowering Every Step of the Scholar Journey</h2>
         <p className="value-subtitle">We support the scholar journey from their first classroom to their first career milestone.</p>
         <p className="value-blurb">
-          At KEI, we walk alongside every scholar — from their first classroom to their first career milestone.
-          Through a holistic ecosystem of support, we provide financial scholarships, dedicated mentorship,
-          digital learning tools, and hands-on career experiences. Our eight programs — spanning High School
-          S, Career Awareness, Mentorship, Experiential Learning, Gooru Navigator, Digital Smart
-          Learning, International Bridge Scholarship, and Graduate Abroad — work together to ensure no gifted
-          student in Kashmir is held back by circumstance.
+          At KEI, we walk alongside every scholar — from the start of their high school journey to their first career milestone. Through a comprehensive ecosystem of support, we provide academic enrichment, competitive exam preparation, mentorship, digital learning, AI-powered career guidance, self-directed learning opportunities, experiential learning, and 21st-century skill development.
         </p>
 
         <div className="value-image-wrapper">
