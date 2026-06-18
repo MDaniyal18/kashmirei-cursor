@@ -77,7 +77,7 @@
 
 .section-about-story {
   background: #ffffff;
-  padding: 88px 40px;
+  padding: 44px 40px;
 }
 
 .about-story-container {
@@ -199,7 +199,7 @@
 .section-about-vision {
   position: relative;
   background: #0f1b24;
-  padding: 183px 40px 88px; /* Adjusted top padding to clear 95px sticky header and match 88px bottom padding */
+  padding: 139px 40px 44px; /* Adjusted top padding to clear 95px sticky header and match 44px bottom padding */
   overflow: hidden;
 }
 
@@ -296,7 +296,7 @@
 
 .section-about-values {
   background: #f4f8fb;
-  padding: 88px 40px;
+  padding: 44px 40px;
 }
 
 .about-values-container {
@@ -396,7 +396,7 @@
 
 .section-about-partners {
   background: #ffffff;
-  padding: 88px 40px;
+  padding: 44px 40px;
 }
 
 .about-partners-container {
@@ -513,7 +513,7 @@
 
 .section-about-team {
   background: #f4f8fb;
-  padding: 88px 40px;
+  padding: 44px 40px;
 }
 
 .about-team-container {
@@ -776,7 +776,7 @@
 
 .section-about-contact {
   background: #ffffff;
-  padding: 88px 40px;
+  padding: 44px 40px;
 }
 
 .about-contact-container {
@@ -1054,11 +1054,11 @@
   .section-about-team,
   .section-about-cta,
   .section-about-contact {
-    padding: 64px 24px;
+    padding: 32px 24px;
   }
 
   .section-about-vision {
-    padding: 159px 24px 64px; /* Adjusted top padding to clear sticky header */
+    padding: 127px 24px 32px; /* Adjusted top padding to clear sticky header */
   }
 
   .about-story-container {
@@ -1114,11 +1114,11 @@
   .section-about-team,
   .section-about-cta,
   .section-about-contact {
-    padding: 52px 16px;
+    padding: 26px 16px;
   }
 
   .section-about-vision {
-    padding: 147px 16px 52px; /* Adjusted top padding to clear sticky header */
+    padding: 121px 16px 26px; /* Adjusted top padding to clear sticky header */
   }
 
   .about-values-grid { grid-template-columns: 1fr; }

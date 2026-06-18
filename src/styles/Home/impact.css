@@ -4,7 +4,7 @@
 
 .section-impact-stories {
   position: relative;
-  padding: 80px 0 100px;
+  padding: 40px 0 50px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -19,10 +19,13 @@
   z-index: 0;
 }
 
-/* All content sits above overlay */
+/* All content sits above overlay - acts as container */
 .impact-inner {
   position: relative;
   z-index: 1;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 /* ── HEADER ─────────────────────────── */
@@ -61,21 +64,25 @@
 /* ── SWIPER WRAPPER ──────────────────── */
 
 .impact-swiper-wrap {
-  padding-top: 50px;
-  max-width: 560px;
+  padding-top: 5px;
+  max-width: 100%;
   margin: 0 auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-/* Fixed card width */
+/* Default card width for mobile/tablet where slidesPerView is "auto" */
 .impact-swiper .swiper-slide {
-  width: 600px !important;
+  width: 360px;
+  max-width: 100% !important;
+  display: flex;
+  height: auto !important;
 }
 
 .impact-swiper {
-  padding-bottom: 60px !important;
-  overflow: visible !important;
+  padding-top: 45px !important;
+  padding-bottom: 20px !important;
+  overflow: hidden !important;
 }
 
 /* ── SLIDE STATES — all equal, no transparency ── */
@@ -92,12 +99,15 @@
   position: relative;
   background: #454545;
   border-radius: 0;
-  padding: 30px 20px 20px;
+  padding: 24px 20px 16px;
   display: flex;
   flex-direction: column;
-  height: 270px;
+  min-height: 200px;
+  height: 100%;
+  width: 100%;
   margin-top: 40px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
 }
 
 /* ── TEAL BADGE — top right corner ─── */
@@ -169,17 +179,17 @@
 }
 
 .impact-card-quote {
-  font-size: 15.5px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 1.6;
   font-style: italic;
   color: #ffffff;
-  margin-bottom: 20px;
-  margin-top: 10px;
+  margin-bottom: 14px;
+  margin-top: 8px;
   padding-right: 20px;
   flex: 1;
 
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -213,7 +223,9 @@
 /* ── PAGINATION ──────────────────────── */
 
 .impact-swiper .swiper-pagination {
-  bottom: 8px;
+  position: relative !important;
+  bottom: auto !important;
+  margin-top: 80px !important;
 }
 
 .impact-swiper .swiper-pagination-bullet {
@@ -269,7 +281,7 @@
 
 @media (max-width: 900px) {
   .section-impact-stories {
-    padding: 60px 0 80px;
+    padding: 30px 0 40px;
   }
 
   .impact-header-wrap h2 {
@@ -288,7 +300,7 @@
 
 @media (max-width: 600px) {
   .section-impact-stories {
-    padding: 40px 0 70px;
+    padding: 20px 0 35px;
   }
 
   .impact-header-wrap {
@@ -305,5 +317,38 @@
 
   .impact-card-quote {
     font-size: 14px;
+  }
+}
+
+.impact-swiper-outer-container {
+  width: auto;
+  margin-left: -40px;
+  margin-right: -40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .impact-swiper-outer-container {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .impact-swiper-outer-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .impact-swiper-outer-container {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }

@@ -58,54 +58,10 @@ const ForScholars = () => {
     */
   ];
 
-  const applicationLinks = [
-    {
-      title: "Download Application Form (PDF)",
-      desc: "Prefer paper? Download our official offline form, print it, and submit it at our offices.",
-      btnText: "Download PDF Form",
-      action: "download-alert"
-    },
-    {
-      title: "Submit Admissions Inquiry",
-      desc: "Have doubts regarding documents or need help? Contact our counselors directly.",
-      btnText: "Contact Us",
-      link: "mailto:info@kashmirei.org",
-      external: true
-    }
-  ];
-
   return (
     <div className="forscholars-page-wrapper">
       {/* ── Rainbow Navigator ───────────────────────────────────── */}
       <ForScholarsPrograms />
-
-      {/* ── How to Apply Section ────────────────────────────────── */}
-      <section className="forscholars-apply-section">
-        <div className="forscholars-container">
-          <div className="forscholars-header">
-            <h2>How to Apply.</h2>
-            <p className="forscholars-sub">
-              Our application process is structured to be transparent, fair, and accessible to students across Kashmir.
-            </p>
-          </div>
-
-          <div className="forscholars-steps-grid">
-            {applySteps.map((item, idx) => (
-              <div key={idx} className="forscholars-step-card">
-                <span className="step-num">{item.step}</span>
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="forscholars-apply-cta">
-            <Link to="/for-scholars/how-to-apply" className="button-outline cta-btn">
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* ── Dates for Application Section ────────────────────────── */}
       <section className="forscholars-dates-section">
@@ -125,7 +81,7 @@ const ForScholars = () => {
                   <span className="status-badge" style={{ backgroundColor: item.statusColor }}>
                     {item.status}
                   </span>
-                  <h3>{item.program} Exam Form Timeline</h3>
+                  <h3>{item.program} Exam Form Timeline (2027 Batch)</h3>
                 </div>
                 <div className="date-card-body" style={{ marginTop: "24px" }}>
                   <div style={{ display: "flex", flexDirection: "column", gap: "24px", position: "relative", paddingLeft: "24px", borderLeft: "2px solid #e4eef4", textAlign: "left" }}>
@@ -156,43 +112,53 @@ const ForScholars = () => {
         </div>
       </section>
 
-      {/* ── Links to Application Section ────────────────────────── */}
-      <section className="forscholars-links-section">
+      {/* ── Eligibility Criteria Section ────────────────────────── */}
+      <section className="forscholars-eligibility-section">
         <div className="forscholars-container">
           <div className="forscholars-header">
-            <span className="forscholars-label"> Links to Application</span>
-            <h2>Application Links & Downloads.</h2>
+            <h2>Eligibility Criteria.</h2>
             <p className="forscholars-sub">
-              Access online registration forms, download offline packets, or reach out to our team if you need support.
+              To apply for the High School Support Program (HSSP), applicants must meet the following eligibility requirements:
             </p>
           </div>
 
-          <div className="forscholars-links-grid">
-            {applicationLinks.map((item, idx) => (
-              <div key={idx} className="forscholars-link-card">
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
-                 <div className="link-card-action">
-                  {item.action === "download-alert" ? (
-                    <a 
-                      href="#" 
-                      onClick={(e) => { e.preventDefault(); alert("Form will be available soon, stay tuned"); }} 
-                      className="button-outline card-btn"
-                    >
-                      {item.btnText}
-                    </a>
-                  ) : item.link && (item.link.startsWith("mailto:") || item.link === "#") ? (
-                    <a href={item.link} className="button-outline card-btn">
-                      {item.btnText}
-                    </a>
-                  ) : (
-                    <Link to={item.link || "#"} className="button-outline card-btn">
-                      {item.btnText}
-                    </Link>
-                  )}
-                </div>
-              </div>
-            ))}
+          <div className="forscholars-eligibility-list-wrap">
+            <ul className="forscholars-eligibility-list">
+              <li>
+                <strong>Academic Performance:</strong> Applicants must have secured at least 70% in their Grade 8 Term Ist results.
+              </li>
+              <li>
+                <strong>Financial Need:</strong> The applicant's annual family income must not exceed INR 5 lakhs.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ── How to Apply Section ────────────────────────────────── */}
+      <section className="forscholars-apply-section">
+        <div className="forscholars-container">
+          <div className="forscholars-header">
+            <h2>How to Apply.</h2>
+            <p className="forscholars-sub">
+              Our application process is structured to be transparent, fair, and accessible to students across Kashmir.
+            </p>
+          </div>
+
+          <div className="forscholars-steps-list-wrap">
+            <ul className="forscholars-steps-list">
+              {applySteps.map((item, idx) => (
+                <li key={idx}>
+                  <strong>{item.title}:</strong> {item.desc}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="forscholars-apply-cta">
+            <Link to="/for-scholars/how-to-apply" className="button-outline cta-btn">
+              Learn More
+            </Link>
           </div>
         </div>
       </section>

@@ -3,7 +3,7 @@
 ========================= */
 
 .forscholars-page {
-  padding: 120px 0;
+  padding: 60px 0;
   font-family: sans-serif;
 }
 
@@ -102,8 +102,9 @@
 
 .forscholars-apply-section,
 .forscholars-dates-section,
+.forscholars-eligibility-section,
 .forscholars-links-section {
-  padding: 90px 24px;
+  padding: 45px 24px;
 }
 
 .forscholars-container {
@@ -388,11 +389,61 @@
   
   .forscholars-apply-section,
   .forscholars-dates-section,
+  .forscholars-eligibility-section,
   .forscholars-links-section {
-    padding: 60px 16px;
+    padding: 30px 16px;
   }
   
   .forscholars-header h2 {
     font-size: 28px;
+  }
+}
+
+/* Eligibility & Step Lists Styles */
+.forscholars-eligibility-list-wrap,
+.forscholars-steps-list-wrap {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  background: #ffffff;
+  border: 1.5px solid #e4eef4;
+  border-radius: 16px;
+  padding: 40px 48px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
+}
+
+.forscholars-steps-list-wrap {
+  background: #f4f8fb;
+}
+
+.forscholars-eligibility-list,
+.forscholars-steps-list {
+  padding-left: 24px;
+  margin: 0;
+}
+
+.forscholars-eligibility-list li,
+.forscholars-steps-list li {
+  font-size: 15.5px;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  list-style-type: disc;
+}
+
+.forscholars-eligibility-list li:last-child,
+.forscholars-steps-list li:last-child {
+  margin-bottom: 0;
+}
+
+.forscholars-eligibility-list li strong,
+.forscholars-steps-list li strong {
+  color: #0f1b24;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .forscholars-eligibility-list-wrap,
+  .forscholars-steps-list-wrap {
+    padding: 30px 24px;
   }
 }

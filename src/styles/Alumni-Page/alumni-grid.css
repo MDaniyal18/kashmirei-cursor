@@ -4,7 +4,7 @@
 
 
 .section-ss-grid {
-  padding: 140px 0;
+  padding: 70px 0;
   background: #f2f3f5;
 }
 
@@ -240,7 +240,7 @@
 
 @media (max-width: 768px) {
   .section-ss-grid {
-    padding: 100px 0;
+    padding: 50px 0;
   }
 
   .section-ss-grid .container {

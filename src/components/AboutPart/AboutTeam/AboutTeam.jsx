@@ -183,13 +183,19 @@ const AboutTeam = () => {
           </div>
         </div>
 
-        <div className="about-team-cta" style={{ textAlign: "center", marginTop: "40px" }}>
-          <p style={{ fontSize: "16px", color: "#555", marginBottom: "20px" }}>
-            If you have any questions, click below.
+        <div className="about-team-cta" style={{ textAlign: "center", marginTop: "50px", borderTop: "1px solid #e4eef4", paddingTop: "40px" }}>
+          <p style={{ fontSize: "16px", color: "#333", fontWeight: "600", marginBottom: "20px" }}>
+            Quick Resources &amp; Updates
           </p>
           <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
+            <Link to="/events" className="about-outline-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
+              Our Events
+            </Link>
+            <Link to="/announcements" className="about-outline-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
+              Announcements
+            </Link>
             <Link to="/faq" className="about-outline-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
-              View FAQ Page
+              View FAQ
             </Link>
             <a href="mailto:info@kashmirei.org" className="about-filled-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
               Contact Us
