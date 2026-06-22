@@ -8,16 +8,13 @@ import { Autoplay, Pagination, Keyboard } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/effect-fade";
 
 import scholarStories from "../../../data/ScholarStories";
 import impactBg from "../../../assets/Images/home-impact-bg.jpg";
 
 const ImpactSection = () => {
   let stories = [...scholarStories].sort((a, b) => (b.year || 0) - (a.year || 0)).slice(0, 5);
-  // Ensure we have at least 6 slides for Swiper loop mode with slidesPerView: 3
-  if (stories.length > 0 && stories.length < 6) {
-    stories = [...stories, ...stories];
-  }
 
   return (
     <section
@@ -43,25 +40,33 @@ const ImpactSection = () => {
               modules={[Autoplay, Pagination, Keyboard]}
               breakpoints={{
                 0: {
-                  slidesPerView: "auto",
-                  centeredSlides: true,
+                  slidesPerView: 1,
+                  centeredSlides: false,
                   spaceBetween: 16,
+                  loop: false,
+                },
+                640: {
+                  slidesPerView: 2,
+                  centeredSlides: false,
+                  spaceBetween: 20,
+                  loop: false,
                 },
                 1024: {
                   slidesPerView: 3,
                   centeredSlides: false,
                   spaceBetween: 24,
+                  loop: true,
                 },
               }}
               keyboard={{ enabled: true, onlyInViewport: true }}
-              loop={true}
+              loop={false}
               speed={700}
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
                 pauseOnMouseEnter: true,
               }}
-              pagination={{ clickable: true }}
+              pagination={{ clickable: true, dynamicBullets: true }}
               allowTouchMove={true}
               className="impact-swiper"
             >
