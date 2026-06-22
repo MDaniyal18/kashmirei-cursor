@@ -3,7 +3,7 @@
 ================================= */
 
 .section-wwd-stories {
-  padding: 160px 0;
+  padding: 22px 0;
   background: #f2f3f5;
   text-align: center;
 }
@@ -15,7 +15,7 @@
 }
 
 .wwd-stories-header {
-  margin-bottom: 90px;
+  margin-bottom: 22px;
 }
 
 .wwd-stories-label {
@@ -38,7 +38,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 90px 45px;
-  margin-top: 60px;
+  margin-top: 22px;
 }
 
 .wwd-story-card {
@@ -98,7 +98,7 @@
 
 @media (max-width: 1100px) {
   .section-wwd-stories {
-    padding: 120px 0;
+    padding: 22px 0;
   }
   .wwd-container {
     padding: 0 30px;
@@ -124,7 +124,7 @@
 
 @media (max-width: 768px) {
   .section-wwd-stories {
-    padding: 90px 0;
+    padding: 22px 0;
   }
   .wwd-container {
     padding: 0 20px;
@@ -133,7 +133,7 @@
     font-size: 26px;
   }
   .wwd-stories-header {
-    margin-bottom: 60px;
+    margin-bottom: 22px;
   }
   .wwd-stories-grid {
     grid-template-columns: 1fr;
@@ -162,7 +162,7 @@
 
 @media (max-width: 480px) {
   .section-wwd-stories {
-    padding: 70px 0;
+    padding: 22px 0;
   }
   .section-wwd-stories h2 {
     font-size: 22px;

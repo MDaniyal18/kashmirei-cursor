@@ -3,7 +3,7 @@
 ========================= */
 
 .section-stats {
-    padding: 50px 0 40px;
+    padding: 22px 0 8px;
     background: #f2f3f5;
     width: 100%;
   }
@@ -165,7 +165,7 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    padding: 0 20px 40px;
+    padding: 0 20px 22px;
   }
 
   .stats-cta-text {
@@ -209,7 +209,7 @@
   
   @media (max-width: 900px) {
     .section-stats {
-      padding: 40px 0 30px;
+      padding: 22px 0 8px;
     }
   
     .stats-container {

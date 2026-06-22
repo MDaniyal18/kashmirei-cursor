@@ -19,7 +19,7 @@ const HistoricalFinancials = () => {
   return (
     <div className="historical-financials-page" style={{ backgroundColor: "#ffffff" }}>
       {/* ── Page Header ─────────────────────────────────────────── */}
-      <section className="wwd-rainbow-section" style={{ padding: "140px 40px 40px", backgroundColor: "#f4f8fb" }}>
+      <section className="wwd-rainbow-section" style={{ padding: "100px 40px 22px", backgroundColor: "#f4f8fb" }}>
         <div className="wwd-rainbow-inner" style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
           <div style={{ marginBottom: "24px" }}>
             <Link 
@@ -55,9 +55,9 @@ const HistoricalFinancials = () => {
       </section>
 
       {/* ── Table Section ───────────────────────────────────────── */}
-      <section style={{ padding: "80px 40px" }}>
+      <section style={{ padding: "22px 40px" }}>
         <div style={{ maxWidth: "960px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "26px", color: "#0f1b24", marginBottom: "32px", textAlign: "center", fontWeight: "700" }}>
+          <h2 style={{ fontSize: "26px", color: "#0f1b24", marginBottom: "22px", textAlign: "center", fontWeight: "700" }}>
             Year-Over-Year Financial Summary
           </h2>
 
@@ -101,9 +101,9 @@ const HistoricalFinancials = () => {
       </section>
 
       {/* ── Downloads Section ───────────────────────────────────── */}
-      <section style={{ padding: "80px 40px", backgroundColor: "#f4f8fb" }}>
+      <section style={{ padding: "22px 40px", backgroundColor: "#f4f8fb" }}>
         <div style={{ maxWidth: "960px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "26px", color: "#0f1b24", marginBottom: "36px", textAlign: "center", fontWeight: "700" }}>
+          <h2 style={{ fontSize: "26px", color: "#0f1b24", marginBottom: "22px", textAlign: "center", fontWeight: "700" }}>
             Download Audited Disclosures
           </h2>
 

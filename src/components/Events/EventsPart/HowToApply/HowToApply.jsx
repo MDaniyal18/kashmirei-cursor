@@ -26,10 +26,10 @@ const HowToApply = () => {
   ];
 
   return (
-    <section className="section-how-to-apply" style={{ padding: "80px 40px", backgroundColor: "#ffffff" }}>
+    <section className="section-how-to-apply" style={{ padding: "22px 40px", backgroundColor: "#ffffff" }}>
       <div className="events-container">
         
-        <div className="events-header" style={{ marginBottom: "50px", textAlign: "center" }}>
+        <div className="events-header" style={{ marginBottom: "22px", textAlign: "center" }}>
           <h2 style={{ fontSize: "36px", color: "#0f1b24", marginTop: "12px" }}>How to Apply.</h2>
           <p className="events-sub" style={{ maxWidth: "600px", margin: "10px auto 0" }}>
             A transparent, merit-based selection process to ensure support reaches the most deserving and high-potential students in Kashmir.

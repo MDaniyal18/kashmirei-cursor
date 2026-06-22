@@ -4,7 +4,7 @@
 
 .section-donate-cta {
   background: #ffffff;
-  padding: 80px 40px;
+  padding: 22px 40px;
   text-align: center;
   border-top: 1px solid #e8eef2;
 }
@@ -80,7 +80,7 @@
 /* ── Mobile ── */
 @media (max-width: 768px) {
   .section-donate-cta {
-    padding: 60px 24px;
+    padding: 22px 24px;
   }
 
   .donate-cta-inner h2 {

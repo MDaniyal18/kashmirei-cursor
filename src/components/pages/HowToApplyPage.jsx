@@ -72,7 +72,7 @@ const HowToApplyPage = () => {
   return (
     <div className="how-to-apply-page" style={{ backgroundColor: "#ffffff" }}>
       {/* ── Page Header ─────────────────────────────────────────── */}
-      <section className="wwd-rainbow-section" style={{ padding: "140px 40px 40px", backgroundColor: "#f4f8fb" }}>
+      <section className="wwd-rainbow-section" style={{ padding: "100px 40px 22px", backgroundColor: "#f4f8fb" }}>
         <div className="wwd-rainbow-inner" style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
           <div style={{ marginBottom: "24px" }}>
             <Link 
@@ -107,13 +107,13 @@ const HowToApplyPage = () => {
       </section>
 
       {/* ── Steps Section ────────────────────────────────────────── */}
-      <section style={{ padding: "80px 40px" }}>
+      <section style={{ padding: "22px 40px" }}>
         <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "28px", color: "#0f1b24", marginBottom: "40px", textAlign: "center" }}>
+          <h2 style={{ fontSize: "28px", color: "#0f1b24", marginBottom: "22px", textAlign: "center" }}>
             Three Steps to Secure Your Scholarship
           </h2>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "22px" }}>
             {steps.map((step, idx) => (
               <div 
                 key={idx} 
@@ -171,13 +171,13 @@ const HowToApplyPage = () => {
       </section>
 
       {/* ── FAQ Section ─────────────────────────────────────────── */}
-      <section style={{ padding: "80px 40px" }}>
+      <section style={{ padding: "22px 40px" }}>
         <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "28px", color: "#0f1b24", marginBottom: "40px", textAlign: "center" }}>
+          <h2 style={{ fontSize: "28px", color: "#0f1b24", marginBottom: "22px", textAlign: "center" }}>
             Admissions FAQs
           </h2>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "22px" }}>
             {faqs.map((faq, idx) => {
               const isOpen = activeFaq === idx;
               return (
@@ -210,7 +210,7 @@ const HowToApplyPage = () => {
                   </button>
 
                   {isOpen && (
-                    <div style={{ padding: "20px 24px", fontSize: "14.5px", color: "#555", lineHeight: "1.7", borderTop: "1.5px solid #e4eef4", backgroundColor: "#ffffff" }}>
+                    <div style={{ padding: "22px 24px", fontSize: "14.5px", color: "#555", lineHeight: "1.7", borderTop: "1.5px solid #e4eef4", backgroundColor: "#ffffff" }}>
                       {faq.a}
                     </div>
                   )}
@@ -222,7 +222,7 @@ const HowToApplyPage = () => {
       </section>
 
       {/* ── Footer / CTA ────────────────────────────────────────── */}
-      <section style={{ padding: "60px 40px", backgroundColor: "#f4f8fb", textAlign: "center" }}>
+      <section style={{ padding: "22px 40px", backgroundColor: "#f4f8fb", textAlign: "center" }}>
         <div style={{ maxWidth: "600px", margin: "0 auto" }}>
           <h3 style={{ fontSize: "22px", color: "#0f1b24", marginBottom: "12px" }}>Still Have Questions?</h3>
           <p style={{ fontSize: "15px", color: "#555", marginBottom: "24px" }}>

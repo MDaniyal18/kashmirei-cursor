@@ -1,9 +1,5 @@
-/* =====================================
-   SCHOLAR STORIES SECTION
-===================================== */
-
 .section-ss-grid {
-  padding: 70px 0;
+  padding: 22px 0;
   background: #f2f3f5;
 }
 
@@ -21,7 +17,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
   gap: 60px 40px;
-  margin-top: 50px;
+  margin-top: 22px;
 }
 
 /* =====================================
@@ -121,7 +117,7 @@
 ===================================== */
 
 .ss-back-top {
-  margin-top: 60px;
+  margin-top: 22px;
   text-align: center;
 }
 
@@ -152,7 +148,7 @@
 ===================================== */
 
 .ss-buttons {
-  margin-top: 70px;
+  margin-top: 22px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -239,7 +235,7 @@
 
 @media (max-width: 768px) {
   .section-ss-grid {
-    padding: 50px 0;
+    padding: 22px 0;
   }
 
   .section-ss-grid .container {

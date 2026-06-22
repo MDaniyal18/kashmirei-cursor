@@ -74,7 +74,7 @@ const ScholarStories = () => {
     <>
       {/* <ScholarStoriesHero /> */}
 
-      <section id="our-impact-section" className="section-ss-grid" style={{ backgroundColor: "#f2f3f5", padding: "130px 0 80px" }}>
+      <section id="our-impact-section" className="section-ss-grid" style={{ backgroundColor: "#f2f3f5", padding: "100px 0 22px" }}>
         <div className="container" style={{ maxWidth: "1300px", margin: "0 auto", padding: "0 40px" }}>
           
           {/* Main 3-column layout */}

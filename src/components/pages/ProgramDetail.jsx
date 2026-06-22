@@ -13,7 +13,7 @@ const ProgramDetail = () => {
 
   if (!program) {
     return (
-      <div style={{ padding: "120px 40px", textAlign: "center" }}>
+      <div style={{ padding: "100px 40px 22px", textAlign: "center" }}>
         <h2>Program Not Found</h2>
         <p>We couldn't find the program you are looking for.</p>
         <Link to="/for-scholars" className="button-outline" style={{ display: "inline-block", marginTop: "16px" }}>

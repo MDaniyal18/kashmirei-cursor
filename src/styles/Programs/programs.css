@@ -222,7 +222,7 @@
 }
 
 .prog-detail-hero {
-  padding: 60px 40px 40px;
+  padding: 100px 40px 22px;
   position: relative;
   overflow: hidden;
 }
@@ -280,7 +280,7 @@
 }
 
 .prog-detail-body {
-  padding: 40px 40px;
+  padding: 22px 40px;
   background: #f4f8fb;
 }
 
@@ -434,13 +434,13 @@
 
 @media (max-width: 768px) {
   .prog-detail-hero {
-    padding: 50px 24px 30px;
+    padding: 70px 24px 22px;
   }
   .prog-detail-title {
     font-size: 32px;
   }
   .prog-detail-body {
-    padding: 24px 24px;
+    padding: 22px 24px;
   }
 }
   

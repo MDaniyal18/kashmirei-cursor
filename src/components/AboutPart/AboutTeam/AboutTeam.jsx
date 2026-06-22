@@ -183,7 +183,7 @@ const AboutTeam = () => {
           </div>
         </div>
 
-        <div className="about-team-cta" style={{ textAlign: "center", marginTop: "50px", borderTop: "1px solid #e4eef4", paddingTop: "40px" }}>
+        <div className="about-team-cta" style={{ textAlign: "center", marginTop: "22px", borderTop: "1px solid #e4eef4", paddingTop: "22px" }}>
           <p style={{ fontSize: "16px", color: "#333", fontWeight: "600", marginBottom: "20px" }}>
             Quick Resources &amp; Updates
           </p>

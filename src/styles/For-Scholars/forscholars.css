@@ -3,13 +3,13 @@
 ========================= */
 
 .forscholars-page {
-  padding: 60px 0;
+  padding: 22px 0;
   font-family: sans-serif;
 }
 
 .wwd-hero {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 22px;
 }
 .wwd-hero h1 {
   font-size: 42px;
@@ -24,7 +24,7 @@
 .wwd-programs {
   text-align: center;
   padding: 0 20px;
-  margin-bottom: 80px;
+  margin-bottom: 22px;
 }
 .wwd-program-grid {
   display: flex;
@@ -59,7 +59,7 @@
 
 .wwd-stories {
   text-align: center;
-  padding: 40px 0;
+  padding: 22px 0;
 }
 .stories-swiper {
   padding-top: 30px;
@@ -104,7 +104,7 @@
 .forscholars-dates-section,
 .forscholars-eligibility-section,
 .forscholars-links-section {
-  padding: 45px 24px;
+  padding: 11px 24px;
 }
 
 .forscholars-container {
@@ -114,7 +114,7 @@
 
 .forscholars-header {
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: 14px;
 }
 
 .forscholars-label {
@@ -391,7 +391,7 @@
   .forscholars-dates-section,
   .forscholars-eligibility-section,
   .forscholars-links-section {
-    padding: 30px 16px;
+    padding: 11px 16px;
   }
   
   .forscholars-header h2 {
@@ -403,11 +403,11 @@
 .forscholars-eligibility-list-wrap,
 .forscholars-steps-list-wrap {
   max-width: 760px;
-  margin: 0 auto 48px;
+  margin: 0 auto 14px;
   background: #ffffff;
   border: 1.5px solid #e4eef4;
   border-radius: 16px;
-  padding: 40px 48px;
+  padding: 22px 30px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
 }
 
@@ -444,6 +444,6 @@
 @media (max-width: 767px) {
   .forscholars-eligibility-list-wrap,
   .forscholars-steps-list-wrap {
-    padding: 30px 24px;
+    padding: 22px 16px;
   }
 }

@@ -80,14 +80,14 @@ const EventsAndAnnouncements = () => {
         .table-section-container {
           max-width: 1100px;
           margin: 0 auto;
-          padding: 60px 24px;
+          padding: 22px 24px;
         }
 
         .table-controls {
           display: flex;
           justify-content: center;
           align-items: center;
-          margin-bottom: 40px;
+          margin-bottom: 22px;
         }
 
         .filter-buttons {

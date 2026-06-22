@@ -4,7 +4,7 @@
 
 .section-ss-hero {
   position: relative;
-  padding: 150px 0 160px;
+  padding: 100px 0 22px;
   text-align: center;
   background-color: #e6e6e6;
 }
@@ -53,9 +53,8 @@
 ===================================== */
 
 @media (max-width: 992px) {
-
   .section-ss-hero {
-    padding: 120px 0 100px;
+    padding: 80px 0 22px;
     margin-top: 70px; /* spacing below navbar */
   }
 
@@ -74,7 +73,6 @@
   .section-ss-hero .container {
     padding: 0 30px;
   }
-
 }
 
 /* =====================================
@@ -82,9 +80,8 @@
 ===================================== */
 
 @media (max-width: 768px) {
-
   .section-ss-hero {
-    padding: 90px 0 80px;
+    padding: 70px 0 22px;
     margin-top: 60px; /* spacing below navbar */
   }
 
@@ -106,7 +103,6 @@
   .section-ss-hero .container {
     padding: 0 20px;
   }
-
 }
 
 /* =====================================
@@ -114,9 +110,8 @@
 ===================================== */
 
 @media (max-width: 480px) {
-
   .section-ss-hero {
-    padding: 70px 0 60px;
+    padding: 70px 0 22px;
     margin-top: 50px; /* spacing below navbar */
   }
 
@@ -131,5 +126,4 @@
   .ss-description {
     font-size: 12.5px;
   }
-
 }

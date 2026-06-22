@@ -4,7 +4,7 @@
 
 .section-donate-compliance {
   background: #0f1b24;
-  padding: 64px 40px;
+  padding: 22px 40px;
 }
 
 .compliance-inner {
@@ -106,14 +106,14 @@
   }
 
   .section-donate-compliance {
-    padding: 48px 24px;
+    padding: 22px 24px;
   }
 }
 
 /* ── Mobile ── */
 @media (max-width: 480px) {
   .section-donate-compliance {
-    padding: 40px 16px;
+    padding: 22px 16px;
   }
 
   .compliance-col h3 {

@@ -40,10 +40,10 @@ const FAQ = () => {
   };
 
   return (
-    <section className="faq-page" style={{ padding: "120px 40px 80px", backgroundColor: "#f4f8fb" }}>
+    <section className="faq-page" style={{ padding: "100px 40px 22px", backgroundColor: "#f4f8fb" }}>
       <div className="container" style={{ maxWidth: "800px", margin: "0 auto" }}>
         
-        <div className="faq-header" style={{ textAlign: "center", marginBottom: "50px" }}>
+        <div className="faq-header" style={{ textAlign: "center", marginBottom: "22px" }}>
           <span className="section-label" style={{ color: "#47BFDA", letterSpacing: "2px", fontWeight: "600", fontSize: "15px" }}>GOT QUESTIONS?</span>
           <h1 style={{ fontSize: "40px", color: "#0f1b24", marginTop: "12px", fontFamily: "Franklin Gothic Demi, sans-serif" }}>Frequently Asked Questions</h1>
           <p style={{ color: "#555", fontSize: "15px", marginTop: "10px" }}>
@@ -52,7 +52,7 @@ const FAQ = () => {
         </div>
 
         {/* Accordion Layout */}
-        <div className="faq-accordion" style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+        <div className="faq-accordion" style={{ display: "flex", flexDirection: "column", gap: "22px" }}>
           {faqs.map((faq, index) => {
             const isOpen = activeIndex === index;
             return (
@@ -76,7 +76,7 @@ const FAQ = () => {
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
-                    padding: "20px 24px",
+                    padding: "22px 24px",
                     background: "transparent",
                     border: "none",
                     color: "#0f1b24",
@@ -108,7 +108,7 @@ const FAQ = () => {
                     borderTop: isOpen ? "1px solid #e4eef4" : "1px solid transparent"
                   }}
                 >
-                  <div style={{ padding: "20px 24px", fontSize: "14.5px", color: "#444", lineHeight: "1.8", background: "#fcfdfe" }}>
+                  <div style={{ padding: "22px 24px", fontSize: "14.5px", color: "#444", lineHeight: "1.8", background: "#fcfdfe" }}>
                     {faq.a}
                   </div>
                 </div>
@@ -117,7 +117,7 @@ const FAQ = () => {
           })}
         </div>
 
-        <div className="faq-footer" style={{ marginTop: "50px", textAlign: "center" }}>
+        <div className="faq-footer" style={{ marginTop: "22px", textAlign: "center" }}>
           <p style={{ fontSize: "15px", color: "#666" }}>Still have questions? Contact our team at any time.</p>
           <a href="mailto:info@kashmirei.org" className="button-outline" style={{ display: "inline-block", marginTop: "12px", textDecoration: "none" }}>
             Email Us Directly →

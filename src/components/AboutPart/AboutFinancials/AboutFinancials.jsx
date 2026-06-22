@@ -35,10 +35,10 @@ const AboutFinancials = () => {
   ];
 
   return (
-    <section className="section-about-financials" style={{ padding: "88px 40px", backgroundColor: "#ffffff" }}>
+    <section className="section-about-financials" style={{ padding: "22px 40px", backgroundColor: "#ffffff" }}>
       <div className="container" style={{ maxWidth: "1100px", margin: "0 auto" }}>
         
-        <div className="about-financials-header" style={{ marginBottom: "52px", textAlign: "center" }}>
+        <div className="about-financials-header" style={{ marginBottom: "22px", textAlign: "center" }}>
           <span className="about-label" style={{ color: "#47BFDA", letterSpacing: "2px", fontWeight: "600", textTransform: "uppercase" }}>FINANCIALS</span>
           <h2 style={{ fontSize: "42px", color: "#0f1b24", marginTop: "14px", fontFamily: "Franklin Gothic Demi, sans-serif" }}>Latest Financials.</h2>
           <p style={{ fontSize: "15px", color: "#555", maxWidth: "600px", margin: "10px auto 0", lineHeight: "1.8" }}>
@@ -86,7 +86,7 @@ const AboutFinancials = () => {
         </div>
 
         {/* CTA to Historical Financials */}
-        <div style={{ marginTop: "48px", textAlign: "center" }}>
+        <div style={{ marginTop: "22px", textAlign: "center" }}>
           <Link 
             to="/about/historical-financials" 
             className="button-outline"
