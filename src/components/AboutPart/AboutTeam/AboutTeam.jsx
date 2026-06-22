@@ -188,11 +188,8 @@ const AboutTeam = () => {
             Quick Resources &amp; Updates
           </p>
           <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link to="/events" className="about-outline-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
-              Our Events
-            </Link>
-            <Link to="/announcements" className="about-outline-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
-              Announcements
+            <Link to="/events-and-announcements" className="about-outline-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
+              Events &amp; Announcements
             </Link>
             <Link to="/faq" className="about-outline-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
               View FAQ

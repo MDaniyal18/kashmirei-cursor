@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 // Global Styles
 import "./styles/base.css";
@@ -16,8 +16,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import HistoricalFinancials from "./components/pages/HistoricalFinancials";
-import Announcements from "./components/pages/Announcements";
-import Events from "./components/pages/Events";
+import EventsAndAnnouncements from "./components/pages/EventsAndAnnouncements";
 import ForScholars from "./components/pages/ForScholars";
 import AllPrograms from "./components/pages/AllPrograms";
 import HowToApplyPage from "./components/pages/HowToApplyPage";
@@ -79,8 +78,9 @@ const App = () => {
             element={<MentorshipStoryPage />}
           />
 
-          <Route path="/announcements" element={<Announcements />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/events-and-announcements" element={<EventsAndAnnouncements />} />
+          <Route path="/announcements" element={<Navigate to="/events-and-announcements" replace />} />
+          <Route path="/events" element={<Navigate to="/events-and-announcements" replace />} />
 
           <Route path="/impact-by-numbers" element={<ImpactByNumbers />} />
           <Route path="/scholar-stories" element={<ScholarStories />} />

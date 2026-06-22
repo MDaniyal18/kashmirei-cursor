@@ -10,13 +10,7 @@ const SITEMAP_LINKS = [
   { path: "/scholar-stories", label: "Our Impact" },
   { path: "/about", label: "About" },
   { path: "/donate", label: "Donate" },
-  {
-    label: "Events",
-    dropdown: [
-      { path: "/announcements", label: "Announcements" },
-      { path: "/events", label: "Events" },
-    ],
-  },
+  { path: "/events-and-announcements", label: "Events & Announcements" },
   { path: "/faq", label: "FAQ" },
 ];
 

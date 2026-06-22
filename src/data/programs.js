@@ -31,7 +31,7 @@ export const programs = [
     ],
     eligibility: {
       academic: "Applicants must have secured at least 70% in their Grade 8 Term Ist results.",
-      financial: "The applicant's family annual income must not exceed INR 5 lakhs."
+      financial: "The applicant's family annual household income must not exceed INR 5 lakhs."
     },
     selectionProcess: [
       { step: "1", title: "KEI Entrance Examination", desc: "A standardized exam held across 10 districts to evaluate the applicant’s aptitude, critical thinking, and academic readiness. The exam is administered on the same day and time across all locations for fairness." },

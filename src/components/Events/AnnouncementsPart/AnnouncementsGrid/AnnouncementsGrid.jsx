@@ -37,7 +37,7 @@ Students currently in Grade 8 with strong academic potential and demonstrated fi
 
 Eligibility Criteria:
 • Academic Performance: Applicants must have secured atleast 70% in their Grade 8 Term Ist results..
-• Financial Need: The applicant's family annual income must not exceed INR 5 lakhs.
+• Financial Need: The applicant's family annual household income must not exceed INR 5 lakhs.
 
 Selection Process:
 The selection process is designed to be transparent, fair, and merit-based, ensuring that the most deserving candidates are selected.
