@@ -74,12 +74,18 @@
 ============================================================ */
 
 .wwd-rainbow-section {
-  background: #f4f8fb;
-  padding: 100px 40px 22px; /* Modified to act as hero */
+  position: relative;
+  background-image: linear-gradient(rgba(15, 27, 36, 0.88), rgba(15, 27, 36, 0.88)), url("../../assets/Images/home-impact-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 40px 50px; /* Modified to act as hero */
   text-align: center;
 }
 
 .wwd-rainbow-inner {
+  position: relative;
+  z-index: 2;
   max-width: 960px;
   margin: 0 auto;
 }
@@ -97,15 +103,15 @@
 
 .wwd-rainbow-heading {
   font-family: "Franklin Gothic Demi", sans-serif;
-  font-size: 34px;
-  font-weight: 600;
-  color: #0f1b24;
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
   margin: 0 0 14px;
 }
 
 .wwd-rainbow-sub {
-  font-size: 15px;
-  color: #555;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.85;
   max-width: 640px;
   margin: 0 auto 36px;
@@ -118,6 +124,10 @@
   max-width: 860px;
   margin: 0 auto;
   user-select: none;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .wwd-rainbow-img {
@@ -156,22 +166,25 @@
   gap: 7px;
   padding: 7px 15px;
   border-radius: 30px;
-  border: 2px solid var(--pill-color, #47BFDA);
-  background: transparent;
-  color: var(--pill-color, #47BFDA);
+  border: 1.5px solid var(--pill-color, #47BFDA);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
   font-family: "Franklin Gothic Book", sans-serif;
   font-size: 12.5px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: all 0.25s ease;
   white-space: nowrap;
   box-shadow: none;
+  backdrop-filter: blur(4px);
 }
 
 .wwd-rainbow-pill:hover {
   background: var(--pill-color, #47BFDA);
   color: #fff;
-  box-shadow: none;
+  border-color: var(--pill-color, #47BFDA);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
 .pill-num {

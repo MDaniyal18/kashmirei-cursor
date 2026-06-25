@@ -39,7 +39,7 @@ const AllPrograms = () => {
   return (
     <div className="all-programs-page">
       {/* ── Page Header ─────────────────────────────────────────── */}
-      <section className="wwd-rainbow-section" style={{ padding: "140px 40px 40px", backgroundColor: "#f4f8fb" }}>
+      <section className="wwd-rainbow-section" style={{ padding: "140px 40px 40px" }}>
         <div className="wwd-rainbow-inner" style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
           <div style={{ marginBottom: "24px" }}>
             <Link 
@@ -65,10 +65,10 @@ const AllPrograms = () => {
             </Link>
           </div>
           <span className="wwd-section-label">OUR PROGRAMS</span>
-          <h1 className="wwd-rainbow-heading" style={{ fontSize: "36px", fontWeight: "700", color: "#0f1b24", marginTop: "10px" }}>
+          <h1 className="wwd-rainbow-heading" style={{ fontSize: "36px", fontWeight: "700", color: "#ffffff", marginTop: "10px" }}>
             Empowering Kashmir's Scholars
           </h1>
-          <p className="wwd-rainbow-sub" style={{ fontSize: "15px", color: "#555", marginTop: "12px", lineHeight: "1.8" }}>
+          <p className="wwd-rainbow-sub" style={{ fontSize: "15px", color: "rgba(255, 255, 255, 0.85)", marginTop: "12px", lineHeight: "1.8" }}>
             Explore our eight specialized programs working together to support every scholar from high school to university and beyond.
           </p>
         </div>

@@ -72,7 +72,7 @@ const HowToApplyPage = () => {
   return (
     <div className="how-to-apply-page" style={{ backgroundColor: "#ffffff" }}>
       {/* ── Page Header ─────────────────────────────────────────── */}
-      <section className="wwd-rainbow-section" style={{ padding: "100px 40px 22px", backgroundColor: "#f4f8fb" }}>
+      <section className="wwd-rainbow-section" style={{ padding: "100px 40px 22px" }}>
         <div className="wwd-rainbow-inner" style={{ maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
           <div style={{ marginBottom: "24px" }}>
             <Link 
@@ -97,10 +97,10 @@ const HowToApplyPage = () => {
               ← Back to For Scholars
             </Link>
           </div>
-          <h1 className="wwd-rainbow-heading" style={{ fontSize: "36px", fontWeight: "700", color: "#0f1b24", marginTop: "10px" }}>
+          <h1 className="wwd-rainbow-heading" style={{ fontSize: "36px", fontWeight: "700", color: "#ffffff", marginTop: "10px" }}>
             Detailed Application Process
           </h1>
-          <p className="wwd-rainbow-sub" style={{ fontSize: "15px", color: "#555", marginTop: "12px", lineHeight: "1.8" }}>
+          <p className="wwd-rainbow-sub" style={{ fontSize: "15px", color: "rgba(255, 255, 255, 0.85)", marginTop: "12px", lineHeight: "1.8" }}>
             Learn about our transparent, merit-cum-means selection methodology and find the checklists required for a successful application.
           </p>
         </div>
