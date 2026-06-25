@@ -3,92 +3,134 @@ import { Link } from "react-router-dom";
 import "../../../styles/Announcements/announcements.css";
 
 const AboutFinancials = () => {
-  const financialCards = [
-    {
-      category: "Overview",
-      date: "FY 2025 Disclosures",
-      title: "$142,500 Total Revenue",
-      summary: "Supported entirely by individual donations, diaspora fundraising dinners, and private foundation grants. KEI does not accept funds from political groups.",
-      color: "#1B4F8A"
-    },
-    {
-      category: "Efficiency",
-      date: "Program Spend Ratio",
-      title: "91% Program Allocation",
-      summary: "Over 91 cents of every single dollar raised goes directly to scholarship payouts, smart labs setup, carrier awareness materials, and tutor coaching fees.",
-      color: "#2E7D32"
-    },
-    {
-      category: "Overhead",
-      date: "General & Administrative",
-      title: "9% Admin & Operations",
-      summary: "Overhead costs are minimized through streamlined volunteer assistance and cloud operations. This ensures resources are prioritized for direct scholar benefits.",
-      color: "#E8A020"
-    },
-    {
-      category: "Compliance",
-      date: "Regulatory Audit",
-      title: "CPA Audited Reports",
-      summary: "Audited by independent certified public accountants. Registered as a 501(c)(3) public charity in Massachusetts, in compliance with federal guidelines.",
-      color: "#6D1ED4"
-    }
+  // ── FY2024 reviewed figures (year ended Dec 31, 2024) ──────────────────────
+  const stats = [
+    { label: "Total Support & Revenue", value: "$426,802" },
+    { label: "Total Expenses", value: "$232,693" },
+    { label: "Total Liabilities", value: "$22,426" },
   ];
 
+  // Expense allocation for the doughnut
+  const PROGRAM = 155273;
+  const NONPROGRAM = 77420;
+  const TOTAL = PROGRAM + NONPROGRAM; // 232,693
+  const programPct = Math.round((PROGRAM / TOTAL) * 100); // 67
+  const nonProgramPct = 100 - programPct; // 33
+
+  // Doughnut geometry (SVG stroke arcs)
+  const R = 60;
+  const C = 2 * Math.PI * R; // 376.99
+  const programLen = (PROGRAM / TOTAL) * C;
+  const nonProgramLen = C - programLen;
+
+  const PROGRAM_COLOR = "#1B4F8A";
+  const NONPROGRAM_COLOR = "#9CC2DE";
+
   return (
-    <section className="section-about-financials" style={{ padding: "22px 40px", backgroundColor: "#ffffff" }}>
-      <div className="container" style={{ maxWidth: "1100px", margin: "0 auto" }}>
-        
-        <div className="about-financials-header" style={{ marginBottom: "22px", textAlign: "center" }}>
-          <span className="about-label" style={{ color: "#47BFDA", letterSpacing: "2px", fontWeight: "600", textTransform: "uppercase" }}>FINANCIALS</span>
-          <h2 style={{ fontSize: "42px", color: "#0f1b24", marginTop: "14px", fontFamily: "Franklin Gothic Demi, sans-serif" }}>Latest Financials.</h2>
-          <p style={{ fontSize: "15px", color: "#555", maxWidth: "600px", margin: "10px auto 0", lineHeight: "1.8" }}>
-            We hold ourselves to the highest standards of financial accountability, ensuring every contribution is fully maximized to benefit Kashmiri scholars.
+    <section className="section-about-financials" style={{ padding: "40px", backgroundColor: "#ffffff" }}>
+      <div className="container" style={{ maxWidth: "1000px", margin: "0 auto" }}>
+
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: "28px" }}>
+          <span className="about-label" style={{ color: "#47BFDA", letterSpacing: "2px", fontWeight: "600", textTransform: "uppercase", fontSize: "13px" }}>
+            Financials
+          </span>
+          <h2 style={{ fontSize: "40px", color: "#0f1b24", marginTop: "12px", fontFamily: "Franklin Gothic Demi, sans-serif" }}>
+            FY2024 at a Glance
+          </h2>
+          <p style={{ fontSize: "15px", color: "#555", maxWidth: "560px", margin: "10px auto 0", lineHeight: "1.7" }}>
+            Year ended December 31, 2024 — financial statements independently reviewed by a CPA firm.
           </p>
         </div>
 
-        {/* 4-column card grid */}
-        <div className="financials-grid" style={{
+        {/* Snapshot stat strip */}
+        <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-          gap: "24px"
+          gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+          gap: "16px",
+          marginBottom: "36px",
         }}>
-          {financialCards.map((card, i) => (
-            <div
-              key={i}
-              className="ann-card"
-              style={{ 
-                "--ann-color": card.color,
-                minHeight: "300px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between"
-              }}
-            >
-              <div>
-                <div className="ann-card-top-bar" />
-                <div className="ann-card-body" style={{ padding: "24px 24px 16px" }}>
-                  <div className="ann-card-meta" style={{ display: "flex", gap: "10px", alignItems: "center", marginBottom: "14px" }}>
-                    <span className="ann-cat-pill" style={{ background: card.color }}>
-                      {card.category}
-                    </span>
-                    <span className="ann-card-date">{card.date}</span>
-                  </div>
-                  <h3 className="ann-card-title" style={{ fontSize: "18px", color: "#0f1b24", lineHeight: "1.4" }}>{card.title}</h3>
-                  <p className="ann-card-summary" style={{ fontSize: "14px", color: "#555", lineHeight: "1.75" }}>{card.summary}</p>
-                </div>
+          {stats.map((s) => (
+            <div key={s.label} style={{
+              background: "#f5f9fc",
+              borderRadius: "12px",
+              padding: "20px 22px",
+              textAlign: "center",
+            }}>
+              <div style={{ fontSize: "13px", color: "#5a6b78", marginBottom: "8px", textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                {s.label}
               </div>
-              
-              <div style={{ borderTop: "1px solid #e4eef4", padding: "14px 24px", fontSize: "13px", fontWeight: "700", color: card.color }}>
-                Verified Financial Report
+              <div style={{ fontSize: "30px", fontWeight: "700", color: "#0f1b24", fontFamily: "Franklin Gothic Demi, sans-serif" }}>
+                {s.value}
               </div>
             </div>
           ))}
         </div>
 
+        {/* Expense allocation doughnut */}
+        <div style={{
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "40px",
+        }}>
+          <div style={{ position: "relative", width: "180px", height: "180px", flexShrink: 0 }}>
+            <svg viewBox="0 0 160 160" width="180" height="180" role="img" aria-label={`Doughnut chart of FY2024 expenses: program ${programPct} percent, non-program ${nonProgramPct} percent.`}>
+              <g transform="rotate(-90 80 80)">
+                <circle cx="80" cy="80" r={R} fill="none" stroke={NONPROGRAM_COLOR} strokeWidth="22" />
+                <circle
+                  cx="80" cy="80" r={R}
+                  fill="none"
+                  stroke={PROGRAM_COLOR}
+                  strokeWidth="22"
+                  strokeDasharray={`${programLen} ${nonProgramLen}`}
+                  strokeDashoffset="0"
+                />
+              </g>
+              <text x="80" y="74" textAnchor="middle" fontSize="30" fontWeight="700" fill="#0f1b24" fontFamily="Franklin Gothic Demi, sans-serif">
+                {programPct}%
+              </text>
+              <text x="80" y="94" textAnchor="middle" fontSize="12" fill="#5a6b78" letterSpacing="0.5">
+                to programs
+              </text>
+            </svg>
+          </div>
+
+          {/* Legend */}
+          <div style={{ minWidth: "240px" }}>
+            <div style={{ fontSize: "13px", color: "#5a6b78", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "14px" }}>
+              How Expenses Are Allocated
+            </div>
+
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "10px 0", borderBottom: "1px solid #eef3f7" }}>
+              <span style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "15px", color: "#0f1b24" }}>
+                <span style={{ width: "12px", height: "12px", borderRadius: "3px", background: PROGRAM_COLOR }} />
+                Program expenses
+              </span>
+              <span style={{ fontSize: "15px", fontWeight: "700", color: "#0f1b24" }}>$155,273</span>
+            </div>
+
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "10px 0" }}>
+              <span style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "15px", color: "#0f1b24" }}>
+                <span style={{ width: "12px", height: "12px", borderRadius: "3px", background: NONPROGRAM_COLOR }} />
+                Non-program expenses
+              </span>
+              <span style={{ fontSize: "15px", fontWeight: "700", color: "#0f1b24" }}>$77,420</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Compliance footnote */}
+        <p style={{ fontSize: "13px", color: "#7a8893", textAlign: "center", margin: "30px auto 0", maxWidth: "640px", lineHeight: "1.7" }}>
+          Registered 501(c)(3) public charity incorporated in Massachusetts. KEI does not accept funds raised at
+          political events; all donations come through official channels.
+        </p>
+
         {/* CTA to Historical Financials */}
-        <div style={{ marginTop: "22px", textAlign: "center" }}>
-          <Link 
-            to="/about/historical-financials" 
+        <div style={{ marginTop: "26px", textAlign: "center" }}>
+          <Link
+            to="/about/historical-financials"
             className="button-outline"
             style={{
               backgroundColor: "transparent",
@@ -103,7 +145,7 @@ const AboutFinancials = () => {
               alignItems: "center",
               gap: "8px",
               fontWeight: "600",
-              textDecoration: "none"
+              textDecoration: "none",
             }}
           >
             View Historical Financials →
