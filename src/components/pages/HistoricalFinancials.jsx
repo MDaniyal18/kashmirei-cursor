@@ -1,21 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import YearOverYearTable from "../AboutPart/AboutFinancials/YearOverYearTable";
+import { reportDownloads } from "../../data/historicalFinancials";
 
 const HistoricalFinancials = () => {
-  const historicalData = [
-    { year: "FY 2024", revenue: "$135,000", program: "$121,500 (90%)", admin: "$13,500 (10%)", audit: "CPA Audited" },
-    { year: "FY 2023", revenue: "$128,000", program: "$117,760 (92%)", admin: "$10,240 (8%)", audit: "CPA Audited" },
-    { year: "FY 2022", revenue: "$115,000", program: "$102,350 (89%)", admin: "$12,650 (11%)", audit: "CPA Audited" },
-    { year: "FY 2021", revenue: "$98,000", program: "$89,180 (91%)", admin: "$8,820 (9%)", audit: "CPA Audited" },
-  ];
-
-  const reportDownloads = [
-    { year: "FY 2024 Disclosures", desc: "Includes Audited Statement of Financial Position, Revenue Ledger, and IRS Form 990 filing." },
-    { year: "FY 2023 Disclosures", desc: "Detailed breakdown of Program Allocations, smart labs support, and operations expenses." },
-    { year: "FY 2022 Disclosures", desc: "Audited financial declarations and Boston/Srinagar operations compliance filings." },
-    { year: "FY 2021 Disclosures", desc: "Annual charity disclosure statement, fundraising audit reports, and balance sheets." },
-  ];
-
   return (
     <div className="historical-financials-page" style={{ backgroundColor: "#ffffff" }}>
       {/* ── Page Header ─────────────────────────────────────────── */}
@@ -57,46 +45,7 @@ const HistoricalFinancials = () => {
       {/* ── Table Section ───────────────────────────────────────── */}
       <section style={{ padding: "22px 40px" }}>
         <div style={{ maxWidth: "960px", margin: "0 auto" }}>
-          <h2 style={{ fontSize: "26px", color: "#0f1b24", marginBottom: "22px", textAlign: "center", fontWeight: "700" }}>
-            Year-Over-Year Financial Summary
-          </h2>
-
-          <div style={{ overflowX: "auto", border: "1.5px solid #e4eef4", borderRadius: "12px", boxShadow: "0 4px 15px rgba(0,0,0,0.01)" }}>
-            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "600px", textAlign: "left" }}>
-              <thead>
-                <tr style={{ backgroundColor: "#f8fbfd", borderBottom: "1.5px solid #e4eef4" }}>
-                  <th style={{ padding: "18px 24px", fontSize: "14px", fontWeight: "700", color: "#0f1b24" }}>Fiscal Year</th>
-                  <th style={{ padding: "18px 24px", fontSize: "14px", fontWeight: "700", color: "#0f1b24" }}>Total Revenue</th>
-                  <th style={{ padding: "18px 24px", fontSize: "14px", fontWeight: "700", color: "#0f1b24" }}>Program Expenditures</th>
-                  <th style={{ padding: "18px 24px", fontSize: "14px", fontWeight: "700", color: "#0f1b24" }}>Admin & General</th>
-                  <th style={{ padding: "18px 24px", fontSize: "14px", fontWeight: "700", color: "#0f1b24" }}>Audit Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                {historicalData.map((row, idx) => (
-                  <tr 
-                    key={idx} 
-                    style={{ 
-                      borderBottom: idx === historicalData.length - 1 ? "none" : "1px solid #eef3f7",
-                      transition: "background-color 0.2s"
-                    }}
-                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#fcfdfe"}
-                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "transparent"}
-                  >
-                    <td style={{ padding: "18px 24px", fontSize: "14.5px", fontWeight: "700", color: "#0f1b24" }}>{row.year}</td>
-                    <td style={{ padding: "18px 24px", fontSize: "14.5px", color: "#444" }}>{row.revenue}</td>
-                    <td style={{ padding: "18px 24px", fontSize: "14.5px", color: "#2E7D32", fontWeight: "600" }}>{row.program}</td>
-                    <td style={{ padding: "18px 24px", fontSize: "14.5px", color: "#E8A020", fontWeight: "600" }}>{row.admin}</td>
-                    <td style={{ padding: "18px 24px", fontSize: "14px" }}>
-                      <span style={{ backgroundColor: "#e8f5e9", color: "#2E7D32", padding: "4px 10px", borderRadius: "20px", fontWeight: "700", fontSize: "11px", textTransform: "uppercase" }}>
-                        {row.audit}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <YearOverYearTable />
         </div>
       </section>
 

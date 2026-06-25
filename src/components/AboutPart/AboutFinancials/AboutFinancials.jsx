@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../../styles/Announcements/announcements.css";
+import YearOverYearTable from "./YearOverYearTable";
 
 const AboutFinancials = () => {
   // ── FY2024 reviewed figures (year ended Dec 31, 2024) ──────────────────────
@@ -120,6 +121,8 @@ const AboutFinancials = () => {
             </div>
           </div>
         </div>
+
+        <YearOverYearTable />
 
         {/* Compliance footnote */}
         <p style={{ fontSize: "13px", color: "#7a8893", textAlign: "center", margin: "30px auto 0", maxWidth: "640px", lineHeight: "1.7" }}>
