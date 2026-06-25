@@ -36,8 +36,7 @@ const HeroSection = () => {
               <h2 className="hero-subheading">Every Dream Deserves a Chance</h2>
               <p>
                 Our mission is to empower extraordinary but financially
-                challenged students to realize their full potential through
-                mentoring, training opportunities, and financial support.
+                challenged students to realize their full.
               </p>
             </div>
           </div>
@@ -84,9 +83,7 @@ const HeroSection = () => {
                 Initiative <span>(KEI)</span>
               </h1>
               <p>
-                A USA-based non-profit that supports the education of
-                underprivileged children in Kashmir through programs
-                and projects.
+                A USA-based non-profit organisation. A registered 501(c)(3) tax-exempt charity in the United States (incorporated in Massachusetts)
               </p>
             </div>
           </div>

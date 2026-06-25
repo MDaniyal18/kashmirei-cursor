@@ -30,17 +30,15 @@ const OurMissionSection = () => {
               <h5>OUR VISION</h5>
               <p>
                 To make education the primary imperative in the empowerment
-                and development of individuals, institutions, and communities
-                in the conflict-ridden regions of the world.
+                and development of individuals, institutions, and communities.
               </p>
             </div>
             <div className="ourmission-vm-item">
               <h5>OUR MISSION</h5>
               <p>
-                To provide bright but at risk students in conflict ridden
-                regions like Kashmir a supportive and leadership oriented
-                educational environment through mentorship, experiential
-                opportunities and financial assistance.
+                To provide bright but at risk students a supportive and leadership oriented
+                educational environment so that these scholars can bring about a positive 
+                change in their families and communities.
               </p>
             </div>
           </div>

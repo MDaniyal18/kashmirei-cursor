@@ -138,7 +138,7 @@ export const programs = [
     stats: [
       { value: "500+", label: "Workshops Conducted" },
       { value: "2,000+", label: "Scholars Engaged" },
-      { value: "21th Century", label: "Skill Development" },
+      { value: "21st Century", label: "Skill Development" },
     ],
     image: imgEL,
     overview: "The Experiential Learning Program is designed to equip KEI scholars with the operational and character competencies needed to navigate the complexities of the present-day world. Academic merit alone is not enough; this program hosts capacity-building workshops focused on life skills, building self-esteem, fostering collaborative learning, and developing a unified 'KEI Scholar' identity.",

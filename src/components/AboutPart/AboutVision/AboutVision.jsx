@@ -12,8 +12,7 @@ const AboutVision = () => {
           <span className="about-label about-label--light">OUR VISION</span>
           <blockquote className="about-vision-quote">
             "To make education the primary imperative in the empowerment
-            and development of individuals, institutions, and communities
-            in the conflict-ridden regions of the world."
+                and development of individuals, institutions, and communities."
           </blockquote>
         </div>
 
@@ -22,10 +21,9 @@ const AboutVision = () => {
         <div className="about-vision-col">
           <span className="about-label about-label--light">OUR MISSION</span>
           <p className="about-vision-mission">
-            "To provide bright but at-risk scholars in conflict-ridden
-            regions like Kashmir a supportive and leadership-oriented
-            educational environment through mentorship, experiential
-            opportunities, and financial assistance."
+            "To provide bright but at risk students a supportive and leadership oriented
+                educational environment so that these scholars can bring about a positive 
+                change in their families and communities."
           </p>
           <p className="about-vision-sub">
             Education is not charity — it's empowerment. By nurturing
