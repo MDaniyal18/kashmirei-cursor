@@ -3,10 +3,12 @@ import { yearOverYearData } from "../../../data/historicalFinancials";
 
 const YearOverYearTable = ({ title = "Year-Over-Year Financial Summary" }) => {
   return (
-    <div style={{ marginTop: "48px" }}>
-      <h3 style={{ fontSize: "26px", color: "#0f1b24", marginBottom: "22px", textAlign: "center", fontWeight: "700" }}>
-        {title}
-      </h3>
+    <div style={{ marginTop: title ? "48px" : "0" }}>
+      {title ? (
+        <h3 style={{ fontSize: "26px", color: "#0f1b24", marginBottom: "22px", textAlign: "center", fontWeight: "700" }}>
+          {title}
+        </h3>
+      ) : null}
 
       <div style={{ overflowX: "auto", border: "1.5px solid #e4eef4", borderRadius: "12px", boxShadow: "0 4px 15px rgba(0,0,0,0.01)" }}>
         <table style={{ width: "100%", borderCollapse: "collapse", minWidth: "600px", textAlign: "left" }}>
