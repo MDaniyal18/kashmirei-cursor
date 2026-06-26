@@ -37,6 +37,7 @@ const ForScholars = () => {
         { label: "Application Submission Deadline", date: "November 10, 2026" },
         { label: "Release of Admit Cards / Roll Numbers", date: "November 25, 2026" },
         { label: "KEI HSSP Test", date: "December 06, 2026" },
+        
         // { label: "Results & Document Verification", date: "December 20, 2026" }
       ]
     }
