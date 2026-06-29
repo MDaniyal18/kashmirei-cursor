@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "../../../styles/What-We-Do/whatwedo-programs.css";
 
-import rainbowImg from "../../../assets/Images/value-we-deliver-updated.png";
+import rainbowImg from "../../../assets/Images/value-we-deliver-rearranged.png";
 
 // Program images
 import imgHSP    from "../../../assets/Images/what-we-do-1.JPG";
@@ -142,14 +142,14 @@ const programs = [
 // ─── Rainbow clickable overlay positions (% of image width/height) ──────────
 // Each entry: { id, label, left, top, width, height }
 const rainbowHotspots = [
-  { id: "hsp",         label: "High School\S",     left: "3%",  top: "52%", width: "14%", height: "40%" },
-  { id: "cap",         label: "Career\nAwareness",             left: "11%", top: "28%", width: "14%", height: "40%" },
-  { id: "mentorship",  label: "Mentorship\nProgram",           left: "23%", top: "8%",  width: "14%", height: "38%" },
-  { id: "experiential",label: "Experiential\nLearning",        left: "37%", top: "0%",  width: "14%", height: "35%" },
-  { id: "gooru",       label: "Gooru\nNavigator",              left: "51%", top: "0%",  width: "14%", height: "35%" },
-  { id: "dsle",        label: "Digital Smart\nLearning",       left: "64%", top: "5%",  width: "15%", height: "38%" },
-  { id: "ibsp",        label: "International\nBridge",         left: "75%", top: "26%", width: "14%", height: "40%" },
-  { id: "gap",         label: "Graduate\nAbroad",              left: "84%", top: "50%", width: "14%", height: "42%" },
+  { id: "hsp",         label: "High School\nSupport",          left: "4%",  top: "57%", width: "12%", height: "30%" },
+  { id: "dsle",        label: "Digital Smart\nLearning",       left: "12%", top: "33%", width: "12%", height: "30%" },
+  { id: "gooru",       label: "Gooru\nNavigator",              left: "24%", top: "12%", width: "12%", height: "30%" },
+  { id: "experiential",label: "Experiential\nLearning",        left: "38%", top: "2%",  width: "12%", height: "30%" },
+  { id: "cap",         label: "Career\nAwareness",             left: "50%", top: "2%",  width: "12%", height: "30%" },
+  { id: "mentorship",  label: "Mentorship\nProgram",           left: "65%", top: "9%",  width: "12%", height: "30%" },
+  { id: "gap",         label: "Graduate\nAbroad",              left: "76%", top: "31%", width: "12%", height: "30%" },
+  { id: "ibsp",        label: "International\nBridge",         left: "85%", top: "56%", width: "12%", height: "30%" },
 ];
 
 // ─── Smooth scroll helper ────────────────────────────────────────────────────
