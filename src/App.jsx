@@ -15,7 +15,6 @@ import Footer from "./components/Footer/Footer";
 // Pages
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
-import HistoricalFinancials from "./components/pages/HistoricalFinancials";
 import EventsAndAnnouncements from "./components/pages/EventsAndAnnouncements";
 import ForScholars from "./components/pages/ForScholars";
 import AllPrograms from "./components/pages/AllPrograms";
@@ -56,7 +55,6 @@ const App = () => {
 
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/about/historical-financials" element={<HistoricalFinancials />} />
           <Route path="/for-scholars" element={<ForScholars />} />
           <Route path="/for-scholars/programs" element={<AllPrograms />} />
           <Route path="/for-scholars/how-to-apply" element={<HowToApplyPage />} />

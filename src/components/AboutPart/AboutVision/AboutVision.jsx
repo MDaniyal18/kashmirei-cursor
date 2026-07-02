@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../../../styles/About/about.css";
 
 const AboutVision = () => {
@@ -25,14 +24,6 @@ const AboutVision = () => {
                 educational environment so that these scholars can bring about a positive 
                 change in their families and communities."
           </p>
-          <p className="about-vision-sub">
-            Education is not charity — it's empowerment. By nurturing
-            skills, ethics, and leadership, KEI helps scholars shape
-            their communities and their futures.
-          </p>
-          <Link to="/for-scholars" className="about-vision-btn">
-            Explore Our Programmes →
-          </Link>
         </div>
 
       </div>
