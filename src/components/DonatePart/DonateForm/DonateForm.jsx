@@ -10,10 +10,7 @@ const DonateForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [cardNumber, setCardNumber] = useState("");
-  const [cardExpiry, setCardExpiry] = useState("");
-  const [cardCvc, setCardCvc] = useState("");
-  const [cardZip, setCardZip] = useState("");
+
 
   const [isProcessing, setIsProcessing] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -77,7 +74,7 @@ const DonateForm = () => {
     return selectedAmount;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setErrorMsg("");
 
@@ -90,18 +87,43 @@ const DonateForm = () => {
       setErrorMsg("Please fill out your personal information.");
       return;
     }
-    if (!cardNumber || !cardExpiry || !cardCvc || !cardZip) {
-      setErrorMsg("Please fill out your payment card details.");
-      return;
-    }
 
     setIsProcessing(true);
 
-    // Simulate Stripe Gateway roundtrip
-    setTimeout(() => {
+    try {
+      const response = await fetch("/api/create-checkout-session", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          amount,
+          frequency,
+          email,
+          firstName,
+          lastName,
+          givingTier,
+          scholarshipType,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to initiate payment session.");
+      }
+
+      if (data.url) {
+        // Redirect to Stripe Checkout page
+        window.location.href = data.url;
+      } else {
+        throw new Error("Invalid response from checkout service.");
+      }
+    } catch (err) {
+      console.error("Stripe Redirect Error:", err);
+      setErrorMsg(err.message || "An error occurred while connecting to Stripe. Please try again.");
       setIsProcessing(false);
-      setIsSuccess(true);
-    }, 2000);
+    }
   };
 
   const resetForm = () => {
@@ -109,10 +131,6 @@ const DonateForm = () => {
     setFirstName("");
     setLastName("");
     setEmail("");
-    setCardNumber("");
-    setCardExpiry("");
-    setCardCvc("");
-    setCardZip("");
     setCustomAmount("");
     setSelectedAmount(100);
     setGivingTier("general");
@@ -312,68 +330,17 @@ const DonateForm = () => {
               </div>
             </div>
 
-            {/* Stripe Mock Card Details */}
+            {/* Stripe Secure Redirect Notice */}
             <div style={{ marginBottom: "24px" }}>
-              <span className="form-group-label">Credit Card Details (Stripe Secured)</span>
-              <div className="stripe-elements-mock">
-                <div>
-                  <label htmlFor="card-number" className="sr-only" style={{ display: "none" }}>Card Number</label>
-                  <input
-                    id="card-number"
-                    type="text"
-                    placeholder="Card Number"
-                    value={cardNumber}
-                    onChange={(e) => setCardNumber(e.target.value)}
-                    maxLength="19"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="card-expiry" className="sr-only" style={{ display: "none" }}>MM/YY</label>
-                  <input
-                    id="card-expiry"
-                    type="text"
-                    placeholder="MM / YY"
-                    value={cardExpiry}
-                    onChange={(e) => setCardExpiry(e.target.value)}
-                    maxLength="5"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="card-cvc" className="sr-only" style={{ display: "none" }}>CVC</label>
-                  <input
-                    id="card-cvc"
-                    type="text"
-                    placeholder="CVC"
-                    value={cardCvc}
-                    onChange={(e) => setCardCvc(e.target.value)}
-                    maxLength="4"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="card-zip" className="sr-only" style={{ display: "none" }}>Postal Code</label>
-                <input
-                  id="card-zip"
-                  type="text"
-                  placeholder="ZIP / Postal Code"
-                  value={cardZip}
-                  onChange={(e) => setCardZip(e.target.value)}
-                  maxLength="8"
-                  required
-                />
-              </div>
-
-              <div className="stripe-branding-line">
-                <span>🔒 Encrypted connection</span>
+              <div className="stripe-branding-line" style={{ display: "flex", justifyContent: "center", borderTop: "1.5px solid #e4eef4", paddingTop: "20px", marginTop: "10px" }}>
+                <span>🔒 Secure checkout powered by </span>
                 <span>
-                  Powered by 
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" alt="Stripe" className="stripe-logo-icon" style={{ marginLeft: "6px", display: "inline-block", verticalAlign: "middle" }} />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg" alt="Stripe" className="stripe-logo-icon" style={{ marginLeft: "6px", display: "inline-block", verticalAlign: "middle", height: "16px" }} />
                 </span>
               </div>
+              <p style={{ fontSize: "13px", color: "#666", textAlign: "center", marginTop: "8px", lineHeight: "1.5" }}>
+                You will be securely redirected to Stripe to enter your payment credentials. We do not store or process card details on our servers.
+              </p>
             </div>
 
             {/* Errors */}

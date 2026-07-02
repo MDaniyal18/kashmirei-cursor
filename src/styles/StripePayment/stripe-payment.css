@@ -1,0 +1,173 @@
+/* Stripe Payment Success Page Styles */
+
+.stripe-payment-page {
+  padding: 120px 20px 80px;
+  background-color: #f4f8fb;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stripe-payment-container {
+  max-width: 650px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.stripe-payment-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1.5px solid #e4eef4;
+  box-shadow: 0 10px 30px rgba(71, 191, 218, 0.08);
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stripe-payment-card:hover {
+  transform: translateY(-2px);
+}
+
+.success-icon-container {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(71, 191, 218, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.success-icon-container svg {
+  width: 40px;
+  height: 40px;
+  color: #47BFDA;
+}
+
+.stripe-payment-card h1 {
+  font-size: 32px;
+  color: #0f1b24;
+  font-family: "Franklin Gothic Demi", sans-serif;
+  margin-bottom: 12px;
+}
+
+.stripe-payment-card .sub-title {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.session-info-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.session-info-box .label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.session-info-box .value {
+  font-family: monospace;
+  font-size: 14px;
+  color: #334155;
+  word-break: break-all;
+}
+
+.test-badge {
+  background-color: #47BFDA;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.error-badge {
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-stripe-confirm {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary-stripe {
+  background-color: #47BFDA;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary-stripe:hover {
+  background-color: #3aaac5;
+}
+
+.btn-secondary-stripe {
+  background-color: transparent;
+  color: #47BFDA;
+  border: 1.5px solid #47BFDA;
+}
+
+.btn-secondary-stripe:hover {
+  background-color: rgba(71, 191, 218, 0.05);
+}
+
+.no-session-card {
+  border-top: 4px solid #ef4444;
+}
+
+.no-session-card h1 {
+  color: #ef4444;
+}
+
+.warning-icon-container {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(239, 68, 68, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.warning-icon-container svg {
+  width: 40px;
+  height: 40px;
+  color: #ef4444;
+}

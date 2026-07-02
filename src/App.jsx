@@ -42,6 +42,7 @@ import Blog from "./components/OurImpactPart/ScholarStoryPart/ScholarStorySectio
 // Video Player Pages
 // import ScholarVideoPlayer from "./components/OurImpactPart/ScholarStoryPart/ScholarStorySection/ScholarVideoPlayer";
 import AlumniVideoPlayer from "./components/OurImpactPart/AlumniPart/AlumniStorySection/AlumniVideoPlayer";
+import StripePayment from "./components/pages/StripePayment";
 
 const App = () => {
   return (
@@ -89,6 +90,7 @@ const App = () => {
 
           {/* <Route path="/scholar-video/:slug" element={<ScholarVideoPlayer />} /> */}
           <Route path="/alumni-video/:slug" element={<AlumniVideoPlayer />} />
+          <Route path="/stripe-payment" element={<StripePayment />} />
 
         </Routes>
       </main>

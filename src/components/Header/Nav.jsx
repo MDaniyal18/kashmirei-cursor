@@ -26,8 +26,8 @@ const Navbar = () => {
 
   // Close all menus on route change
   useEffect(() => {
-    setOpenDropdown(null);
-    setMobileOpen(false);
+    // setOpenDropdown(null);
+    // setMobileOpen(false);
   }, [location.pathname]);
 
   const closeMenus = () => {
