@@ -10,7 +10,13 @@ const DonateForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [isTribute, setIsTribute] = useState(false);
+  const [tributeType, setTributeType] = useState("Honor");
+  const [tributeHonoreeName, setTributeHonoreeName] = useState("");
 
+  // Extract sf_campaign_id from URL if present
+  const queryParams = new URLSearchParams(window.location.search);
+  const sfCampaignId = queryParams.get("sf_campaign_id") || "";
 
   const [isProcessing, setIsProcessing] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -104,6 +110,11 @@ const DonateForm = () => {
           lastName,
           givingTier,
           scholarshipType,
+          sf_campaign_id: sfCampaignId,
+          ...(isTribute && {
+            tributeType,
+            tributeHonoreeName,
+          })
         }),
       });
 
@@ -135,6 +146,9 @@ const DonateForm = () => {
     setSelectedAmount(100);
     setGivingTier("general");
     setScholarshipType("general");
+    setIsTribute(false);
+    setTributeType("Honor");
+    setTributeHonoreeName("");
   };
 
   if (isSuccess) {
@@ -315,8 +329,53 @@ const DonateForm = () => {
                   />
                 </div>
               </div>
-              <div className="donor-info-grid donor-info-grid-full">
-                <div>
+            </div>
+
+            {/* Tribute Information */}
+            <div style={{ marginBottom: "24px", padding: "16px", backgroundColor: "#f9fbfd", borderRadius: "8px", border: "1px solid #e4eef4" }}>
+              <label style={{ display: "flex", alignItems: "center", cursor: "pointer", fontSize: "14px", fontWeight: "600", color: "#333", marginBottom: isTribute ? "16px" : "0" }}>
+                <input 
+                  type="checkbox" 
+                  checked={isTribute}
+                  onChange={(e) => setIsTribute(e.target.checked)}
+                  style={{ marginRight: "10px", width: "18px", height: "18px" }}
+                />
+                Dedicate this donation in honor or in memory of someone
+              </label>
+
+              {isTribute && (
+                <div className="donor-info-grid" style={{ marginTop: "12px" }}>
+                  <div>
+                    <label className="form-group-label" htmlFor="tribute-type">Tribute Type</label>
+                    <select 
+                      id="tribute-type" 
+                      value={tributeType} 
+                      onChange={(e) => setTributeType(e.target.value)}
+                      className="input"
+                      style={{ width: "100%", padding: "12px", borderRadius: "6px", border: "1.5px solid #e4eef4", fontSize: "14px", backgroundColor: "#fff", outline: "none", height: "48px" }}
+                    >
+                      <option value="Honor">In Honor Of</option>
+                      <option value="Memory">In Memory Of</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="form-group-label" htmlFor="honoree-name">Honoree Name</label>
+                    <input
+                      id="honoree-name"
+                      type="text"
+                      placeholder="Name of Honoree"
+                      value={tributeHonoreeName}
+                      onChange={(e) => setTributeHonoreeName(e.target.value)}
+                      required={isTribute}
+                      style={{ width: "100%", padding: "12px", borderRadius: "6px", border: "1.5px solid #e4eef4", fontSize: "14px", outline: "none", height: "48px", boxSizing: "border-box" }}
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div className="donor-info-grid donor-info-grid-full">
+              <div>
                   <label htmlFor="email-address" className="sr-only" style={{ display: "none" }}>Email Address</label>
                   <input
                     id="email-address"
@@ -328,7 +387,6 @@ const DonateForm = () => {
                   />
                 </div>
               </div>
-            </div>
 
             {/* Stripe Secure Redirect Notice */}
             <div style={{ marginBottom: "24px" }}>

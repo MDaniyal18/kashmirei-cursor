@@ -21,6 +21,9 @@ export default async function handler(req, res) {
     lastName,
     givingTier,
     scholarshipType,
+    sf_campaign_id,
+    tributeType,
+    tributeHonoreeName,
   } = req.body || {};
 
   // Basic validation
@@ -67,6 +70,9 @@ export default async function handler(req, res) {
       metadata: {
         givingTier: givingTier || "general",
         scholarshipType: scholarshipType || "general",
+        sf_campaign_id: sf_campaign_id || "",
+        ...(tributeType && { tributeType }),
+        ...(tributeHonoreeName && { tributeHonoreeName }),
       },
     });
 
@@ -98,7 +104,24 @@ export default async function handler(req, res) {
         givingTier: givingTier || "general",
         scholarshipType: scholarshipType || "general",
         frequency: frequency || "one-time",
+        sf_campaign_id: sf_campaign_id || "",
+        ...(tributeType && { tributeType }),
+        ...(tributeHonoreeName && { tributeHonoreeName }),
       },
+      ...(isMonthly && {
+        subscription_data: {
+          metadata: {
+            givingTier: givingTier || "general",
+            scholarshipType: scholarshipType || "general",
+            sf_campaign_id: sf_campaign_id || "",
+            firstName: firstName || "",
+            lastName: lastName || "",
+            email: email || "",
+            ...(tributeType && { tributeType }),
+            ...(tributeHonoreeName && { tributeHonoreeName }),
+          },
+        },
+      }),
     };
 
     // Generate Stripe Session
