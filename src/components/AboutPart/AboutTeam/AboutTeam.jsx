@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "../../../styles/About/about.css";
 
 const PersonIcon = () => (
@@ -112,11 +111,6 @@ const AboutTeam = () => {
 
         <div className="about-team-header">
           <span className="about-label">THE PEOPLE BEHIND KEI</span>
-          <h2>Meet the Team.</h2>
-          <p className="about-team-sub">
-            Our strength lies in the people who dedicate their time and
-            expertise to building a brighter future for Kashmiri youth.
-          </p>
           {/* {hasEdits && (
             // <button
             //   onClick={handleReset}
@@ -180,23 +174,6 @@ const AboutTeam = () => {
                 <p className="about-team-role">{m.title}</p>
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="about-team-cta" style={{ textAlign: "center", marginTop: "22px", borderTop: "1px solid #e4eef4", paddingTop: "22px" }}>
-          <p style={{ fontSize: "16px", color: "#333", fontWeight: "600", marginBottom: "20px" }}>
-            Quick Resources &amp; Updates
-          </p>
-          <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link to="/events-and-announcements" className="about-outline-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
-              Events &amp; Announcements
-            </Link>
-            <Link to="/faq" className="about-outline-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
-              View FAQ
-            </Link>
-            <a href="mailto:info@kashmirei.org" className="about-filled-btn" style={{ padding: "12px 30px", fontSize: "15px" }}>
-              Contact Us
-            </a>
           </div>
         </div>
 

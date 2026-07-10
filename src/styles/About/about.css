@@ -296,16 +296,26 @@
 
 .section-about-values {
   background: #f4f8fb;
-  padding: 22px 40px;
+  padding: 22px 40px 22px;
 }
 
 .about-values-container {
   max-width: 1100px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 20px;
 }
 
-.about-values-header {
-  margin-bottom: 22px;
+.about-values-sentence {
+  font-family: "Franklin Gothic Book", sans-serif;
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1 1 520px;
+  text-wrap: pretty;
 }
 
 .about-values-header h2 {
@@ -514,6 +524,7 @@
 .section-about-team {
   background: #f4f8fb;
   padding: 22px 40px;
+  border-top: 1px solid #e4eef4;
 }
 
 .about-team-container {
@@ -522,7 +533,7 @@
 }
 
 .about-team-header {
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
 
 .about-team-header h2 {
@@ -690,6 +701,38 @@
 
 .about-team-cta {
   margin-top: 12px;
+}
+
+.section-about-quick-resources {
+  background: #ffffff;
+  padding: 22px 40px 40px;
+  border-top: 1px solid #e4eef4;
+}
+
+.about-quick-resources-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-quick-resources-title {
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
+.about-quick-resources-links {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-quick-resources-links .about-outline-btn,
+.about-quick-resources-links .about-filled-btn {
+  padding: 12px 30px;
+  font-size: 15px;
 }
 
 

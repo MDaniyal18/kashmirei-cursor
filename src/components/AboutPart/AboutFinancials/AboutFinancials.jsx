@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../../../styles/Announcements/announcements.css";
 import YearOverYearTable from "./YearOverYearTable";
+
+const FINANCIAL_REPORT_PDF = "/documents/KEI-financial-Rpt-2024-detailed.pdf";
 
 const AboutFinancials = () => {
   return (
@@ -13,26 +14,19 @@ const AboutFinancials = () => {
           <span className="about-label" style={{ color: "#47BFDA", letterSpacing: "2px", fontWeight: "600", textTransform: "uppercase", fontSize: "13px" }}>
             Financials
           </span>
-          <h2 style={{ fontSize: "40px", color: "#0f1b24", marginTop: "12px", fontFamily: "Franklin Gothic Demi, sans-serif" }}>
-            Latest Financials.
-          </h2>
-          <p style={{ fontSize: "15px", color: "#555", maxWidth: "560px", margin: "10px auto 0", lineHeight: "1.7" }}>
-            We hold ourselves to the highest standards of financial accountability, ensuring every contribution is fully maximized to benefit Kashmiri scholars.
-          </p>
         </div>
 
         <YearOverYearTable title="" />
 
-        {/* Compliance footnote */}
-        <p style={{ fontSize: "13px", color: "#7a8893", textAlign: "center", margin: "30px auto 0", maxWidth: "640px", lineHeight: "1.7" }}>
-          Registered 501(c)(3) public charity incorporated in Massachusetts. KEI does not accept funds raised at
-          political events; all donations come through official channels.
-        </p>
-
-        {/* CTA to Historical Financials */}
         <div style={{ marginTop: "26px", textAlign: "center" }}>
-          <Link
-            to="/about/historical-financials"
+          <a
+            href={FINANCIAL_REPORT_PDF}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open(FINANCIAL_REPORT_PDF, "_blank", "noopener,noreferrer");
+            }}
             className="button-outline"
             style={{
               backgroundColor: "transparent",
@@ -50,8 +44,8 @@ const AboutFinancials = () => {
               textDecoration: "none",
             }}
           >
-            View Historical Financials →
-          </Link>
+            View latest financial report →
+          </a>
         </div>
 
       </div>
