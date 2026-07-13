@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ForScholarsProgramIntro from "../ForScholarsPart/ForScholarsProgramIntro";
 import ForScholarsPrograms from "../ForScholarsPart/ForScholarsPrograms";
 import "../../styles/For-Scholars/forscholars.css";
 
@@ -61,6 +62,8 @@ const ForScholars = () => {
 
   return (
     <div className="forscholars-page-wrapper">
+      <ForScholarsProgramIntro />
+
       {/* ── Rainbow Navigator ───────────────────────────────────── */}
       <ForScholarsPrograms />
 
