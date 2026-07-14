@@ -3,7 +3,7 @@
 ========================================= */
 
 .gi-ways {
-    padding: 22px 0;
+    padding: 100px 0 40px; /* clear fixed header, matches For Scholars */
     background: #f5f6f8;
   }
   
@@ -143,7 +143,7 @@
   
   @media (max-width: 768px) {
     .gi-ways {
-      padding: 22px 0;
+      padding: 90px 0 30px;
     }
   
     .gi-ways-header h2 {
@@ -375,6 +375,360 @@
   .gi-modal-footer {
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+
+/* =========================================
+   INLINE EXPANDING SECTIONS (v2 layout)
+   ========================================= */
+
+/* ---- section label heading (matches .wwd-section-label on For Scholars) ---- */
+.gi-ways-header h2.gi-section-label {
+  display: block;
+  font-family: "Franklin Gothic Book", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #47BFDA;
+  margin: 0 0 14px;
+}
+
+/* ---- intro under header ---- */
+.gi-ways-intro {
+  max-width: 720px;
+  margin: 16px auto 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ---- impact strip ---- */
+.gi-impact-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 26px auto 10px;
+}
+
+.gi-impact-strip span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f1b24;
+  background: #ffffff;
+  border: 1.5px solid #e4eef4;
+  border-radius: 30px;
+  padding: 8px 18px;
+}
+
+/* ---- 4-card grid ---- */
+.gi-ways-grid-4 {
+  grid-template-columns: repeat(4, minmax(200px, 240px));
+  gap: 20px;
+}
+
+.gi-ways-grid-4 .gi-card {
+  width: auto;
+  height: auto;
+  min-height: 240px;
+  padding: 26px 18px;
+  border: 1.5px solid #dde6ec;
+  border-radius: 16px;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.gi-ways-grid-4 .gi-card:hover {
+  transform: translateY(-4px);
+  border-color: #47bfda;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.gi-ways-grid-4 .gi-card h3 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.gi-ways-grid-4 .gi-card p {
+  font-size: 13.5px;
+  margin-bottom: 16px;
+}
+
+.gi-card-icon {
+  width: 44px;
+  height: 44px;
+  color: #1b4f8a;
+  margin-bottom: 16px;
+}
+
+.gi-card-active {
+  border: 2px solid #47bfda !important;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.gi-card-tagline {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #47bfda;
+  margin-bottom: 8px;
+}
+
+.gi-card-toggle {
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 700;
+  color: #47bfda;
+  cursor: pointer;
+  padding: 0;
+  letter-spacing: 0.6px;
+}
+
+/* ---- detail panel ---- */
+.gi-detail-panel {
+  margin-top: 26px;
+  background: #ffffff;
+  border: 2px solid #47bfda;
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+  animation: giPanelIn 0.3s ease;
+  scroll-margin-top: 110px;
+}
+
+@keyframes giPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gi-detail-inner {
+  padding: 40px 48px 44px;
+  text-align: left;
+}
+
+.gi-detail-header {
+  border-left: 5px solid #47bfda;
+  padding-left: 18px;
+  margin-bottom: 22px;
+}
+
+.gi-detail-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #47bfda;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.gi-detail-header h3 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f1b24;
+  margin: 0;
+}
+
+.gi-detail-lead {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #444;
+  max-width: 820px;
+  margin-bottom: 26px;
+}
+
+.gi-detail-inner h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f1b24;
+  margin: 0 0 14px;
+}
+
+/* ---- volunteer / partner role grid ---- */
+.gi-role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.gi-role-item {
+  background: #f8fbfd;
+  border: 1.5px solid #eef3f7;
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.gi-role-item h5 {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #0f1b24;
+  margin: 0 0 6px;
+}
+
+.gi-role-item p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+
+/* ---- mentor callout ---- */
+.gi-callout {
+  background: #f4f8fb;
+  border-left: 4px solid #47bfda;
+  border-radius: 0 12px 12px 0;
+  padding: 18px 22px;
+  margin-bottom: 26px;
+  max-width: 820px;
+}
+
+.gi-callout h4 {
+  margin: 0 0 6px;
+}
+
+.gi-callout p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* ---- two-column blocks ---- */
+.gi-detail-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-bottom: 24px;
+}
+
+.gi-detail-list {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.gi-detail-list li {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.gi-detail-list-plain {
+  list-style: none;
+  padding-left: 0;
+}
+
+.gi-detail-list-plain li {
+  border-bottom: 1px solid #eef3f7;
+  padding-bottom: 10px;
+}
+
+.gi-detail-note {
+  font-size: 13.5px;
+  color: #666;
+  margin: 0 0 12px;
+}
+
+.gi-detail-list-narrow {
+  max-width: 520px;
+  margin-bottom: 8px;
+}
+
+/* ---- proof line ---- */
+.gi-proof-line {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #47bfda;
+  letter-spacing: 0.3px;
+  margin: 4px 0 24px;
+}
+
+/* ---- CTA row ---- */
+.gi-detail-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.gi-detail-btn {
+  display: inline-block;
+  width: auto;
+  padding: 13px 30px;
+}
+
+.gi-detail-btn-outline {
+  background: transparent;
+  border: 2.5px solid #47bfda;
+  color: #47bfda;
+}
+
+.gi-detail-btn-outline:hover {
+  background: rgba(71, 191, 218, 0.08);
+  color: #3aa9c4;
+}
+
+/* ---- closing ---- */
+.gi-closing {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.gi-closing-line {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.gi-closing-line a {
+  color: #47bfda;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.gi-closing-line a:hover {
+  text-decoration: underline;
+}
+
+/* ---- responsive ---- */
+@media (max-width: 1300px) {
+  .gi-ways-grid-4 {
+    grid-template-columns: repeat(2, minmax(240px, 300px));
+  }
+}
+
+@media (max-width: 768px) {
+  .gi-ways-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .gi-ways-grid-4 .gi-card {
+    max-width: 100%;
+    aspect-ratio: auto;
+    min-height: 0;
+    padding: 32px 24px;
+  }
+
+  .gi-detail-inner {
+    padding: 28px 22px 32px;
+  }
+
+  .gi-detail-columns {
+    gap: 20px;
   }
 }
   

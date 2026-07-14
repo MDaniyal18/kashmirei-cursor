@@ -1,20 +1,70 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../../styles/Get-Involved/getinvolved-ways.css";
 
-import volunteerIcon from "../../../assets/Images/GetInvolved-icon/getinvolved-volunteer.webp";
-import mentorIcon from "../../../assets/Images/GetInvolved-icon/getinvolved-mentor.webp";
-import sponsorIcon from "../../../assets/Images/GetInvolved-icon/getinvolved-sponsor.webp";
+const CardIcon = ({ name }) => {
+  const paths = {
+    volunteer: (
+      <>
+        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+        <path d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25" />
+        <path d="M12.5 15.5l2 2" />
+        <path d="M15 13l2 2" />
+      </>
+    ),
+    mentor: (
+      <>
+        <path d="M8 16l2 -6l6 -2l-2 6l-6 2" />
+        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+        <path d="M12 3l0 2" />
+        <path d="M12 19l0 2" />
+        <path d="M3 12l2 0" />
+        <path d="M19 12l2 0" />
+      </>
+    ),
+    partners: (
+      <>
+        <path d="M8 9l5 5v7h-5v-4m0 4h-5v-7l5 -5m1 1v-6a1 1 0 0 1 1 -1h10a1 1 0 0 1 1 1v17h-8" />
+        <path d="M13 7l0 .01" />
+        <path d="M17 7l0 .01" />
+        <path d="M17 11l0 .01" />
+        <path d="M17 15l0 .01" />
+      </>
+    ),
+    donate: (
+      <>
+        <path d="M3 8m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z" />
+        <path d="M12 8l0 13" />
+        <path d="M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7" />
+        <path d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5" />
+      </>
+    ),
+  };
+  return (
+    <svg
+      className="gi-card-icon"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      {paths[name]}
+    </svg>
+  );
+};
+
+// TODO: replace with the real volunteer interest form URL
+const VOLUNTEER_FORM_URL =
+  "https://docs.google.com/forms/d/e/YOUR_FORM_LINK_HERE/viewform";
+
+const MENTOR_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfKvVgYMBk7IyH-rIR43V9B-3ZQUyZunFZxMWYi2Wq3VZu4Lg/viewform?usp=sf_link";
 
 const partners = [
-  /*
-  {
-    initials: "IMT",
-    color: "#1B4F8A",
-    name: "Iqbal Memorial Trust",
-    desc: "Standardised testing frameworks and experiential learning opportunities for KEI scholars across Kashmir.",
-  },
-  */
   {
     initials: "PW",
     color: "#1A1D20",
@@ -26,320 +76,367 @@ const partners = [
     initials: "CMI",
     color: "#2E7D32",
     name: "Competitiveness Mindset Institute (CMI)",
-    desc: "Competitiveness Mindset Institute (CMI) is a US 501(c)(3) and India 80(G) certified non-profit organization founded in 2017 in Princeton, New Jersey, USA. It is committed to providing world-class training aimed at making Indian professionals a globally competitive and ethical workforce. CMI produces original, research-backed training content in the areas of competitiveness and ethical leadership.CMI provides this training through its FLY Training programs, using the latest Active Learning methodologies.",
+    desc: "Competitiveness Mindset Institute (CMI) is a US 501(c)(3) and India 80(G) certified non-profit organization founded in 2017 in Princeton, New Jersey, USA. It is committed to providing world-class training aimed at making Indian professionals a globally competitive and ethical workforce. CMI produces original, research-backed training content in the areas of competitiveness and ethical leadership. CMI provides this training through its FLY Training programs, using the latest Active Learning methodologies.",
     url: "https://www.competitivenessmindset.org",
   },
   {
     initials: "MDR",
     color: "#F39C12",
     name: "Mindler",
-    desc: "KEI's collaboration with Mindler equips scholars with the knowledge and guidance needed to make informed academic and career decisions. Through this partnership, scholars explore diverse career opportunities and educational streams, understand the pathways to achieve their goals, and develop personalized career plans along with alternate options to navigate their future with confidence and clarity..",
+    desc: "KEI's collaboration with Mindler equips scholars with the knowledge and guidance needed to make informed academic and career decisions. Through this partnership, scholars explore diverse career opportunities and educational streams, understand the pathways to achieve their goals, and develop personalized career plans along with alternate options to navigate their future with confidence and clarity.",
     url: "https://www.mindler.com/",
   },
 ];
 
-const GetInvolvedWays = () => {
-  const [activeDrawer, setActiveDrawer] = useState(null);
+const cards = [
+  {
+    id: "volunteer",
+    title: "Volunteer With Us",
+    tagline: "Give your time",
+    summary: "A few hours a month, from anywhere in the world.",
+    cta: "SEE HOW YOU CAN HELP",
+  },
+  {
+    id: "mentor",
+    title: "Mentor a Scholar",
+    tagline: "Give your experience",
+    summary: "2 hours a month, one scholar, one year.",
+    cta: "SEE HOW MENTORSHIP WORKS",
+  },
+  {
+    id: "partners",
+    title: "Build With Us",
+    tagline: "Give your network",
+    summary: "Program, technology, CSR, or institutional partnerships.",
+    cta: "SEE HOW WE COLLABORATE",
+  },
+  {
+    id: "donate",
+    title: "Donate",
+    tagline: "Give your support",
+    summary: "91% of every dollar goes directly to programs.",
+    cta: "SEE WAYS TO GIVE",
+  },
+];
 
-  const closeDrawer = () => {
-    setActiveDrawer(null);
+const GetInvolvedWays = () => {
+  const [activeSection, setActiveSection] = useState(null);
+  const panelRef = useRef(null);
+
+  const toggleSection = (id) => {
+    setActiveSection((prev) => (prev === id ? null : id));
   };
+
+  useEffect(() => {
+    if (activeSection && panelRef.current) {
+      panelRef.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+  }, [activeSection]);
 
   return (
     <section className="gi-ways">
       <div className="container">
-
         <div className="gi-ways-header">
-          <span>GET INVOLVED</span>
-          <h2>Ways to Get Involved</h2>
+          <h2 className="gi-section-label">WAYS TO GET INVOLVED</h2>
+          <p className="gi-ways-intro">
+            KEI is powered by people — volunteers who run our programs, mentors
+            who guide our scholars, partners who extend our reach, and donors
+            who make it all possible. Choose the way that fits you.
+          </p>
         </div>
 
-        <div className="gi-ways-grid">
-
-          {/* Volunteer Card */}
-          <div 
-            className="gi-card" 
-            onClick={() => setActiveDrawer("volunteer")} 
-            style={{ cursor: "pointer" }}
-          >
-            <span style={{ display: "block" }}>
-              <img src={volunteerIcon} alt="Volunteer" />
-            </span>
-            <h3>Volunteer With Us</h3>
-            <p>Join hands with us in operations, training, or outreach.</p>
-            <button 
-              style={{
-                background: "none",
-                border: "none",
-                fontSize: "14px",
-                fontFamily: "inherit",
-                fontWeight: "700",
-                color: "#47BFDA",
-                cursor: "pointer",
-                padding: 0,
-                letterSpacing: "0.6px"
-              }}
-              onClick={(e) => {
-                e.stopPropagation();
-                setActiveDrawer("volunteer");
-              }}
-            >
-              VOLUNTEER WITH US
-            </button>
-          </div>
-
-          {/* Mentor Card */}
-          <div 
-            className="gi-card" 
-            onClick={() => setActiveDrawer("mentor")} 
-            style={{ cursor: "pointer" }}
-          >
-            <span style={{ display: "block" }}>
-              <img src={mentorIcon} alt="Mentor" />
-            </span>
-            <h3>Mentor</h3>
-            <p>Guide a scholar’s journey and be part of their transformation.</p>
-            <button 
-              style={{
-                background: "none",
-                border: "none",
-                fontSize: "14px",
-                fontFamily: "inherit",
-                fontWeight: "700",
-                color: "#47BFDA",
-                cursor: "pointer",
-                padding: 0,
-                letterSpacing: "0.6px"
-              }}
-              onClick={(e) => {
-                e.stopPropagation();
-                setActiveDrawer("mentor");
-              }}
-            >
-              BECOME A MENTOR
-            </button>
-          </div>
-
-          {/* Partner Card */}
-          <div 
-            className="gi-card" 
-            onClick={() => setActiveDrawer("partners")} 
-            style={{ cursor: "pointer" }}
-          >
-            <span style={{ display: "block" }}>
-              <img src={sponsorIcon} alt="Partner" />
-            </span>
-            <h3>Build With Us</h3>
-            <p>Collaborate with us as an organisation, or corporate partner to amplify impact.</p>
-            <button 
-              style={{
-                background: "none",
-                border: "none",
-                fontSize: "14px",
-                fontFamily: "inherit",
-                fontWeight: "700",
-                color: "#47BFDA",
-                cursor: "pointer",
-                padding: 0,
-                letterSpacing: "0.6px"
-              }}
-              onClick={(e) => {
-                e.stopPropagation();
-                setActiveDrawer("partners");
-              }}
-            >
-              BUILD WITH US
-            </button>
-          </div>
-
+        <div className="gi-impact-strip">
+          <span>8,000+ scholarships awarded</span>
+          <span>300+ active mentors</span>
+          <span>1,600+ digital devices provided</span>
+          <span>91% of every dollar to programs</span>
         </div>
 
-        <blockquote className="gi-quote">
-          “Supporting KEI is like investing in the future of humanity.”
-          <span>– KEI Supporter</span>
-        </blockquote>
+        <div className="gi-ways-grid gi-ways-grid-4">
+          {cards.map((card) => (
+            <div
+              key={card.id}
+              className={`gi-card ${activeSection === card.id ? "gi-card-active" : ""}`}
+              onClick={() => toggleSection(card.id)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  toggleSection(card.id);
+                }
+              }}
+              aria-expanded={activeSection === card.id}
+            >
+              <span style={{ display: "block" }}>
+                <CardIcon name={card.id} />
+              </span>
+              <h3>{card.title}</h3>
+              <p>
+                <strong className="gi-card-tagline">{card.tagline}</strong>
+                {card.summary}
+              </p>
+              <button
+                className="gi-card-toggle"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleSection(card.id);
+                }}
+              >
+                {activeSection === card.id ? "HIDE DETAILS ▲" : `${card.cta} ▼`}
+              </button>
+            </div>
+          ))}
+        </div>
 
-      </div>
-
-      {/* ── Side Drawer Popup ────────────────────────────────── */}
-      {activeDrawer && (
-        <div className="gi-modal-backdrop" onClick={closeDrawer}>
-          <div className="gi-modal-drawer" onClick={(e) => e.stopPropagation()}>
-            <button className="gi-modal-close" onClick={closeDrawer}>✕</button>
-            
-            {activeDrawer === "partners" && (
-              <>
-                <div className="gi-modal-header">
-                  <span className="gi-modal-label"> Collaborations </span>
-                  <h2 className="gi-modal-title">Working Together for Lasting Change</h2>
+        {activeSection && (
+          <div className="gi-detail-panel" ref={panelRef}>
+            {activeSection === "volunteer" && (
+              <div className="gi-detail-inner">
+                <div className="gi-detail-header">
+                  <span className="gi-detail-label">GET INVOLVED / VOLUNTEER</span>
+                  <h3>Volunteer With Us</h3>
                 </div>
-                
-                <div className="gi-modal-body">
-                  <div className="gi-modal-partners-list">
-                    {partners.map((p) => (
-                      <div className="gi-partner-item" key={p.name}>
-                        <div className="gi-partner-avatar" style={{ backgroundColor: p.color }}>
-                          {p.initials}
-                        </div>
-                        <div className="gi-partner-info">
-                          <h4>{p.name}</h4>
-                          <span className="gi-partner-tag">
-                           With Kashmir Education Initiative's Collaboration
-                          </span>
-                          <p>{p.desc}</p>
-                          {p.url && (
-                            <a
-                              href={p.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="gi-partner-link"
-                            >
-                              Visit Website →
-                            </a>
-                          )}
-                        </div>
-                      </div>
-                    ))}
+                <p className="gi-detail-lead">
+                  KEI is a volunteer-driven organization. From Srinagar to San
+                  Francisco, volunteers keep every program running — on their
+                  own schedule, mostly remotely.
+                </p>
+                <h4>Where you can plug in</h4>
+                <div className="gi-role-grid">
+                  <div className="gi-role-item">
+                    <h5>Program Operations</h5>
+                    <p>Manage scholarship cycles, applicant screening, and scholar records.</p>
+                  </div>
+                  <div className="gi-role-item">
+                    <h5>Teaching &amp; Training</h5>
+                    <p>Deliver guest lectures, exam coaching, and skill workshops.</p>
+                  </div>
+                  <div className="gi-role-item">
+                    <h5>Outreach &amp; Communications</h5>
+                    <p>Grow our digital presence, tell scholar stories, support community events.</p>
+                  </div>
+                  <div className="gi-role-item">
+                    <h5>Research &amp; Field Work</h5>
+                    <p>Conduct field studies and impact assessments that shape our programs.</p>
+                  </div>
+                  <div className="gi-role-item">
+                    <h5>Fundraising</h5>
+                    <p>Help organize campaigns and diaspora events that sustain our mission.</p>
+                  </div>
+                  <div className="gi-role-item">
+                    <h5>Your Idea</h5>
+                    <p>Have an initiative we haven&apos;t listed? We&apos;re always open to fresh ideas — pitch it to us.</p>
                   </div>
                 </div>
-                
-                <div className="gi-modal-footer">
-                  <a href="mailto:info@kashmirei.org" className="gi-modal-btn">
-                    Become a Partner →
-                  </a>
-                </div>
-              </>
-            )}
-
-            {activeDrawer === "volunteer" && (
-              <>
-                <div className="gi-modal-header" style={{ borderLeft: "5px solid #47BFDA" }}>
-                  <span className="gi-modal-label">GET INVOLVED / VOLUNTEER</span>
-                  <h2 className="gi-modal-title">Volunteer With Us</h2>
-                </div>
-                
-                <div className="gi-modal-body">
-                  <p style={{ fontSize: "14.5px", lineHeight: "1.6", color: "#444", marginBottom: "20px" }}>
-                    KEI is a volunteer-driven organization, and we offer a wide range of 
-                    opportunities for individuals who are passionate about creating impact.
-                  </p>
-                  
-                  <div style={{ marginTop: "24px" }}>
-                    <h3 style={{ fontSize: "18px", fontWeight: "700", color: "#0f1b24", marginBottom: "12px" }}>How can you help?</h3>
-                    <p style={{ fontSize: "14px", lineHeight: "1.6", color: "#555", marginBottom: "14px" }}>
-                      You can contribute your time and skills by supporting specific ongoing 
-                      projects or by assisting in our broader organizational efforts.
-                    </p>
-                    <p style={{ fontSize: "14px", lineHeight: "1.6", color: "#555", marginBottom: "14px" }}>
-                      Our volunteers and interns actively engage in a variety of initiatives, 
-                      including managing scholarship programs, mentoring students across 
-                      primary, secondary, undergraduate, and graduate levels, and delivering 
-                      guest lectures at educational institutions.
-                    </p>
-                    <p style={{ fontSize: "14px", lineHeight: "1.6", color: "#555", marginBottom: "14px" }}>
-                      In addition, volunteers support outreach initiatives, enhance our 
-                      digital presence, conduct research and field studies, and contribute 
-                      to fundraising efforts that sustain our mission.
-                    </p>
-                    <p style={{ fontSize: "14px", lineHeight: "1.6", color: "#555", marginBottom: "14px" }}>
-                      We are always open to fresh ideas and innovative approaches. If you have 
-                      a vision or initiative you would like to contribute, we would love to 
-                      hear from you.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="gi-modal-footer">
-                  <p style={{ fontSize: "13.5px", fontWeight: "600", color: "#0f1b24", marginBottom: "12px" }}>To get started, click the button below and share your details with us.</p>
+                <div className="gi-detail-cta-row">
                   <a
-                    href="https://docs.google.com/forms/d/e/YOUR_FORM_LINK_HERE/viewform"
+                    href={VOLUNTEER_FORM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="gi-modal-btn"
+                    className="gi-modal-btn gi-detail-btn"
                   >
-                    Fill Volunteer Information Form
+                    Fill the Volunteer Interest Form
                   </a>
                 </div>
-              </>
+              </div>
             )}
 
-            {activeDrawer === "mentor" && (
-              <>
-                <div className="gi-modal-header" style={{ borderLeft: "5px solid #47BFDA" }}>
-                  <span className="gi-modal-label">GET INVOLVED / MENTOR</span>
-                  <h2 className="gi-modal-title">Become a Mentor</h2>
+            {activeSection === "mentor" && (
+              <div className="gi-detail-inner">
+                <div className="gi-detail-header">
+                  <span className="gi-detail-label">GET INVOLVED / MENTOR</span>
+                  <h3>Mentor a Scholar</h3>
                 </div>
-                
-                <div className="gi-modal-body">
-                  <p style={{ fontSize: "14.5px", lineHeight: "1.6", color: "#444", marginBottom: "20px" }}>
-                    Share your knowledge and guide scholars towards a brighter future.
-                    Your mentorship can shape careers and transform lives.
+                <p className="gi-detail-lead">
+                  Our scholars are talented and driven — many are the first in
+                  their families to aim for university. What they need
+                  isn&apos;t tutoring; it&apos;s someone who has walked the
+                  path before.
+                </p>
+                <div className="gi-callout">
+                  <h4>One Mentor, One Scholar</h4>
+                  <p>
+                    You&apos;re matched with one high school scholar and meet
+                    virtually about <strong>2 hours a month</strong> for at
+                    least <strong>one year</strong> — guiding their academic
+                    choices, career direction, and confidence.
                   </p>
-                  
-                  <div style={{
-                    background: "#f4f8fb",
-                    borderLeft: "4px solid #47BFDA",
-                    padding: "18px",
-                    borderRadius: "0 12px 12px 0",
-                    marginBottom: "20px"
-                  }}>
-                    <h4 style={{ fontSize: "16px", fontWeight: "700", color: "#0f1b24", margin: "0 0 6px" }}>One Mentor, One Scholar</h4>
-                    <p style={{ margin: 0, fontSize: "13.5px", color: "#555", lineHeight: "1.5" }}>
-                      Support a high school scholar by volunteering <strong>2 hours per month</strong> 
-                      for a minimum of <strong>one year</strong>. Help guide their academic journey 
-                      and future goals.
-                    </p>
+                </div>
+                <div className="gi-detail-columns">
+                  <div>
+                    <h4>You&apos;re a fit if you:</h4>
+                    <ol className="gi-detail-list">
+                      <li>
+                        Have completed higher secondary education and are in
+                        college or hold a degree.
+                      </li>
+                      <li>
+                        Can commit 2–4 hours per month for at least a year.
+                      </li>
+                      <li>
+                        Are willing to guide a scholar&apos;s academic and
+                        long-term goals — no tutoring required.
+                      </li>
+                    </ol>
                   </div>
-
-                  <div style={{ marginTop: "24px" }}>
-                    <h3 style={{ fontSize: "16px", fontWeight: "700", color: "#0f1b24", marginBottom: "10px" }}>Mentorship Sign-Up Requirements</h3>
-                    <p style={{ fontSize: "13.5px", color: "#555", marginBottom: "12px" }}>Before applying, please confirm that you:</p>
-                    
-                    <ul style={{ paddingLeft: "18px", margin: "0 0 20px", listStyleType: "decimal" }}>
-                      <li style={{ fontSize: "13.5px", color: "#555", lineHeight: "1.6", marginBottom: "8px" }}>
-                        Have completed higher secondary education and are currently in college or hold a degree.
+                  <div>
+                    <h4>What happens next</h4>
+                    <ol className="gi-detail-list">
+                      <li>Apply online and complete a short orientation.</li>
+                      <li>We match you with a scholar based on interests and goals.</li>
+                      <li>
+                        Our mentorship team supports you throughout, with
+                        resources and Supercoach sessions.
                       </li>
-                      <li style={{ fontSize: "13.5px", color: "#555", lineHeight: "1.6", marginBottom: "8px" }}>
-                        Can commit <strong>2–4 hours per month</strong> for at least <strong>a year</strong>.
-                      </li>
-                      <li style={{ fontSize: "13.5px", color: "#555", lineHeight: "1.6", marginBottom: "8px" }}>
-                        Are willing to mentor a student and guide them in their academic and long-term goals 
-                        (no tutoring required).
-                      </li>
-                    </ul>
+                    </ol>
                   </div>
                 </div>
-                
-                <div className="gi-modal-footer">
-                  <p style={{ fontSize: "13.5px", fontWeight: "600", color: "#0f1b24", marginBottom: "12px" }}>If you meet these criteria, please proceed to the application form.</p>
-                  <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                    <a
-                      href="https://docs.google.com/forms/d/e/1FAIpQLSfKvVgYMBk7IyH-rIR43V9B-3ZQUyZunFZxMWYi2Wq3VZu4Lg/viewform?usp=sf_link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="gi-modal-btn"
-                    >
-                      Sign up / Apply Online
-                    </a>
-                    <Link
-                      to="/mentorship-success-stories"
-                      className="gi-modal-btn"
-                      style={{
-                        background: "transparent",
-                        border: "2.5px solid #47BFDA",
-                        color: "#47BFDA"
-                      }}
-                    >
-                      Success Stories →
-                    </Link>
-                  </div>
+                <p className="gi-proof-line">
+                  300+ active mentors · 1,000+ mentorship sessions every year
+                </p>
+                <div className="gi-detail-cta-row">
+                  <a
+                    href={MENTOR_FORM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="gi-modal-btn gi-detail-btn"
+                  >
+                    Apply to Become a Mentor
+                  </a>
+                  <Link
+                    to="/our-impact"
+                    className="gi-modal-btn gi-detail-btn gi-detail-btn-outline"
+                  >
+                    Read Success Stories →
+                  </Link>
                 </div>
-              </>
+              </div>
             )}
 
+            {activeSection === "partners" && (
+              <div className="gi-detail-inner">
+                <div className="gi-detail-header">
+                  <span className="gi-detail-label">GET INVOLVED / PARTNER</span>
+                  <h3>Build With Us</h3>
+                </div>
+                <p className="gi-detail-lead">
+                  Some of KEI&apos;s biggest leaps came through collaboration.
+                  If your organization believes talent should never be limited
+                  by circumstance, let&apos;s build together.
+                </p>
+                <h4>Ways to collaborate</h4>
+                <div className="gi-role-grid">
+                  <div className="gi-role-item">
+                    <h5>Program Partnerships</h5>
+                    <p>Bring your curriculum or platform to scholars — as Physics Wallah does with exam prep and Mindler with career guidance.</p>
+                  </div>
+                  <div className="gi-role-item">
+                    <h5>Leadership &amp; Skills Training</h5>
+                    <p>Deliver workshops and training, as CMI does through its FLY leadership program.</p>
+                  </div>
+                  <div className="gi-role-item">
+                    <h5>Technology &amp; Learning Tools</h5>
+                    <p>Power digital learning, as Gooru does with the Navigator adaptive learning platform.</p>
+                  </div>
+                  <div className="gi-role-item">
+                    <h5>Corporate &amp; CSR</h5>
+                    <p>Sponsor programs, fund devices, or engage your employees as mentors and volunteers.</p>
+                  </div>
+                </div>
+                <h4>Our partners</h4>
+                <div className="gi-modal-partners-list">
+                  {partners.map((p) => (
+                    <div className="gi-partner-item" key={p.name}>
+                      <div
+                        className="gi-partner-avatar"
+                        style={{ backgroundColor: p.color }}
+                      >
+                        {p.initials}
+                      </div>
+                      <div className="gi-partner-info">
+                        <h4>{p.name}</h4>
+                        <span className="gi-partner-tag">
+                          With Kashmir Education Initiative&apos;s Collaboration
+                        </span>
+                        <p>{p.desc}</p>
+                        {p.url && (
+                          <a
+                            href={p.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="gi-partner-link"
+                          >
+                            Visit Website →
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="gi-detail-cta-row">
+                  <a
+                    href="mailto:info@kashmirei.org?subject=Partnership%20with%20KEI"
+                    className="gi-modal-btn gi-detail-btn"
+                  >
+                    Start a Partnership Conversation →
+                  </a>
+                </div>
+              </div>
+            )}
+
+            {activeSection === "donate" && (
+              <div className="gi-detail-inner">
+                <div className="gi-detail-header">
+                  <span className="gi-detail-label">GET INVOLVED / DONATE</span>
+                  <h3>Donate</h3>
+                </div>
+                <p className="gi-detail-lead">
+                  Every scholarship changes the trajectory of an entire family.
+                  KEI is a registered 501(c)(3) public charity (EIN
+                  42-1733906), and <strong>91% of every dollar goes directly
+                  to programs</strong>. U.S. donations are tax-deductible.
+                </p>
+                <h4>Give Any Amount</h4>
+                <p className="gi-detail-note">
+                  One-time or recurring — whichever works for you:
+                </p>
+                <ul className="gi-detail-list gi-detail-list-plain gi-detail-list-narrow">
+                  <li><strong>Zelle</strong> — zelle@kashmirei.org</li>
+                  <li><strong>PayPal or credit card</strong> — via our secure donate page</li>
+                  <li>
+                    <strong>Cheque</strong> — payable to Kashmir Education
+                    Initiative
+                  </li>
+                </ul>
+                <p className="gi-proof-line">
+                  CPA-audited financials · non-political &amp; non-religious ·
+                  donations accepted only through official channels
+                </p>
+                <div className="gi-detail-cta-row">
+                  <Link to="/donate" className="gi-modal-btn gi-detail-btn">
+                    Donate Now →
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
+        )}
+
+        <div className="gi-closing">
+          <p className="gi-closing-line">
+            Not sure where to start? Write to us at{" "}
+            <a href="mailto:info@kashmirei.org">info@kashmirei.org</a> — tell us
+            who you are and what you care about, and we&apos;ll find the right
+            fit together.
+          </p>
+          <blockquote className="gi-quote">
+            &ldquo;Supporting KEI is like investing in the future of
+            humanity.&rdquo;
+            <span>– KEI Supporter</span>
+          </blockquote>
         </div>
-      )}
+      </div>
     </section>
   );
 };

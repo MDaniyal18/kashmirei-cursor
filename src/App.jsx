@@ -26,9 +26,6 @@ import OurImpact from "./components/pages/OurImpact";
 import FAQ from "./components/pages/FAQ";
 import ScholarStories from "./components/pages/ScholarStories";
 import ImpactByNumbers from "./components/pages/ImpactByNumbers";
-// Get Involved Pages
-import Sponsor from "./components/pages/GetInvolvedWays_Pages/SponsorAScholar";
-
 // Mentorship Pages
 import MentorshipSuccessStories from "./components/pages/GetInvolvedWays_Pages/MentorshipSuccessStories/MentorshipSuccessStories";
 
@@ -63,8 +60,6 @@ const App = () => {
           <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/our-impact" element={<ScholarStories />} />
           <Route path="/faq" element={<FAQ />} />
-
-          <Route path="/sponsor-a-scholar" element={<Sponsor />} />
 
           <Route
             path="/mentorship-success-stories"
