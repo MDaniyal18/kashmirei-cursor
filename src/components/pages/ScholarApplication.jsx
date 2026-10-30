@@ -1,8 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+// import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const ScholarApplication = () => {
     const navigate = useNavigate();
+
+    /* =========================================================================
+       SALESFORCE FORM STATE & HANDLERS (COMMENTED OUT FOR NEXT CYCLE)
+       =========================================================================
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [applicantName, setApplicantName] = useState('');
     const [isDuplicate, setIsDuplicate] = useState(false);
@@ -38,12 +43,124 @@ const ScholarApplication = () => {
         setIsSubmitted(true);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
+    ========================================================================= */
 
     return (
-        <div style={{ padding: "40px 20px", background: "#f4f8fb", fontFamily: "'Segoe UI', Arial, sans-serif", color: "#263746", minHeight: "100vh" }}>
+        <div style={{ padding: "40px 20px", background: "#f4f8fb", fontFamily: '"Franklin Gothic Book", "Segoe UI", Arial, sans-serif', color: "#263746", minHeight: "100vh" }}>
             <style dangerouslySetInnerHTML={{
                 __html: `
-        /* Form & Success Styles */
+        /* Closed Notice Styles (Default Website Theme) */
+        .closed-notice-container {
+            max-width: 760px;
+            margin: 110px auto 60px;
+            background: #ffffff;
+            padding: 55px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 35px rgba(23, 76, 104, 0.08);
+            border: 1px solid #e3edf2;
+            text-align: center;
+        }
+
+        .notice-badge {
+            display: inline-block;
+            background: #eefafc;
+            color: var(--kei-accent-text, #1E7A93);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 30px;
+            border: 1px solid rgba(71, 191, 218, 0.35);
+            margin-bottom: 24px;
+        }
+
+        .notice-icon-wrap {
+            width: 76px;
+            height: 76px;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+            background: #eefafc;
+            color: var(--kei-accent, #47BFDA);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--kei-accent, #47BFDA);
+            box-shadow: 0 4px 14px rgba(71, 191, 218, 0.18);
+        }
+
+        .notice-title {
+            margin: 0 0 18px;
+            color: #174c68;
+            font-family: "Franklin Gothic Demi", sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        .notice-subtitle {
+            margin: 0 auto 32px;
+            max-width: 600px;
+            color: #64748b;
+            font-size: 15px;
+            line-height: 1.65;
+        }
+
+        .notice-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--kei-accent, #47BFDA);
+            color: #ffffff;
+            padding: 12px 32px;
+            border: 1px solid transparent;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(71, 191, 218, 0.25);
+        }
+
+        .btn-primary:hover {
+            background-color: #3aa9c4;
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(71, 191, 218, 0.35);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            color: var(--kei-accent-text, #1E7A93);
+            padding: 12px 28px;
+            border: 1.5px solid var(--kei-accent, #47BFDA);
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #eefafc;
+            color: #155f73;
+            transform: translateY(-1px);
+        }
+
+        /* Form & Success Styles (Preserved for future reopenings) */
         .form-container {
             max-width: 1000px;
             margin: 100px auto 40px;
@@ -243,6 +360,24 @@ const ScholarApplication = () => {
         }
 
         @media (max-width: 700px) {
+            .closed-notice-container {
+                margin: 90px 12px 40px;
+                padding: 38px 20px;
+            }
+
+            .notice-title {
+                font-size: 21px;
+            }
+
+            .notice-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+
             .form-container {
                 padding: 25px 20px;
             }
@@ -262,14 +397,52 @@ const ScholarApplication = () => {
         }
       `}} />
 
-            {/* Hidden iframe for Salesforce response */}
+            {/* =========================================================================
+                Active Display: Application Submissions Closed Notice
+               ========================================================================= */}
+            <div className="closed-notice-container">
+                <span className="notice-badge">Admission Notice</span>
+
+                <div className="notice-icon-wrap" aria-hidden="true">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                </div>
+
+                <h1 className="notice-title">
+                    The Last Day for the Submission of the Applications of The High School Support Program 2027 Have Been Closed
+                </h1>
+
+                <p className="notice-subtitle">
+                    Online and offline submissions for the High School Support Program (HSSP) 2027 cycle are now officially closed. We sincerely thank all students and applicants for their submissions. For upcoming updates, test schedules, and other scholar programs, please visit our website sections below.
+                </p>
+
+                <div className="notice-actions">
+                    <button className="btn-primary" type="button" onClick={() => navigate('/')}>
+                        Back to Home
+                    </button>
+                    <button className="btn-secondary" type="button" onClick={() => navigate('/for-scholars')}>
+                        For Scholars
+                    </button>
+                    <button className="btn-secondary" type="button" onClick={() => navigate('/events-and-announcements')}>
+                        Announcements
+                    </button>
+                </div>
+            </div>
+
+            {/* =========================================================================
+                SALESFORCE WEB-TO-LEAD APPLICATION FORM & SUCCESS CONFIRMATION
+                (Commented out because HSSP 2027 submissions have been closed)
+               ========================================================================= */}
+            {/*
             <iframe
                 name="hidden_iframe"
                 id="hidden_iframe"
                 style={{ display: "none" }}
             ></iframe>
 
-            {/* Success Confirmation Card */}
             <div className="success-container" style={{ display: isSubmitted ? "block" : "none" }}>
                 <div className="success-icon-wrap">✓</div>
                 <h1 className="success-title">{isDuplicate ? "Form Submitted" : "Your Form Has Been Submitted"}</h1>
@@ -285,7 +458,6 @@ const ScholarApplication = () => {
                 </button>
             </div>
 
-            {/* Main Application Form Container */}
             <div className="form-container" style={{ display: isSubmitted ? "none" : "block" }}>
 
                 <div className="form-header">
@@ -570,6 +742,7 @@ const ScholarApplication = () => {
 
                 </form>
             </div>
+            */}
         </div>
     );
 };
